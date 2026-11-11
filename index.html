@@ -415,6 +415,14 @@ html.skip *,html.skip *::before,html.skip *::after{transition:none !important}
   var seen=false;try{seen=sessionStorage.getItem("introSeen")==="1";}catch(e){}
   /* appli installée (écran d'accueil) : la session persiste, on rejoue l'intro à chaque lancement */
   if(navigator.standalone===true||(window.matchMedia&&matchMedia("(display-mode: standalone)").matches))seen=false;
+  /* appli installée : après 10 min en arrière-plan, on recharge pour rejouer l'intro */
+  if(navigator.standalone===true||(window.matchMedia&&matchMedia("(display-mode: standalone)").matches)){
+    var hid=0;
+    document.addEventListener("visibilitychange",function(){
+      if(document.hidden){hid=Date.now();}
+      else if(hid&&Date.now()-hid>600000){location.reload();}
+    });
+  }
   var rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
   if(rm||seen||location.hash.length>1){d.className+=" done";return;}
   d.className+=" op";d.setAttribute("data-intro","1");
