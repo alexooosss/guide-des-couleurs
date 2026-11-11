@@ -1,0 +1,1823 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guide des couleurs</title>
+<meta name="description" content="Atlas de vingt couleurs lues à travers cinq aires culturelles : significations, valeurs véhiculées, pièges à l’international, contraste d’accessibilité et sources. Recherche par sens ou par code HEX.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#E5E5E3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#272727" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Guide des couleurs">
+<meta property="og:description" content="Atlas de vingt couleurs lues à travers cinq aires culturelles : significations, valeurs véhiculées, pièges à l’international, contraste d’accessibilité et sources. Recherche par sens ou par code HEX.">
+<meta property="og:url" content="https://alexooosss.github.io/guide-des-couleurs/">
+<meta property="og:image" content="https://alexooosss.github.io/guide-des-couleurs/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://alexooosss.github.io/guide-des-couleurs/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3CclipPath%20id='r'%3E%3Crect%20width='32'%20height='32'%20rx='6'/%3E%3C/clipPath%3E%3Cg%20clip-path='url(%23r)'%3E%3Crect%20x='0'%20width='4'%20height='32'%20fill='%23D62828'/%3E%3Crect%20x='4'%20width='4'%20height='32'%20fill='%23EB6A1A'/%3E%3Crect%20x='8'%20width='4'%20height='32'%20fill='%23F6D02F'/%3E%3Crect%20x='12'%20width='4'%20height='32'%20fill='%232E8B4A'/%3E%3Crect%20x='16'%20width='4'%20height='32'%20fill='%232BB3AE'/%3E%3Crect%20x='20'%20width='4'%20height='32'%20fill='%231F5FBF'/%3E%3Crect%20x='24'%20width='4'%20height='32'%20fill='%237A3FA0'/%3E%3Crect%20x='28'%20width='4'%20height='32'%20fill='%23E87EA1'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+<style>
+/* ===== Base ===== */
+:root{
+  --bg:#E5E5E3;
+  --surface:#F2F2F0;
+  --ink:#1E1E1E;
+  --ink-2:#585856;
+  --rule:#C6C6C3;
+  --ring:rgba(0,0,0,.10);
+  --pad:clamp(16px,4vw,48px);
+  --max:1240px;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#272727;--surface:#313131;--ink:#EBEBE9;--ink-2:#A6A6A3;--rule:#474746;--ring:rgba(255,255,255,.10);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#272727;--surface:#313131;--ink:#EBEBE9;--ink-2:#A6A6A3;--rule:#474746;--ring:rgba(255,255,255,.10);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none !important}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+html:has(dialog[open]){overflow:hidden}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;line-height:1.55;font-kerning:normal}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+mark{background:var(--ink);color:var(--bg);padding:0 .12em}
+
+/* ===== Bande de fils (en-tête) ===== */
+.warp{--h:clamp(220px,48vh,480px);display:flex;height:var(--h)}
+.thread{flex:1 1 0;min-width:0;position:relative;background:var(--c);text-decoration:none;transform-origin:top center;animation:drop .9s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i) * 40ms);transition:flex-grow .45s cubic-bezier(.2,.7,.2,1)}
+.thread span{position:absolute;left:50%;bottom:16px;writing-mode:vertical-rl;transform:translateX(-50%) rotate(180deg);font-stretch:62%;font-weight:700;font-size:min(2.4vw,calc(var(--h) / 10));line-height:.8;text-transform:uppercase;letter-spacing:-.01em;color:var(--on);white-space:nowrap;transition:font-size .45s cubic-bezier(.2,.7,.2,1),font-weight .45s cubic-bezier(.2,.7,.2,1),bottom .45s cubic-bezier(.2,.7,.2,1)}
+@media (hover:hover){.thread:hover{flex-grow:3}.thread:hover span{font-size:min(12vw,calc(var(--h) / 4.9));font-weight:850;bottom:6px}}
+.thread:focus-visible{flex-grow:3;outline:3px solid var(--on);outline-offset:-6px}
+.thread:focus-visible span{font-size:min(12vw,calc(var(--h) / 4.9));font-weight:850;bottom:6px}
+@media (max-width:600px){.thread span{font-size:min(3.6vw,calc(var(--h) / 10));bottom:12px}}
+@media (prefers-reduced-motion:reduce){.thread span{transition:none}}
+@keyframes drop{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.warp.mini{height:12px}
+.warp.mini span{flex:1 1 0;background:var(--c)}
+
+/* ===== Introduction ===== */
+.intro{max-width:var(--max);margin:0 auto;padding:clamp(28px,5vw,64px) var(--pad) clamp(24px,3vw,40px);display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:20px clamp(24px,5vw,72px);align-items:end}
+h1{margin:0;font-stretch:68%;font-weight:800;font-size:clamp(46px,8.5vw,120px);line-height:.9;letter-spacing:-.01em}
+.lede{margin:0;font-size:clamp(17px,1.5vw,20px);line-height:1.5;color:var(--ink-2);max-width:38ch}
+@media (max-width:820px){.intro{grid-template-columns:1fr}}
+
+/* ===== Onglets et thème ===== */
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--rule)}
+.tabs-in{max-width:var(--max);margin:0 auto;padding:0 var(--pad);display:flex;gap:clamp(18px,3vw,36px);overflow-x:auto;scrollbar-width:none}
+.tab{display:block;padding:15px 0 12px;border-bottom:3px solid transparent;text-decoration:none;font-weight:600;color:var(--ink-2);white-space:nowrap}
+.tab:hover{color:var(--ink)}
+.tab[aria-current="page"]{color:var(--ink);border-bottom-color:var(--ink)}
+.tab:focus-visible{outline-offset:-3px}
+.theme{margin-left:auto;align-self:center;flex:none;display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:14.5px;font-weight:600;color:var(--ink);background:transparent;border:1.5px solid var(--rule);border-radius:999px;padding:6px 13px 6px 10px;cursor:pointer;white-space:nowrap}
+.theme:hover{border-color:var(--ink)}
+.theme svg{width:18px;height:18px;flex:none}
+.theme .i-sun{display:none}
+:root[data-theme="dark"] .theme .i-sun{display:block}
+:root[data-theme="dark"] .theme .i-moon{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .theme .i-sun{display:block}:root:not([data-theme="light"]) .theme .i-moon{display:none}}
+@media (max-width:640px){.theme .tl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.theme{position:fixed;right:max(12px,env(safe-area-inset-right,0px));bottom:max(12px,env(safe-area-inset-bottom,0px));z-index:18;padding:11px;background:var(--bg);box-shadow:0 2px 10px rgba(0,0,0,.28)}}
+
+/* ===== Recherche et filtres ===== */
+.tools{max-width:var(--max);margin:0 auto;padding:28px var(--pad) 4px;display:grid;gap:14px}
+.search{position:relative;max-width:640px}
+.search input{width:100%;font:inherit;font-size:18px;color:var(--ink);background:var(--surface);border:1.5px solid var(--ink);border-radius:3px;padding:13px 50px 13px 16px}
+.search input::placeholder{color:var(--ink-2)}
+.search input::-webkit-search-cancel-button{display:none}
+.search input:focus-visible{outline-offset:2px}
+.clear{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:40px;height:40px;border:0;border-radius:50%;background:transparent;color:var(--ink);font:inherit;font-size:24px;line-height:1;cursor:pointer}
+.row{display:grid;grid-template-columns:120px minmax(0,1fr);gap:8px 12px;align-items:center}
+.rl{font-size:15px;color:var(--ink-2)}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pills.scroll{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin;padding:2px 2px 6px}
+.pill{font:inherit;font-size:15px;line-height:1.2;padding:7px 14px;border:1.5px solid var(--rule);border-radius:999px;background:transparent;color:var(--ink);cursor:pointer;white-space:nowrap}
+.pill:hover{border-color:var(--ink)}
+.pill[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.status{margin:4px 0 0;font-size:15px;color:var(--ink-2)}
+@media (max-width:640px){.row{grid-template-columns:1fr}}
+a.pill{display:inline-block;text-decoration:none}
+.pill[aria-current="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+
+/* ===== Vignettes et résultats ===== */
+.group{max-width:var(--max);margin:0 auto;padding:12px var(--pad) 8px}
+.group h2{margin:28px 0 18px;padding-top:14px;border-top:2px solid var(--ink);font-stretch:80%;font-weight:750;font-size:clamp(22px,2.4vw,28px);line-height:1.1;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px}
+.group h2 small{font-stretch:100%;font-weight:400;font-size:15px;color:var(--ink-2)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:30px 18px}
+.tile{display:block;text-decoration:none;color:inherit}
+.tile .sw{position:relative;display:grid;place-items:center;aspect-ratio:4/5;border-radius:5px;background:var(--c);box-shadow:inset 0 0 0 1px var(--ring)}
+.tile .sw-label{padding:7px 16px;border-radius:4px;background:var(--on);color:var(--c);font-size:15px;font-weight:700;line-height:1.2;opacity:0;transform:translateY(5px);transition:opacity .2s ease-out,transform .2s cubic-bezier(.16,1,.3,1)}
+.tile:hover .sw-label,.tile:focus-visible .sw-label{opacity:1;transform:translateY(0)}
+.tile .tn{display:block;margin-top:10px;font-stretch:85%;font-weight:700;font-size:20px;line-height:1.15}
+.tile .tk{display:block;margin-top:3px;font-size:14.5px;line-height:1.4;color:var(--ink-2)}
+.tile:focus-visible{outline-offset:5px}
+@media (max-width:420px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 14px}}
+.empty{padding:24px 0;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.empty p{flex-basis:100%;margin:0 0 6px;font-size:18px}
+.hexres{max-width:var(--max);margin:0 auto;padding:12px var(--pad) 8px}
+.hexhead{display:flex;align-items:center;gap:14px;margin:18px 0 18px;padding-top:14px;border-top:2px solid var(--ink)}
+.hexhead .sw{width:52px;height:52px;background:var(--c);box-shadow:inset 0 0 0 1px var(--ring);flex:none}
+.hexhead h2{margin:0;font-stretch:80%;font-weight:750;font-size:clamp(22px,2.4vw,28px);line-height:1.1}
+.hexhead p{margin:2px 0 0;font-size:14px;color:var(--ink-2)}
+.de{display:block;margin-top:3px;font-size:13.5px;font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.method{margin:22px 0 0;font-size:13.5px;color:var(--ink-2);max-width:80ch}
+
+/* ===== Tableau comparatif ===== */
+.view-intro{max-width:var(--max);margin:0 auto;padding:18px var(--pad) 0;color:var(--ink-2)}
+.view-intro p{margin:0;max-width:70ch}
+.matrix-wrap{max-width:var(--max);margin:0 auto;padding:16px var(--pad) 48px}
+.scroller{overflow-x:auto;border-top:2px solid var(--ink)}
+table{border-collapse:collapse;width:100%;min-width:1080px;font-size:15px;line-height:1.35}
+th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--rule)}
+thead th{font-weight:700;font-stretch:90%;font-size:15.5px;vertical-align:bottom}
+thead th small{display:block;margin-top:2px;font-weight:400;font-stretch:100%;font-size:13px;color:var(--ink-2)}
+thead th:first-child{position:sticky;left:0;z-index:2;background:var(--bg)}
+tbody th{position:sticky;left:0;z-index:1;background:var(--bg);border-left:12px solid var(--c);font-weight:700;font-stretch:90%;font-size:16px;white-space:nowrap}
+tbody th a{text-decoration:none}
+tbody tr{cursor:pointer}
+tbody tr:hover > *{background:var(--surface)}
+td.on{background:var(--surface)}
+thead th.on{box-shadow:inset 0 -3px 0 var(--ink)}
+
+/* ===== Repères ===== */
+.prose{max-width:var(--max);margin:0 auto;padding:28px var(--pad) 56px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px clamp(32px,5vw,72px)}
+.prose > div{max-width:64ch}
+.prose h2{margin:8px 0 16px;font-stretch:75%;font-weight:800;font-size:clamp(30px,4vw,44px);line-height:1}
+.prose h3{margin:28px 0 8px;font-stretch:85%;font-weight:700;font-size:20px}
+.prose p{margin:0 0 10px;line-height:1.6}
+.prose dl{margin:8px 0 12px;border-top:1px solid var(--rule)}
+.prose dl div{padding:10px 0;border-bottom:1px solid var(--rule)}
+.prose dt{font-weight:700}
+.prose dd{margin:2px 0 0;color:var(--ink-2);line-height:1.5}
+.prose ul{padding-left:1.1em;margin:8px 0}
+.prose li{margin:7px 0;line-height:1.55}
+cite{font-style:italic}
+@media (max-width:820px){.prose{grid-template-columns:1fr}}
+
+/* ===== Pied de page ===== */
+.foot{margin-top:24px}
+.foot p{max-width:var(--max);margin:0 auto;padding:18px var(--pad) 36px;font-size:14.5px;color:var(--ink-2)}
+
+/* ===== Fiche d’une teinte ===== */
+dialog.sheet{padding:0;border:0;margin:auto;width:min(1060px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh - 32px);overflow:auto;overscroll-behavior:contain;background:var(--bg);color:var(--ink)}
+dialog.sheet::backdrop{background:rgba(18,18,18,.6)}
+.sheet-in{animation:rise .3s cubic-bezier(.2,.7,.2,1)}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.sheet-head{position:relative;background:var(--c);color:var(--on);padding:22px clamp(20px,3.5vw,44px) clamp(14px,2vw,24px);box-shadow:inset 0 -1px 0 var(--ring)}
+.fam{margin:0;padding-right:112px;font-size:15px;opacity:.85}
+.sheet-head h2{margin:clamp(48px,9vw,120px) 0 0;font-stretch:62%;font-weight:800;font-size:clamp(64px,12vw,160px);line-height:.82;letter-spacing:-.01em;overflow-wrap:anywhere}
+.close{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:50%;border:1.5px solid currentColor;background:transparent;color:inherit;font:inherit;font-size:24px;line-height:1;cursor:pointer;display:grid;place-items:center}
+.close:focus-visible{outline-color:currentColor}
+.print{position:absolute;top:14px;right:66px;width:44px;height:44px;border-radius:50%;border:1.5px solid currentColor;background:transparent;color:inherit;cursor:pointer;display:grid;place-items:center}
+.print svg{width:20px;height:20px}
+.print:focus-visible{outline-color:currentColor}
+.codes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:var(--surface);border-bottom:1px solid var(--rule)}
+.code{font:inherit;color:var(--ink);background:transparent;border:0;border-right:1px solid var(--rule);padding:14px clamp(16px,2.4vw,28px);text-align:left;cursor:pointer;display:grid;gap:1px}
+.code:last-child{border-right:0}
+.code:hover .cc{color:var(--ink)}
+.code:focus-visible{outline-offset:-4px}
+.cl{font-size:13px;color:var(--ink-2)}
+.cv{font-size:19px;font-weight:650;font-stretch:90%;font-variant-numeric:tabular-nums}
+.cc{font-size:13px;color:var(--ink-2);text-decoration:underline;text-underline-offset:2px}
+.codes-note{margin:0;padding:10px clamp(20px,3.5vw,44px) 0;font-size:13.5px;color:var(--ink-2)}
+.sheet-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:8px clamp(28px,4vw,56px);padding:22px clamp(20px,3.5vw,44px) 8px}
+.sheet h3{margin:0 0 6px;font-stretch:85%;font-weight:750;font-size:18px}
+.blk{margin:0 0 26px}
+.blk p{margin:0}
+.blk p + p{margin-top:6px}
+.emo{font-weight:650}
+.trap{background:var(--surface);border-left:8px solid var(--c);padding:14px 18px}
+details.cult{padding:13px 0;border-top:1px solid var(--rule)}
+.cults h3 + details.cult{margin-top:8px;border-top:2px solid var(--ink)}
+details.cult summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details.cult summary::-webkit-details-marker{display:none}
+details.cult summary::after{content:'▼';font-size:11px;transition:transform .3s ease}
+details.cult[open] summary::after{transform:rotate(180deg)}
+details.cult p{margin:0}
+details.cult .sm{display:grid;gap:2px}
+details.cult .ck{display:block}
+details.cult p.ct-t{margin-top:8px}
+details.cult summary::after{flex:none;margin-left:12px}
+.cn{font-weight:700}
+.cs{font-weight:400;font-size:14px;color:var(--ink-2)}
+.ck{font-weight:650;margin:3px 0 !important}
+details.cult.on{background:var(--surface);padding-left:14px;padding-right:14px;box-shadow:inset 4px 0 0 var(--ink)}
+.sheet-nav{display:flex;justify-content:space-between;gap:12px;margin-top:10px;padding:14px clamp(20px,3.5vw,44px) 26px;border-top:1px solid var(--rule)}
+.sheet-nav a{display:inline-flex;align-items:center;gap:10px;padding:8px 0;text-decoration:none;font-weight:650}
+.sheet-nav a:hover{text-decoration:underline;text-underline-offset:3px}
+.dot{display:inline-block;width:14px;height:26px;background:var(--c);box-shadow:inset 0 0 0 1px var(--ring)}
+@media (max-width:760px){
+  dialog.sheet{width:100vw;height:100dvh;max-height:none;margin:0;inset:0}
+  .sheet-head{padding-top:calc(env(safe-area-inset-top,0px) + 18px)}
+  .close,.print{top:calc(env(safe-area-inset-top,0px) + 12px)}
+  .codes{grid-template-columns:1fr}
+  .code{grid-template-columns:52px 1fr auto;align-items:baseline;gap:10px;border-right:0;border-bottom:1px solid var(--rule)}
+  .code:last-child{border-bottom:0}
+  .sheet-body{grid-template-columns:1fr}
+  .sheet-nav{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 22px)}
+}
+.refs{padding:22px clamp(20px,3.5vw,44px) 4px}
+.refs-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:10px}
+.ref{margin:0}
+.ref a.ri{display:block;aspect-ratio:4/3;overflow:hidden;background:var(--c);box-shadow:inset 0 0 0 1px var(--ring)}
+.ref img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.ref a.ri:hover img{transform:scale(1.04)}
+.ref figcaption{margin-top:7px;font-size:14px;line-height:1.4}
+.ref .rt{display:block;font-weight:650}
+.ref .rc{display:block;font-size:12.5px;color:var(--ink-2)}
+.ref .rc a{color:inherit}
+@media (max-width:760px){.refs-g{grid-template-columns:1fr}}
+.lvl{display:block;margin:0 0 3px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.contrast{padding:16px clamp(20px,3.5vw,44px) 0}
+.ct-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:8px}
+.ct{display:flex;align-items:center;gap:14px;padding:10px 14px;background:var(--c);box-shadow:inset 0 0 0 1px var(--ring)}
+.ct b{font-size:30px;font-weight:800;line-height:1;font-stretch:75%}
+.ct span{font-size:13.5px;line-height:1.35}
+.ct-note{margin:8px 0 0;font-size:13px;color:var(--ink-2)}
+.retenir{margin:18px clamp(20px,3.5vw,44px) 0;padding:16px 20px;background:var(--surface);border-left:8px solid var(--c);box-shadow:inset 0 0 0 1px var(--ring)}
+.retenir h3{margin:0 0 6px}
+.retenir p{margin:0;font-size:clamp(17px,1.6vw,19px);line-height:1.5}
+.cert{display:inline-block;margin-left:8px;padding:0 8px;border:1.5px solid var(--ink-2);border-radius:999px;font-size:12px;font-weight:600;line-height:1.5;color:var(--ink-2);vertical-align:1px;white-space:nowrap}
+.cert.discute{border-style:dashed}
+.cert.nc{border-style:dotted}
+.cite{font-size:12.5px;color:var(--ink-2);white-space:nowrap}
+.lim{margin-top:6px !important;font-size:14px;line-height:1.45;color:var(--ink-2)}
+.ex .exs{margin-top:6px !important;font-size:13.5px;color:var(--ink-2)}
+.srcs{padding:6px clamp(20px,3.5vw,44px) 4px}
+.srcs ol{margin:6px 0 0;padding-left:1.5em;font-size:13.5px;line-height:1.5;color:var(--ink-2)}
+.srcs li{margin:3px 0}
+.srcs a{color:inherit;overflow-wrap:anywhere}
+.srcs .todo{margin:6px 0 0;font-size:13.5px;color:var(--ink-2)}
+.vchips{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 10px}
+.vchip{display:inline-block;padding:4px 11px;border:1.5px solid var(--ink);border-radius:999px;font-size:14.5px;line-height:1.3;text-decoration:none;color:var(--ink)}
+.vchip.f{background:var(--ink);color:var(--bg)}
+.vchip:hover{text-decoration:underline;text-underline-offset:2px}
+.risk{color:var(--ink-2)}
+.legend{font-size:13px;color:var(--ink-2)}
+
+/* ===== Par valeur et palettes ===== */
+.pal-tools{display:flex;flex-wrap:wrap;gap:8px}
+.prop{display:flex;height:40px;margin:8px 0 6px}
+.prop span{background:var(--c);box-shadow:inset 0 0 0 1px var(--ring)}
+.prop-l{display:flex;flex-wrap:wrap;gap:4px 18px;margin:0 0 6px;font-size:14px;color:var(--ink-2)}
+.pairs{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin:10px 0 8px}
+.pair{padding:12px 14px;background:var(--bg-c);color:var(--fg-c);box-shadow:inset 0 0 0 1px var(--ring)}
+.pair b{display:block;font-size:24px;font-weight:800;line-height:1.05;font-stretch:80%}
+.pair span{display:block;margin-top:4px;font-size:13px;line-height:1.35}
+.pal-note{margin:0 0 30px;font-size:13.5px;color:var(--ink-2)}
+.vals{max-width:var(--max);margin:0 auto;padding:28px var(--pad) 56px;display:grid;grid-template-columns:minmax(220px,300px) minmax(0,1fr);gap:28px clamp(28px,4vw,64px);align-items:start}
+.vpick{position:sticky;top:calc(env(safe-area-inset-top,0px) + 72px)}
+.vpick > p{margin:0;color:var(--ink-2);font-size:15px}
+.vgroup{margin-top:16px}
+.vgroup h3{margin:0 0 8px;font-size:15px;font-weight:600;color:var(--ink-2)}
+.vgroup .pills{gap:6px}
+.vgroup .pill{font-size:14.5px;padding:6px 12px}
+.vpanel{scroll-margin-top:calc(env(safe-area-inset-top,0px) + 64px)}
+.vpanel h2{margin:0;font-stretch:62%;font-weight:800;font-size:clamp(56px,9vw,120px);line-height:.85;letter-spacing:-.01em}
+.vdef{margin:12px 0 22px;font-size:clamp(17px,1.5vw,20px);color:var(--ink-2);max-width:52ch}
+.palette{display:flex;height:72px}
+.palette span{background:var(--c);box-shadow:inset 0 0 0 1px var(--ring)}
+.palette .f{flex:3 1 0}
+.palette .s{flex:1.2 1 0}
+.pal-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 16px;margin:10px 0 30px;font-size:14.5px;color:var(--ink-2)}
+.vpanel > h3,.nuance h3{margin:0 0 6px;font-stretch:85%;font-weight:750;font-size:18px}
+.vlist{list-style:none;margin:8px 0 28px;padding:0;border-top:2px solid var(--ink)}
+.vitem{border-bottom:1px solid var(--rule)}
+.vitem a{display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;align-items:start;padding:14px 0;text-decoration:none;color:inherit}
+.vitem .sw{display:block;height:72px;background:var(--c);box-shadow:inset 0 0 0 1px var(--ring)}
+.vitem.s .sw{height:44px}
+.vn{font-weight:700;font-stretch:85%;font-size:20px}
+.lv{margin-left:8px;font-size:14px;color:var(--ink-2)}
+.vitem p{margin:2px 0 0;line-height:1.5}
+.vitem a:hover .vn{text-decoration:underline;text-underline-offset:3px}
+.nuance{border-left:8px solid var(--ink);background:var(--surface);padding:14px 18px}
+.nuance p{margin:0}
+@media (max-width:820px){.vals{grid-template-columns:1fr}.vpick{position:static}}
+
+/* ===== Écrans tactiles et petites tailles ===== */
+@media (max-width:720px){
+  .tab .long{display:none}
+}
+@media (max-width:520px){
+  .tabs-in{gap:16px}
+  .tab{font-size:15px}
+}
+@media (max-width:420px){
+  .ct-row{grid-template-columns:1fr}
+}
+@media (max-width:340px){
+  .tabs-in{gap:12px;padding:0 12px}
+  .tab{font-size:14px}
+}
+@media (pointer:coarse){
+  .pill{padding:10px 15px}
+  .vgroup .pill{padding:9px 13px}
+  .theme{min-width:44px;min-height:44px;justify-content:center}
+}
+@media (max-height:520px){
+  dialog.sheet{width:100vw;height:100dvh;max-height:none;margin:0;inset:0}
+  .sheet-head{padding-top:14px;padding-bottom:12px}
+  .sheet-head h2{margin-top:20px;font-size:clamp(44px,9vw,84px)}
+  .codes{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+
+/* ===== Ouverture animée ===== */
+html.op,html.op body{overflow:hidden}
+html.op #warp,html.cl #warp{position:relative;z-index:25}
+html.op #warp{height:100vh;height:100dvh}
+html.op #warp .thread{height:100vh;height:100dvh;pointer-events:none}
+html.op #warp .thread span{font-size:min(4.2vw,calc(100dvh / 7));font-weight:800;bottom:22px}
+html.cl #warp .thread{height:var(--h);transition:height .9s cubic-bezier(.65,0,.2,1),flex-grow .45s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--i) * 55ms)}
+html.cl #warp .thread span{transition:font-size .9s cubic-bezier(.65,0,.2,1),font-weight .9s,bottom .9s cubic-bezier(.65,0,.2,1);transition-delay:calc(var(--i) * 55ms)}
+html.op .intro,html.op .tabs,html.op main,html.op .foot{opacity:0;transform:translateY(18px)}
+html.cl .intro,html.cl .tabs,html.cl main,html.cl .foot{opacity:1;transform:none;transition:opacity .7s ease 1.1s,transform .7s cubic-bezier(.2,.7,.2,1) 1.1s}
+html.done #warp .thread{animation:none}
+html.skip *,html.skip *::before,html.skip *::after{transition:none !important}
+
+/* ===== Impression (A4) ===== */
+@page{size:A4;margin:13mm}
+@media print{
+  :root:root:root{--bg:#fff;--surface:#f3f3f1;--ink:#111;--ink-2:#444;--rule:#bdbdbb;--ring:rgba(0,0,0,.18);--pad:0px;--max:none;color-scheme:light}
+  *,*::before,*::after{-webkit-print-color-adjust:exact;print-color-adjust:exact;animation:none !important;transition:none !important}
+  html,body{background:#fff;overflow:visible !important}
+  body{font-size:10.5pt;line-height:1.45}
+  body::before,.tabs,.tools,.theme,.clear,.close,.print,.sheet-nav,.cc,.codes-note,.foot p{display:none !important}
+  html.op .intro,html.op .tabs,html.op main,html.op .foot{opacity:1;transform:none}
+  a{text-decoration:none}
+  .group h2,.sheet h3,.prose h3,h1{break-after:avoid}
+  .blk,.retenir,.cult,details.cult,.ref,.vitem,.pair,.tile,.srcs,.srcs li,.ct,tr{break-inside:avoid}
+  .lvl{break-after:avoid}
+  details.cult summary::after{display:none}
+
+  /* Page courante : bande en tête, puis la vue active */
+  .warp{--h:34mm;height:var(--h) !important}
+  .warp .thread{height:var(--h) !important;animation:none !important;box-shadow:inset 0 0 0 .2mm rgba(0,0,0,.18)}
+  .warp .thread span{font-size:7pt !important;font-weight:800 !important;bottom:2mm !important}
+  .intro{display:block;padding:6mm 0 4mm}
+  h1{font-size:30pt}
+  .lede{font-size:10.5pt;max-width:none}
+  .tiles{grid-template-columns:repeat(5,minmax(0,1fr));gap:5mm 4mm}
+  .tile .sw{aspect-ratio:3/2}
+  .tile .sw-label{display:none}
+  .scroller{overflow:visible}
+  table{min-width:0;font-size:7.5pt}
+  th,td{padding:2mm 1.6mm}
+  .vals{display:block;padding:0}
+  .vpick{display:none}
+  .prose{display:block;padding:0}
+
+  /* Fiche ouverte : seule la fiche s'imprime */
+  html:has(dialog[open]) body > :not(dialog){display:none !important}
+  html:has(dialog[open]){overflow:visible}
+  dialog.sheet{position:static !important;display:block;width:auto !important;max-width:none;height:auto !important;max-height:none !important;margin:0 !important;overflow:visible !important;border:0;background:#fff;color:#111;inset:auto}
+  dialog.sheet::backdrop{display:none}
+  .sheet-in{animation:none}
+  .sheet-head{padding:5mm 6mm 5mm}
+  .sheet-head h2{margin-top:14mm;font-size:54pt}
+  .fam{padding-right:0}
+  .codes{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .code{padding:3mm 5mm}
+  .contrast,.refs,.srcs{padding-left:6mm;padding-right:6mm}
+  .retenir{margin-left:6mm;margin-right:6mm}
+  .sheet-body{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:2mm 9mm;padding:5mm 6mm 0}
+  .refs-g{gap:4mm}
+  .ref a.ri{aspect-ratio:3/2}
+  .ref figcaption{font-size:8pt}
+}
+
+/* ===== Mouvement réduit ===== */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+}
+</style>
+<script>
+(function(){
+  var d=document.documentElement;
+  try{var th=localStorage.getItem("theme");if(th==="light"||th==="dark")d.setAttribute("data-theme",th);}catch(e){}
+  var seen=false;try{seen=sessionStorage.getItem("introSeen")==="1";}catch(e){}
+  var rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(rm||seen||location.hash.length>1){d.className+=" done";return;}
+  d.className+=" op";d.setAttribute("data-intro","1");
+  setTimeout(function(){if(/(op|cl)/.test(d.className)){d.classList.remove("op","cl");d.classList.add("done");}},6000);
+})();
+</script>
+</head>
+<body>
+
+<header>
+  <nav class="warp" id="warp" aria-label="Les 20 teintes"></nav>
+  <div class="intro">
+    <h1>Ce que disent les couleurs</h1>
+    <p class="lede">Vingt teintes lues à travers cinq aires culturelles&nbsp;: ce qu’elles signifient, les valeurs qu’elles véhiculent et les malentendus qu’elles peuvent créer. Touchez un fil pour ouvrir sa fiche.</p>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs" aria-label="Vues">
+  <div class="tabs-in">
+    <a class="tab" href="#teintes">Les teintes</a>
+    <a class="tab" href="#valeurs">Par valeur</a>
+    <a class="tab" href="#comparer" aria-label="Comparer les cultures">Comparer<span class="long"> les cultures</span></a>
+    <a class="tab" href="#reperes">Repères</a>
+    <button type="button" class="theme" id="theme" aria-label="Passer en mode clair">
+      <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+      <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z"/></svg>
+      <span class="tl">Mode clair</span>
+    </button>
+  </div>
+</nav>
+
+<main>
+  <div class="tools" id="tools">
+    <div class="search">
+      <label class="sr" for="q">Chercher un sens</label>
+      <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Chercher un sens&nbsp;: deuil, mariage, chance…">
+      <button type="button" class="clear" id="clear" aria-label="Effacer la recherche" hidden>×</button>
+    </div>
+    <div class="row"><span class="rl">Quelques sens</span><div class="pills" id="chips"></div></div>
+    <div class="row"><span class="rl">Lire depuis</span><div class="pills scroll" id="cults"></div></div>
+    <p class="status" id="status" aria-live="polite"></p>
+  </div>
+
+  <div class="view" id="v-teintes"><div id="groups"></div></div>
+
+  <div class="view" id="v-valeurs" hidden>
+    <div class="vals">
+      <nav class="vpick" id="vpick" aria-label="Valeurs"></nav>
+      <section class="vpanel" id="vpanel"></section>
+    </div>
+  </div>
+
+  <div class="view" id="v-comparer" hidden>
+    <div class="view-intro"><p>Chaque ligne est une teinte, chaque colonne une aire culturelle. Choisissez une aire pour la mettre en évidence, touchez une teinte pour ouvrir sa fiche.</p></div>
+    <div class="matrix-wrap"><div class="scroller" id="matrix"></div></div>
+  </div>
+
+  <div class="view" id="v-reperes" hidden>
+    <div class="prose">
+      <div>
+        <h2>Comment lire cet atlas</h2>
+        <p>Nous voyons les couleurs à peu près de la même façon partout&nbsp;; ce que nous y lisons, en revanche, s’apprend. Le blanc des mariées européennes est celui du deuil en Chine et en Inde, le rouge qui alerte en Occident porte chance à Pékin. Cet atlas rassemble, pour vingt teintes, les lectures les plus répandues dans cinq grandes aires culturelles.</p>
+        <h3>Des teintes, pas des nuances</h3>
+        <p>Chaque fiche traite une famille de couleur&nbsp;: le bleu, pas le bleu ciel ni le bleu marine. Les codes donnés sont une valeur représentative de la teinte, pas une référence absolue.</p>
+        <h3>Cinq aires culturelles</h3>
+        <dl id="cult-list"></dl>
+        <p>Ce sont des repères, pas des règles&nbsp;: la religion, la région, la génération et l’époque pèsent autant que le pays. Aucune aire n’est homogène.</p>
+      </div>
+      <div>
+        <h3>Lire les valeurs</h3>
+        <p>Les valeurs véhiculées traduisent la symbolique en langage de communication&nbsp;: ce qu’une teinte permet d’affirmer pour une marque, une institution ou une campagne. Chaque teinte a des valeurs centrales, des valeurs d’appoint et un risque d’image. Cette lecture reflète surtout les usages du marketing international, largement façonnés par l’Occident&nbsp;: la nuance culturelle de chaque valeur indique où elle se déplace.</p>
+        <h3>Quatre niveaux de lecture</h3>
+        <p>Chaque fiche sépare ce qui ne doit pas être confondu&nbsp;:</p>
+        <ul>
+          <li><b>Propriété visuelle</b>&nbsp;: ce qui se mesure (codes, contraste).</li>
+          <li><b>Association émotionnelle</b>&nbsp;: ce que la couleur évoque souvent, variable selon les personnes et les situations. Ce n’est pas une preuve de symbolique.</li>
+          <li><b>Signification culturelle</b>&nbsp;: une convention sociale ou historique, propre à un lieu et à une époque.</li>
+          <li><b>Application graphique</b>&nbsp;: un choix de communication dans une situation précise.</li>
+        </ul>
+        <h3>Degrés de certitude</h3>
+        <p>Chaque lecture culturelle documentée porte une mention&nbsp;: <b>attesté</b> (établi par des sources historiques ou institutionnelles), <b>répandu</b> (usage courant et observable, peu étudié par la recherche) <b>discuté</b> (interprétation variable ou contestée) ou <b>non codifié</b> (pas de symbolique propre documentée : lecture contemporaine, aucune source à citer). Les numéros renvoient à la liste des sources de la fiche. Une lecture sans source académique est signalée comme telle plutôt que justifiée par une référence approximative. Ce travail est en cours, couleur par couleur.</p>
+        <h3>Teintes, achromatiques et matières</h3>
+        <p>Les fiches distinguent les quinze teintes chromatiques, les trois achromatiques (blanc, gris, noir) et deux matières, l’or et l’argent. Ces dernières figurent parce qu’elles portent des usages symboliques forts (prestige, sacré, récompense)&nbsp;; elles ne sont pas des teintes au sens strict et ne rendent leur effet qu’avec une encre métallique ou une dorure.</p>
+        <h3>Lire les codes</h3>
+        <p>HEX et RVB servent à l’écran. Le CMJN est obtenu par conversion mathématique simple, sans profil colorimétrique&nbsp;: c’est un point de départ. Pour l’impression, convertissez dans InDesign ou Illustrator avec le profil de l’imprimeur (en Europe, souvent Coated FOGRA39) et validez sur épreuve. L’or et l’argent ne rendent leur effet qu’avec une encre métallique ou une dorure.</p>
+        <h3>Quatre réflexes pour une palette internationale</h3>
+        <ul>
+          <li>Désigner une couleur par son code, jamais par son seul nom&nbsp;: kaki, indigo ou <i>purple</i> ne désignent pas la même chose selon la langue.</li>
+          <li>Tester la palette auprès du public visé, surtout pour le blanc, le noir, le rouge et le vert, les plus chargés de sens.</li>
+          <li>Regarder les combinaisons, pas seulement les teintes isolées&nbsp;: une association peut rappeler un drapeau, un parti, un club ou une religion.</li>
+          <li>Ne jamais confier une information à la seule couleur&nbsp;: environ 8&nbsp;% des hommes distinguent mal certaines teintes, notamment le rouge et le vert.</li>
+        </ul>
+        <h3>Rechercher par code</h3>
+        <p>Tapez un code HEX (par exemple <code>#2A6FDB</code>) dans la recherche&nbsp;: l’atlas affiche la fiche correspondante ou les familles les plus proches, classées par distance ΔE.</p>
+        <p><button type="button" class="pill" data-export-all>Télécharger toutes les données (JSON)</button></p>
+        <h3>Pour aller plus loin</h3>
+        <ul>
+          <li>Michel Pastoureau, ses histoires d’une couleur&nbsp;: <cite>Bleu</cite>, <cite>Noir</cite>, <cite>Vert</cite>, <cite>Rouge</cite>, <cite>Jaune</cite>, <cite>Blanc</cite> (Seuil).</li>
+          <li>Brent Berlin et Paul Kay, <cite>Basic Color Terms</cite> (1969), sur la façon dont les langues nomment les couleurs.</li>
+          <li>Kassia St Clair, <cite>Les Vies secrètes des couleurs</cite> (2016 en anglais).</li>
+          <li>Eva Heller, <cite>Psychologie de la couleur&nbsp;: effets et symboliques</cite> (Pyramyd).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="warp mini" id="warp-foot" aria-hidden="true"></div>
+  <p>Synthèse indicative&nbsp;: une aire culturelle n’est jamais homogène, et les symboliques varient selon les régions, les religions, les générations et les époques.</p>
+</footer>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sheet-title"></dialog>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------- Données ---------- */
+var CULTURES=[
+  {id:"occ",name:"Occident",sub:"Europe, Amérique du Nord"},
+  {id:"asi",name:"Asie",sub:"Chine, Japon, Inde"},
+  {id:"ara",name:"Monde arabe et Moyen-Orient",sub:"Maghreb, Machrek, Golfe, Iran, Turquie"},
+  {id:"afr",name:"Afrique",sub:"Surtout subsaharienne, et l'Égypte ancienne"},
+  {id:"lat",name:"Amérique latine",sub:"Mexique, Andes, Brésil, Caraïbes"}
+];
+var FAMS=[
+  {id:"spec",name:"Teintes chromatiques",note:"quinze familles, du rouge au rose"},
+  {id:"metal",name:"Matières : or et argent",note:"des matériaux de prestige plus que des teintes ; leur effet passe par une encre métallique ou une dorure"},
+  {id:"achro",name:"Achromatiques",note:"blanc, gris et noir, sans teinte"}
+];
+var CHIPS=[
+  {l:"deuil",t:["deuil","funérailles","funéraire","linceul","défunt"]},
+  {l:"mariage",t:["mariage","mariée","mariés","noces","épouse"]},
+  {l:"chance",t:["chance","porte-bonheur","fortune","prospérité"]},
+  {l:"pouvoir",t:["pouvoir","empereur","impérial","impériale","royauté","roi","rois","souverain","souveraineté","autorité"]},
+  {l:"protection",t:["protect","protège","mauvais œil","amulette","talisman"]},
+  {l:"sacré",t:["sacré","sacrée","divin","religieux","religieuse","paradis","islam","Prophète","déesse","dieu","hindouisme","bouddhisme","bouddhistes","liturgie","shintō"]},
+  {l:"paix",t:["paix"]}
+];
+
+var RAW=[
+{id:"rouge",n:"Rouge",hex:"#D62828",g:"spec",
+ctx:"Avec le noir et le blanc, c'est la première couleur nommée dans la plupart des langues. Ocres rouges dès la Préhistoire, puis garance, cochenille et vermillon.",
+emo:["énergie","passion","urgence","danger"],
+emoT:"Elle capte l'œil en premier : elle accélère la lecture, stimule l'appétit et signale l'action ou l'alerte. À forte dose, elle agresse.",
+c:[
+["amour, danger, interdit","Amour et passion (Saint-Valentin), mais aussi danger, erreur et interdiction. Couleur de Noël ; marqueur politique, à gauche en Europe, côté républicain aux États-Unis."],
+["chance, fête, mariage","Chine : chance et prospérité (Nouvel An, enveloppes hongbao, robe de mariée). Japon : protection et vitalité (portiques torii). Inde : couleur de la mariée et du sindoor des femmes mariées."],
+["courage, sacrifice","Une des quatre couleurs panarabes : le courage et le sang versé pour la nation. Dans les tapis et les textiles, signe de vie, de force et de chaleur."],
+["vie, deuil, bravoure","Double lecture : le sang et la vie, mais aussi le deuil. Au Ghana, rouge et noir se portent aux funérailles akan ; chez les Maasaï, le rouge des étoffes shúkà dit la bravoure."],
+["ferveur, fête","Ferveur religieuse (Sacré-Cœur) et énergie des fêtes. La cochenille, insecte du Mexique et du Pérou, a fourni aux Andes puis à l'Europe leurs plus beaux rouges."]],
+p:"En Chine, à Taïwan et en Corée du Sud, la Bourse affiche la hausse en rouge et la baisse en vert : un graphique où rouge = perte y sera lu à l'envers. En Chine, évitez aussi d'écrire le nom d'une personne à l'encre rouge, geste associé aux défunts."},
+
+{id:"corail",n:"Corail",hex:"#F07856",g:"spec",
+ctx:"Doit son nom au corail rouge de Méditerranée, sculpté en bijoux et en amulettes depuis l'Antiquité. Teinte à mi-chemin entre l'orange et le rose.",
+emo:["chaleur","convivialité","optimisme","douceur"],
+emoT:"L'énergie de l'orange adoucie par le rose : une couleur sociable et vivante, très présente dans la beauté, la mode et le lifestyle.",
+c:[
+["été, porte-bonheur","Été, littoral, jeunesse. En Italie du Sud, le cornicello en corail protège du mauvais œil ; l'Europe ancienne en suspendait au cou des nouveau-nés."],
+["précieux, courage","Tibet et Népal : matière précieuse des parures, souvent associée à la turquoise. Inde : en astrologie védique, le corail (moonga) est la pierre de Mars, censée donner courage et énergie."],
+["parure, protection","Maghreb : les bijoux amazighs associent corail, argent et ambre, portés comme protection et comme signe de prospérité familiale."],
+["royauté","Royaume du Bénin (actuel Nigeria) : colliers, coiffes et tuniques de perles de corail sont des attributs réservés à l'Oba et à sa cour."],
+["tropical, festif","Peu codifié comme symbole ; lu comme une teinte tropicale et festive, fréquente sur les façades colorées des villes côtières et caribéennes."]],
+p:"Peu codifié, il emprunte le sens de ses voisins : en Chine, il se lit comme un rouge festif, en Occident plutôt comme un rose « féminin ». Testez sa perception auprès du public visé."},
+
+{id:"orange",n:"Orange",hex:"#EB6A1A",g:"spec",
+ctx:"Le mot désigne d'abord le fruit, venu de l'arabe nāranj ; la couleur ne prend ce nom qu'au XVIe siècle. Avant, on la décrivait comme un jaune rougeâtre.",
+emo:["enthousiasme","chaleur","créativité","accessibilité"],
+emoT:"Il attire l'attention sans l'agressivité du rouge. Il évoque le dynamisme, la convivialité, et souvent le prix abordable ou la promotion.",
+c:[
+["automne, Halloween, Pays-Bas","Automne, Halloween, vitamines. Pays-Bas : couleur de la maison d'Orange-Nassau et de la fierté nationale. Irlande du Nord : couleur des protestants unionistes (ordre d'Orange)."],
+["renoncement, sacré","Bouddhisme theravāda (Thaïlande, Birmanie, Sri Lanka) : couleur des robes des moines, signe de renoncement. Inde : proche du safran, il partage son caractère sacré."],
+["henné, bénédiction","La teinte orangée du henné, appliqué sur les mains de la mariée lors de la nuit du henné, symbolise bénédiction, joie et protection."],
+["savane, désert","Côte d'Ivoire : l'orange du drapeau représente la savane du nord. Niger : il figure le Sahara. Couleur de la terre sèche et des récoltes."],
+["Día de Muertos","Mexique : les fleurs de cempasúchil (œillets d'Inde) du Día de Muertos ; leur couleur et leur parfum guident les âmes des défunts jusqu'aux autels."]],
+p:"En Irlande du Nord, l'orange (comme le vert) reste un marqueur politique et religieux : à éviter dans une campagne qui se veut neutre. Aux Pays-Bas, au contraire, il rassemble."},
+
+{id:"safran",n:"Safran",hex:"#F9A12E",g:"spec",
+ctx:"Nommé d'après l'épice la plus chère du monde, tirée des pistils du crocus. Il sert de teinture en Inde, en Perse et autour de la Méditerranée depuis l'Antiquité.",
+emo:["spiritualité","ferveur","rayonnement","dignité"],
+emoT:"Plus solennel que l'orange : il évoque l'élévation, le sacré et la chaleur du soleil. Une teinte de prestige plutôt que de promotion.",
+c:[
+["luxe, Orient","Peu de symbolique propre aujourd'hui ; évoque le luxe culinaire et un « Orient » rêvé. Dans la Grèce antique, Éos, l'Aurore, est dite « au voile de safran »."],
+["sacré, courage","Inde : couleur la plus sacrée de l'hindouisme (sadhus, renonçants) et bande supérieure du drapeau, pour le courage et le sacrifice. C'est aussi la couleur emblématique des sikhs."],
+["prestige, hospitalité","Iran : le safran, cultivé depuis l'Antiquité, colore le riz et les desserts des fêtes et des mariages ; teinte d'hospitalité et de prestige."],
+["peu codifié","Peu de symbolique propre : lu comme un jaune orangé solaire, associé à la terre et aux épices du commerce."],
+["peu codifié","Peu de symbolique propre ; il rejoint les ors de l'art baroque religieux et les fleurs orangées du Día de Muertos."]],
+p:"En Inde, le safran est aussi un marqueur politique (nationalisme hindou) : à manier avec prudence dans une communication institutionnelle ou interreligieuse."},
+
+{id:"jaune",n:"Jaune",hex:"#F6D02F",g:"spec",
+ctx:"La teinte que l'œil perçoit comme la plus lumineuse. Ocres jaunes dès la Préhistoire, orpiment dans l'Antiquité, jaunes de synthèse au XIXe siècle.",
+emo:["joie","optimisme","vigilance","nervosité"],
+emoT:"Visible de loin, il est idéal pour signaler (taxis, panneaux). Il réjouit et dynamise, mais en grande surface il fatigue l'œil et peut créer de l'anxiété.",
+c:[
+["soleil, trahison, alerte","Soleil, joie, été, mais un lourd héritage : trahison (Judas souvent peint en jaune), mensonge, infamie, jusqu'à l'étoile jaune imposée aux Juifs sous le nazisme."],
+["empereur, bénédiction","Chine : couleur impériale, réservée à l'empereur sous les Ming et les Qing ; elle symbolise le centre et la terre. Inde : jaune du curcuma, bénédiction des futurs mariés (rituel haldi)."],
+["soleil, peur","Soleil, désert, prospérité dans l'artisanat. Mais en arabe, un visage « devenu jaune » exprime la peur ou la maladie."],
+["richesse, royauté","Ghana : dans le kente, le jaune dit la richesse, la royauté et le statut. Yoruba : couleur d'Oshun, orisha de l'amour, des rivières et de la fécondité."],
+["richesse, chance","Brésil : pour la lecture populaire, le jaune du drapeau évoque l'or et la richesse. Dans plusieurs pays, porter du jaune le soir du Nouvel An attire chance et argent."]],
+p:"En chinois, 黄色 (huángsè, « jaune ») désigne aussi les contenus pornographiques : un « film jaune » est un film érotique. À vérifier avant de nommer un produit ou une campagne."},
+
+{id:"ocre",n:"Ocre",hex:"#B9822F",g:"spec",
+ctx:"Terre colorée par les oxydes de fer, c'est le plus ancien pigment connu : utilisé il y a 100 000 ans dans la grotte de Blombos (Afrique du Sud), puis à Lascaux.",
+emo:["authenticité","chaleur","enracinement","nostalgie"],
+emoT:"Rassurant et naturel, il évoque l'artisanat, le fait-main et le patrimoine. Il peut aussi paraître terne ou daté.",
+c:[
+["Provence, patrimoine, naturel","Provence (ocres de Roussillon), façades méditerranéennes, patrimoine. En design, il porte aujourd'hui les valeurs « naturel » et « durable »."],
+["terre, foyer","Inde : enduits de terre et peintures murales des villages, renouvelés pour les fêtes. Chine : couleur de la terre jaune du plateau de lœss, berceau de la civilisation chinoise."],
+["architecture de terre","Architecture de terre crue (ksour du Sud marocain, tours de Shibam au Yémen) : stabilité, ancrage, couleur de l'habitat et du paysage."],
+["vie, beauté, rite","Namibie : les femmes himba s'enduisent d'otjize, pâte d'ocre et de beurre qui protège la peau et symbolise la terre et le sang, donc la vie."],
+["pigment ancestral","Pigment majeur des fresques précolombiennes et des enduits coloniaux ; couleur de la terre et de l'artisanat andin et mexicain."]],
+p:"Chez les Himba comme chez de nombreux peuples autochtones, l'ocre est rituel : évitez de l'employer comme simple décor « tribal » ou « ethnique » dans une campagne."},
+
+{id:"marron",n:"Marron",hex:"#7B4A2D",g:"spec",
+ctx:"Couleur de la terre, du bois et du cuir. Longtemps celle des habits modestes et des ordres religieux mendiants, comme les franciscains.",
+emo:["stabilité","confort","fiabilité","simplicité"],
+emoT:"Il rassure et ancre ; il évoque le naturel, le café, le chocolat, le bio. Mal dosé, il paraît terne ou vieillot.",
+c:[
+["humilité, terroir, bio","Humilité (bure des moines), terroir, automne ; aujourd'hui naturel, artisanal et bio. En Allemagne, le brun renvoie aussi au nazisme (chemises brunes)."],
+["élégance discrète","Japon : à l'époque d'Edo, les lois limitant les couleurs vives font naître les « 48 bruns et 100 gris », devenus le comble du raffinement."],
+["dignité, désert","Couleur de la terre, du désert et du bisht, manteau d'apparat masculin porté dans le Golfe lors des grandes occasions : dignité, sobriété."],
+["protection, rite de passage","Mali : le bogolan, teint à la boue et aux plantes, porte des motifs protecteurs ; chasseurs et femmes le portaient lors des rites de passage."],
+["terre, identité métisse","Andes : couleur de la Pachamama, la Terre-Mère. Mexique : la Vierge de Guadalupe, « la Morenita » au teint brun, symbole d'identité métisse."]],
+p:"En Allemagne, braun reste associé à l'extrême droite dans le vocabulaire politique : à éviter en communication politique ou militante."},
+
+{id:"kaki",n:"Kaki",hex:"#7A7444",g:"spec",
+ctx:"Du persan khâk, « poussière ». L'armée britannique en Inde l'adopte au XIXe siècle pour se fondre dans le paysage.",
+emo:["robustesse","discipline","pragmatisme","aventure"],
+emoT:"Fonctionnel et neutre, il évoque le terrain, l'utilitaire, le plein air. Il peut aussi paraître austère ou autoritaire.",
+c:[
+["armée, utilitaire","Uniforme, discipline, sérieux ; récupéré par la mode utilitaire (workwear, safari) et par les marques de plein air."],
+["uniforme, autorité","Inde : berceau du mot, c'est encore la couleur de l'uniforme de la police. Chine : vert olive de l'Armée populaire de libération."],
+["olivier, paix, armée","Vert olive : l'olivier, symbole de paix, d'abondance et d'attachement à la terre au Levant ; mais aussi la tenue militaire, marqueur d'autorité."],
+["armée, État","Associé aux uniformes, donc à l'armée et à l'autorité de l'État ; ailleurs, simple couleur de travail et de terrain."],
+["révolution","Cuba : le treillis vert olive de Fidel Castro et de Che Guevara en a fait un marqueur révolutionnaire (« verde olivo »)."]],
+p:"Faux ami : en anglais, khaki désigne un beige sable ; en français, le kaki est un vert brun. Précisez toujours le code HEX dans un brief international."},
+
+{id:"vert",n:"Vert",hex:"#2E8B4A",g:"spec",
+ctx:"Difficile à fixer en teinture, il fut en Europe la couleur du hasard et du changement avant de devenir celle de la nature à l'époque romantique.",
+emo:["équilibre","calme","croissance","sécurité"],
+emoT:"Il repose l'œil, rassure et signale ce qui est permis ou sain (feu vert, pharmacie). Il évoque aussi l'argent et l'écologie.",
+c:[
+["nature, écologie, argent","Nature, écologie, santé, autorisation ; l'Irlande et la Saint-Patrick ; l'argent aux États-Unis (dollar). Mais aussi la jalousie, le poison et les monstres."],
+["harmonie, fertilité","Chine : croissance et harmonie, mais « porter un chapeau vert » signifie être trompé. Japon : renouveau et fraîcheur. Inde : fertilité et prospérité de la terre (drapeau)."],
+["islam, paradis","Couleur de l'islam : jardins du Paradis, couleur attribuée au Prophète. Omniprésente dans les drapeaux (Arabie saoudite, Algérie, Pakistan…)."],
+["terre, espoir","Une des couleurs panafricaines héritées du drapeau éthiopien : la terre fertile, l'agriculture, l'espoir."],
+["précieux, vie","Mayas et Aztèques : le vert du jade et des plumes de quetzal valait plus que l'or, symbole de vie et de maïs. Mexique : vert du drapeau, l'espérance."]],
+p:"Dans les pays musulmans, évitez le vert sacré sur des supports triviaux (emballages jetables, chaussures, sous-vêtements). En Chine, n'offrez jamais de chapeau vert."},
+
+{id:"turquoise",n:"Turquoise",hex:"#2BB3AE",g:"spec",
+ctx:"« Pierre turque » : extraite en Iran et au Sinaï, la turquoise arrivait en Europe par la Turquie. Teinte charnière entre le bleu et le vert.",
+emo:["fraîcheur","clarté","sérénité","communication"],
+emoT:"Plus vivant que le bleu, plus calme que le vert : il évoque l'eau claire, le soin, la santé et une modernité légère.",
+c:[
+["mer, bien-être, tech","Mers tropicales, vacances, bien-être ; teinte appréciée des marques de santé et de tech pour son côté frais et fiable."],
+["protection, céramique","Tibet et Népal : avec le corail, la pierre protectrice par excellence. Chine : couleur des glaçures céramiques, signe de prestige."],
+["ciel, paradis, mauvais œil","Iran et Asie centrale : coupoles et faïences turquoise des mosquées (Ispahan, Samarcande) figurent le ciel et le paradis ; amulettes contre le mauvais œil."],
+["joie, renaissance","Égypte ancienne : la turquoise du Sinaï était consacrée à Hathor, « dame de la turquoise », déesse de la joie et de la renaissance."],
+["feu, pouvoir","Aztèques : la turquoise (xihuitl) est liée au feu, au temps et à la souveraineté ; elle recouvre masques et mosaïques rituels."]],
+p:"Plusieurs langues ne séparent pas bleu et vert (le japonais ao, le vietnamien xanh) : un turquoise peut y être appelé « bleu » comme « vert ». Désignez la couleur par son code, pas par son nom."},
+
+{id:"bleu",n:"Bleu",hex:"#1F5FBF",g:"spec",
+ctx:"Peu valorisé dans l'Antiquité gréco-romaine, il devient au XIIe siècle la couleur de la Vierge et des rois de France, puis la couleur préférée des Européens.",
+emo:["confiance","calme","sérieux","loyauté"],
+emoT:"Couleur préférée dans la plupart des enquêtes : il apaise et inspire la fiabilité, d'où sa domination dans la banque, l'assurance et la tech.",
+c:[
+["confiance, institution, paix","Confiance, institutions, paix (ONU, Union européenne), royauté (bleu de France), Vierge Marie ; code « garçon » depuis le milieu du XXe siècle. En anglais, blue dit aussi la tristesse."],
+["divin, raffinement","Inde : peau bleue de Krishna et de Shiva, couleur du divin et de l'infini. Chine : porcelaine « bleu et blanc », raffinement. Japon : fraîcheur et quotidien."],
+["protection, sacré","Talisman contre le mauvais œil (nazar turc, khamsa bleue) ; bleu du ciel et du sacré dans les céramiques des mosquées."],
+["eau, maternité","Yoruba : couleur de Yemoja, orisha des eaux et de la maternité. En Afrique de l'Ouest, les étoffes d'un bleu profond sont un signe de prestige."],
+["pluie, ciel","Mayas : le « bleu maya » (indigo et argile) recouvrait les offrandes au dieu de la pluie Chaac. Aujourd'hui, couleur du ciel et du manteau de la Vierge."]],
+p:"Couleur sûre, donc banale : dans la banque ou la tech, il ne différencie plus. Et le code « bleu = garçon », récent et occidental, n'a rien d'universel."},
+
+{id:"indigo",n:"Indigo",hex:"#253370",g:"spec",
+ctx:"Teinture tirée de l'indigotier, dont le nom rappelle l'Inde. Son commerce mondial est lié à la colonisation et à l'esclavage dans les plantations des Amériques.",
+emo:["profondeur","introspection","intuition","autorité calme"],
+emoT:"Plus mystérieux que le bleu : il évoque la nuit, le savoir, la concentration. Familier aussi, grâce au denim.",
+c:[
+["denim, liberté","Le jean (toile de Nîmes, bleu de Gênes) : du vêtement de travail au symbole de jeunesse et de liberté. Newton l'a placé parmi les sept couleurs de l'arc-en-ciel."],
+["résistance, artisanat","Inde : berceau de la teinture et symbole anticolonial (révolte de l'indigo en 1859, Gandhi à Champaran en 1917). Japon : l'aizome, si répandu qu'on le surnomma « bleu du Japon »."],
+["caravanes, Touaregs","En arabe an-nīl, d'où l'espagnol añil et le mot « aniline » : l'indigo voyageait par les caravanes. Sahara : le chèche indigo des Touaregs, les « hommes bleus », signe de prestige."],
+["savoir-faire, richesse","Yoruba (Nigeria) : l'adire, tissu indigo à motifs en réserve, savoir-faire transmis par les femmes. En Afrique de l'Ouest, plus le bleu est profond, plus l'étoffe est précieuse."],
+["richesse coloniale","Guatemala et Salvador : l'añil fut la grande richesse de l'époque coloniale ; il colore encore les textiles mayas."]],
+p:"L'« indigo » du web (#4B0082) est un violet ; l'indigo de teinture est un bleu nuit. Et son histoire coloniale invite à éviter un récit naïvement « exotique »."},
+
+{id:"violet",n:"Violet",hex:"#7A3FA0",g:"spec",
+ctx:"Longtemps rare et coûteux, il se démocratise avec la mauvéine, premier colorant de synthèse, découverte par William Perkin en 1856.",
+emo:["mystère","créativité","spiritualité","ambiguïté"],
+emoT:"Entre le calme du bleu et l'ardeur du rouge : il évoque l'imaginaire, l'introspection, le luxe ou l'étrange selon sa saturation.",
+c:[
+["pénitence, féminisme, imaginaire","Pénitence et attente (Avent, Carême), évêques ; demi-deuil au XIXe siècle ; couleur du féminisme depuis les suffragettes ; créativité et imaginaire."],
+["noblesse, sagesse","Japon : le murasaki, couleur du plus haut rang à la cour ancienne. Chine : zǐ, couleur de l'étoile polaire et du pouvoir céleste ; la Cité interdite est la « cité pourpre interdite »."],
+["raffinement","Peu codifié par la tradition ; aujourd'hui associé au raffinement dans la mode, la parfumerie et la cosmétique."],
+["liturgie, élégance","Peu de symbolique traditionnelle (pigment rare) ; présent via la liturgie chrétienne et perçu aujourd'hui comme élégant et festif."],
+["pénitence, deuil","Pérou : octobre est le « mois violet » du Señor de los Milagros, dont les fidèles portent l'habit violet. Couleur des pénitents de la Semaine sainte, il peut aussi évoquer le deuil."]],
+p:"En Italie, le violet passe pour porter malheur dans le spectacle, héritage des théâtres fermés pendant le Carême. En Amérique latine, il rappelle pénitence et deuil : prudence pour un événement festif."},
+
+{id:"pourpre",n:"Pourpre",hex:"#7E1F55",g:"spec",
+ctx:"La pourpre de Tyr, extraite de milliers de coquillages murex, valait plus que l'or : elle était réservée aux empereurs romains et byzantins, « nés dans la pourpre ».",
+emo:["pouvoir","prestige","sensualité","gravité"],
+emoT:"Plus chaud et plus dense que le violet : il impose plus qu'il n'apaise. Couleur de l'autorité, du luxe et d'une certaine sensualité.",
+c:[
+["pouvoir, Église","Pouvoir impérial et ecclésiastique : être élevé à la pourpre, c'est devenir cardinal. Aujourd'hui : luxe, vin, sensualité."],
+["fête, noblesse","Inde : les rouges violacés (magenta, rani pink) sont des couleurs de fête, des saris de mariage et de Holi. Chine et Japon : pourpre et violet partagent un même mot, signe de noblesse."],
+["héritage phénicien","Liban : la pourpre de Tyr est un patrimoine phénicien ; le nom même de « Phénicie » viendrait du grec phoinix, la pourpre."],
+["liturgie","Peu de symbolique traditionnelle propre ; dans les Églises du continent, couleur de l'autorité épiscopale et des temps de pénitence."],
+["élite inca","Selon le mordant, la cochenille donne des rouges profonds jusqu'aux pourpres : ces teintes ornaient les textiles de l'élite inca."]],
+p:"La frontière varie selon les langues : l'anglais purple couvre à la fois le violet et le pourpre. Fixez la référence par un code, pas par un mot."},
+
+{id:"rose",n:"Rose",hex:"#E87EA1",g:"spec",
+ctx:"Nommé d'après la fleur, le rose ne devient « féminin » en Occident que vers les années 1940-1950 ; auparavant, il était parfois conseillé pour les garçons.",
+emo:["douceur","tendresse","romantisme","audace"],
+emoT:"Pâle, il rassure et apaise ; vif (fuchsia), il devient ludique, audacieux et pop.",
+c:[
+["féminité, tendresse, engagement","Féminité, enfance, romance ; lutte contre le cancer du sein (Octobre rose) ; triangle rose réapproprié par les communautés LGBT."],
+["éphémère, hospitalité","Japon : rose des cerisiers (sakura), beauté éphémère de la vie. Inde : Jaipur, peinte en rose en 1876 en signe d'hospitalité, devenue la « ville rose »."],
+["raffinement, spiritualité","Rose de Damas et eau de rose : raffinement, hospitalité et spiritualité ; l'eau de rose sert même à laver la Kaaba, à La Mecque."],
+["joie","Peu de symbolique traditionnelle propre ; dans les tissus wax, le rose vif se lit comme joyeux et festif."],
+["identité, fête","Mexique : le rosa mexicano, revendiqué comme couleur identitaire (fêtes, artisanat, architecture de Luis Barragán)."]],
+p:"Au Japon, « pinku » connote aussi l'érotisme (le cinéma pinku eiga). Et le code « rose = fille », récent, est souvent perçu comme stéréotypé."},
+
+{id:"or",n:"Or",hex:"#D4AF37",g:"metal",
+ctx:"Métal inaltérable, associé au soleil et au divin depuis l'Égypte ancienne ; les fonds d'or des icônes représentent la lumière céleste.",
+emo:["prestige","réussite","célébration","chaleur"],
+emoT:"Signal immédiat de qualité et de valeur. Bien dosé, il élève ; en excès, il devient ostentatoire.",
+c:[
+["victoire, luxe, sacré","Richesse, victoire (médaille d'or), noces d'or après 50 ans de mariage, sacré (auréoles, retables), luxe."],
+["prospérité, beauté réparée","Chine : prospérité (lingots du Nouvel An). Inde : l'or de la mariée, lié à Lakshmi, déesse de la fortune. Japon : le kintsugi répare à l'or et sublime les fêlures."],
+["sacré, alliance","Enluminures coraniques, coupole du Dôme du Rocher ; les bijoux en or offerts au mariage sont un gage de sécurité pour l'épouse."],
+["royauté, âme d'un peuple","Ashanti (Ghana) : le Tabouret d'or incarne l'âme de la nation ; l'or est l'attribut des rois et des chefs."],
+["soleil, conquête","Incas : l'or est « la sueur du soleil ». Mythe de l'El Dorado, né d'un rituel muisca au lac Guatavita ; or des retables baroques."]],
+p:"La tradition islamique déconseille le port de l'or aux hommes : évitez de le mettre en avant pour un public masculin musulman. Ailleurs, un or trop clinquant décrédibilise un message écologique ou solidaire."},
+
+{id:"argent",n:"Argent",hex:"#B8BCC2",g:"metal",
+ctx:"Associé à la Lune comme l'or au Soleil ; métal monétaire par excellence, au point que le mot désigne la monnaie en français.",
+emo:["modernité","précision","élégance","froideur"],
+emoT:"Plus discret que l'or : il évoque la technologie, l'automobile, la pureté et une élégance sobre.",
+c:[
+["technologie, deuxième place, lune","Deuxième place, noces d'argent après 25 ans, technologie et futur ; pureté et lune (Artémis, Diane)."],
+["protection, pureté","Chine : le cadenas d'argent offert aux nouveau-nés promet protection et longue vie. Inde : on porte l'argent aux pieds (chevillères), l'or étant réservé au haut du corps par respect pour Lakshmi."],
+["protection, dot","Bijoux bédouins et amazighs en argent : protection, dot portée sur soi. En islam, l'argent est permis aux hommes, contrairement à l'or."],
+["protection, transmission","Touaregs (Niger) : la croix d'Agadez en argent, bijou protecteur transmis d'une génération à l'autre ; l'argent y est préféré à l'or."],
+["richesse, pillage","Potosí (Bolivie) et Mexique : l'argent colonial a enrichi l'Europe, symbole de richesse et de pillage. Incas : « les larmes de la lune ». L'Argentine lui doit son nom."]],
+p:"Sans effet métallique, l'argent n'est qu'un gris : prévoyez un dégradé à l'écran et, en impression, une encre métallique ou une dorure à chaud."},
+
+{id:"blanc",n:"Blanc",hex:"#FFFFFF",g:"achro",
+ctx:"Lumière, vide, page vierge. Un blanc parfaitement pur fut longtemps difficile et coûteux à obtenir en teinture, d'où son prestige.",
+emo:["pureté","clarté","simplicité","vide"],
+emoT:"Il aère, clarifie et rassure (hygiène, santé). En excès, il paraît froid, clinique ou impersonnel.",
+c:[
+["pureté, mariage, paix","Pureté, innocence, mariage (robe blanche popularisée par la reine Victoria en 1840), paix (drapeau blanc), médecine."],
+["deuil, pureté","Chine, Inde, Corée : couleur traditionnelle du deuil (tenues de funérailles, veuves en blanc en Inde). Japon : pureté shintō et kimono blanc de la mariée (shiromuku)."],
+["égalité, pureté","Vêtement blanc du pèlerinage à La Mecque (ihram), égalité de tous devant Dieu ; linceul blanc ; thobe blanc des hommes du Golfe."],
+["ancêtres, guérison","Argile blanche (kaolin) des rites d'initiation et de guérison, lien avec les ancêtres. Yoruba : Obatala, orisha de la pureté et de la sagesse."],
+["paix, renouveau","Premières communions et mariages ; à Rio, on s'habille en blanc le soir du Nouvel An, pour la paix et les offrandes à Iemanjá."]],
+p:"En Asie de l'Est, des fleurs ou un emballage tout blancs peuvent évoquer des funérailles ; en Chine, l'enveloppe blanche est réservée aux dons de deuil."},
+
+{id:"gris",n:"Gris",hex:"#8A8D91",g:"achro",
+ctx:"Couleur de la cendre et de la bure, longtemps associée à la pauvreté et à l'humilité ; il devient au XXe siècle la teinte du costume, de la ville et de l'industrie.",
+emo:["neutralité","sobriété","maturité","ennui"],
+emoT:"Il met en valeur les autres couleurs et inspire le sérieux. Seul, il peut sembler triste, indécis ou austère.",
+c:[
+["sérieux, âge, grisaille","Professionnalisme (costume gris), âge et sagesse, mais aussi tristesse, monotonie (la grisaille) et zone grise morale."],
+["raffinement, détachement","Japon : les « cent gris » (nezumi-iro) de l'époque d'Edo, raffinement discret. Chine et Corée : robes grises des moines bouddhistes, détachement."],
+["neutre, modernité","Peu codifié par la tradition ; aujourd'hui lu comme moderne et neutre, à l'image du béton et de l'acier de l'architecture contemporaine."],
+["peu codifié","Peu codifié : pas de symbolique propre documentée à l'échelle du continent ; le gris relève surtout d'usages contemporains (vêtement, architecture)."],
+["neutre, naturel","Peu codifié ; dans les Andes, couleur naturelle de la laine d'alpaga, valorisée telle quelle dans le textile."]],
+p:"Neutre partout, mais jamais héroïque : trop de gris évoque l'austérité, la pauvreté ou la tristesse. Vérifiez aussi le contraste d'un texte gris sur fond blanc (accessibilité)."},
+
+{id:"noir",n:"Noir",hex:"#000000",g:"achro",
+ctx:"Charbon et suie dès la Préhistoire. En Europe, couleur de la morale protestante, puis de l'élégance au XXe siècle avec la « petite robe noire » de 1926.",
+emo:["autorité","élégance","mystère","deuil"],
+emoT:"Puissant et intemporel : il structure, impose et habille. Selon le contexte, il paraît luxueux, sobre, lourd ou menaçant.",
+c:[
+["deuil, élégance, rébellion","Deuil, mort, mal ; mais aussi élégance, luxe, tenue de soirée, et rébellion (punk, anarchisme)."],
+["intégrité, protection","Chine : l'eau et le nord dans les cinq éléments ; à l'opéra de Pékin, le masque noir signifie l'intégrité. Inde : le kajal noir protège les bébés du mauvais œil."],
+["sacré, dignité, deuil","Kiswa noire de la Kaaba, abaya : dignité, sacré, pudeur ; une des couleurs panarabes ; couleur du deuil chiite lors de l'Achoura."],
+["maturité, ancêtres","Maturité, sagesse, lien aux ancêtres. Ghana : le noir et le rouge des funérailles ; dans le drapeau panafricain, le noir représente les peuples africains."],
+["deuil, contraste","Deuil catholique (le luto), longtemps porté par les veuves ; mais au Mexique, la mort se célèbre plutôt en couleurs vives."]],
+p:"Signe de luxe en Occident, le noir reste d'abord la couleur du deuil dans de nombreuses cultures : à éviter pour un cadeau, un faire-part ou un événement festif en Chine."}
+];
+
+/* ---------- Valeurs véhiculées ---------- */
+var VALUES=[
+{id:"confiance",name:"Confiance",def:"Être perçu comme fiable, honnête et compétent.",nu:"Le bleu inspire confiance sur presque tous les marchés, d'où sa banalisation dans la banque et la tech. Le marron rassure surtout en Europe, où il évoque la matière et le terroir ; ailleurs, il peut sembler simplement terne."},
+{id:"rigueur",name:"Rigueur",def:"Sérieux, précision, professionnalisme.",nu:"Le gris et le bleu foncé passent pour professionnels presque partout. Le kaki renvoie d'abord à l'uniforme : selon les pays, il évoque l'autorité militaire, voire la révolution à Cuba, plus que la rigueur."},
+{id:"engagement",name:"Engagement",def:"Défendre une cause, prendre position, agir.",nu:"Les couleurs de cause sont codées localement : rose pour le cancer du sein, violet pour les droits des femmes, rouge pour la lutte contre le sida. Rouge et orange ont aussi des sens politiques (gauche en Europe, unionistes en Irlande du Nord) : vérifiez le contexte de chaque pays."},
+{id:"audace",name:"Audace",def:"Oser, surprendre, se démarquer.",nu:"L'audace dépend de ce qui est courant : un rose vif détonne dans la finance occidentale mais reste banal dans la mode indienne, où les couleurs saturées sont la norme. Le noir rebelle en Occident demeure d'abord funèbre ailleurs."},
+{id:"authenticite",name:"Authenticité",def:"Paraître vrai, sincère, ancré dans une matière ou un savoir-faire.",nu:"Les teintes de terre (ocre, marron, indigo) parlent d'authenticité presque partout, mais elles ont souvent une valeur rituelle chez les peuples qui les produisent : évitez le décor « ethnique » vidé de son sens."},
+{id:"innovation",name:"Innovation",def:"Incarner la nouveauté, la technologie, l'avenir.",nu:"Turquoise, argent et blanc évoquent la tech dans le monde entier, portés par les grandes marques numériques. En Asie de l'Est, un blanc dominant peut toutefois paraître froid, voire funèbre : réchauffez-le d'une couleur d'accent."},
+{id:"serenite",name:"Sérénité",def:"Apaiser, rassurer, ralentir.",nu:"Bleu et vert apaisent dans la plupart des cultures. Au Moyen-Orient et en Asie centrale, le turquoise y ajoute une dimension spirituelle : c'est la couleur des coupoles et du paradis."},
+{id:"excellence",name:"Excellence",def:"Haut de gamme, savoir-faire supérieur, luxe.",nu:"Noir et or signent le luxe à l'occidentale ; en Chine, l'association de l'or et du rouge dit davantage prospérité et fête. Pourpre reste surtout lié au pouvoir dans l'Europe chrétienne."},
+{id:"bienveillance",name:"Bienveillance",def:"Prendre soin, accueillir, montrer de l'empathie.",nu:"Le rose est lu comme bienveillant en Occident, mais il y est très genré ; le vert du soin et de la santé est plus universel, avec une forte charge religieuse dans les pays musulmans."},
+{id:"dynamisme",name:"Dynamisme",def:"Énergie, mouvement, réactivité.",nu:"Rouge et orange dynamisent partout, mais le rouge tourne vite à l'alerte en Occident, alors qu'en Chine il reste festif et porte-bonheur."},
+{id:"durabilite",name:"Durabilité",def:"Écologie, respect du vivant, long terme.",nu:"Le vert est devenu le code mondial de l'écologie, au point d'éveiller le soupçon de greenwashing. Les teintes de terre (ocre, kaki, marron) sont souvent plus crédibles pour parler de matière et de durée."},
+{id:"simplicite",name:"Simplicité",def:"Aller à l'essentiel, épurer, faciliter.",nu:"Le minimalisme blanc et gris est un langage international du design. Mais en Inde ou en Amérique latine, où la couleur est très valorisée, une identité trop neutre peut sembler froide ou triste."},
+{id:"transparence",name:"Transparence",def:"Clarté, honnêteté, rien à cacher.",nu:"Le blanc dit la clarté en Occident et la pureté dans l'islam (ihram), mais il évoque le deuil en Chine, en Inde et en Corée : préférez-y un bleu clair ou un turquoise pour parler de transparence."},
+{id:"convivialite",name:"Convivialité",def:"Partage, chaleur humaine, plaisir d'être ensemble.",nu:"Les teintes chaudes (corail, orange, safran) évoquent la table et l'accueil presque partout ; au Moyen-Orient et en Inde, safran et ocre renvoient en plus aux épices et à l'hospitalité."},
+{id:"spiritualite",name:"Spiritualité",def:"Sens, élévation, rapport au sacré.",nu:"C'est la valeur la plus liée aux religions : vert (islam), safran (hindouisme, bouddhisme), violet (liturgie chrétienne), or (sacré). Une teinte sacrée posée sur un produit trivial peut choquer."},
+{id:"tradition",name:"Tradition",def:"Héritage, transmission, savoir-faire ancien.",nu:"Chaque culture a ses couleurs patrimoniales : safran en Inde, rouge et or en Chine, indigo en Afrique de l'Ouest et au Japon, ocre en Méditerranée. Pour une marque internationale, la tradition se décline donc localement."},
+{id:"creativite",name:"Créativité",def:"Imagination, originalité, liberté d'expression.",nu:"Violet, jaune et orange sont associés à la créativité en Occident. Ailleurs, elle s'exprime souvent par des associations de couleurs vives plutôt que par une teinte unique."},
+{id:"optimisme",name:"Optimisme",def:"Confiance en l'avenir, joie, élan positif.",nu:"Le jaune est solaire presque partout, mais il porte des sens négatifs ponctuels : trahison dans l'histoire européenne, connotation érotique en Chine. Le corail et l'orange sont des alternatives plus sûres."},
+{id:"pouvoir",name:"Pouvoir",def:"Autorité, statut, leadership.",nu:"Le pouvoir a ses couleurs historiques : pourpre à Rome et à Byzance, jaune impérial en Chine, or chez les Ashanti et les Incas, noir pour l'autorité moderne. Une même teinte n'impose donc pas partout la même hiérarchie."},
+{id:"accessibilite",name:"Accessibilité",def:"Être abordable, ouvert, populaire.",nu:"L'orange et le jaune disent « accessible » et « bon prix » dans la grande distribution occidentale : un atout pour une offre grand public, un risque d'image low-cost pour une offre premium."},
+{id:"liberte",name:"Liberté",def:"Évasion, aventure, indépendance.",nu:"Le kaki évoque l'aventure en Occident mais l'uniforme ailleurs ; le turquoise de l'évasion balnéaire est aussi, au Moyen-Orient et en Asie centrale, une couleur sacrée."}
+];
+var VALDATA={
+rouge:{f:["dynamisme","engagement","audace"],s:["convivialite","pouvoir"],com:"Il incarne l'engagement et l'audace d'une marque qui s'affirme ; à utiliser en accent (appel à l'action, mot clé) plutôt qu'en aplat.",r:"agressivité, alerte, promotion permanente"},
+corail:{f:["convivialite","bienveillance","optimisme"],s:["creativite"],com:"Il humanise une marque : chaleureuse, accessible, tournée vers les gens, sans la tension du rouge.",r:"légèreté, manque de sérieux"},
+orange:{f:["accessibilite","dynamisme","creativite"],s:["convivialite","optimisme"],com:"Couleur des marques qui veulent paraître ouvertes, abordables et pleines d'idées ; il rend une offre accessible.",r:"low-cost, bas de gamme, agitation"},
+safran:{f:["spiritualite","tradition"],s:["convivialite","excellence"],com:"Il transmet profondeur et héritage : une chaleur solennelle, adaptée aux marques de savoir-faire, de gastronomie ou de bien-être.",r:"connotation religieuse ou politique"},
+jaune:{f:["optimisme","creativite"],s:["dynamisme","accessibilite","innovation"],com:"Il signe l'optimisme et l'idée neuve ; associé au noir, il devient franc et lisible, très efficace en accroche et en signalétique.",r:"anxiété, bon marché, alerte"},
+ocre:{f:["authenticite","tradition"],s:["durabilite","convivialite"],com:"Il ancre une marque dans un territoire et un savoir-faire : fait-main, local, durable.",r:"passéisme, rusticité"},
+marron:{f:["authenticite","confiance"],s:["durabilite","simplicite","tradition"],com:"Il inspire une confiance tranquille et sincère : les marques de matière brute, de café, de cuir ou de bio s'en servent pour paraître vraies.",r:"vieillot, terne, manque d'ambition"},
+kaki:{f:["rigueur","liberte"],s:["durabilite","authenticite"],com:"Il porte la rigueur et l'esprit d'aventure des marques outdoor et utilitaires : solide, fonctionnel, sans fioritures.",r:"militarisme, autorité, austérité"},
+vert:{f:["durabilite","serenite","bienveillance"],s:["optimisme","spiritualite"],com:"Il incarne la durabilité, la santé et l'apaisement ; c'est la couleur réflexe des engagements environnementaux.",r:"greenwashing, déjà-vu, connotation religieuse"},
+turquoise:{f:["innovation","serenite"],s:["transparence","bienveillance","liberte"],com:"Il dit l'innovation douce : une modernité claire et accueillante, prisée en santé, en bien-être et dans les services numériques.",r:"froideur, effet start-up générique"},
+bleu:{f:["confiance","rigueur","serenite"],s:["innovation","transparence"],com:"Valeur sûre de la confiance, du sérieux et du calme ; il rassure sur la fiabilité d'une offre, notamment financière ou technique.",r:"froideur, conformisme, banalité"},
+indigo:{f:["authenticite","rigueur"],s:["liberte","spiritualite"],com:"Il exprime une expertise profonde et un savoir-faire authentique, avec la décontraction du denim.",r:"austérité, distance"},
+violet:{f:["creativite","spiritualite","engagement"],s:["excellence"],com:"Il signale la créativité et la conviction : marques culturelles, causes féministes, univers de l'imaginaire ou du soin de soi.",r:"ésotérisme, excentricité"},
+pourpre:{f:["excellence","pouvoir"],s:["audace","tradition"],com:"Il affirme l'excellence et le pouvoir avec plus de chaleur que le noir : luxe, vins, institutions de prestige.",r:"élitisme, arrogance"},
+rose:{f:["bienveillance","engagement"],s:["audace","optimisme"],com:"Il porte la bienveillance et l'engagement pour une cause ; en version vive, il devient un manifeste audacieux et décomplexé.",r:"stéréotype genré, mièvrerie"},
+or:{f:["excellence","pouvoir"],s:["spiritualite","tradition"],com:"Il dit l'excellence, la réussite et la célébration ; à doser en détail (filet, logo, dorure) pour rester élégant.",r:"ostentation, bling, inaccessibilité"},
+argent:{f:["innovation","rigueur"],s:["excellence","simplicite"],com:"Il associe une marque à la technologie et à la précision, avec une élégance plus sobre que l'or.",r:"froideur, impersonnel"},
+blanc:{f:["simplicite","transparence"],s:["serenite","innovation"],com:"Il incarne la simplicité et la transparence : espace, clarté, honnêteté de l'offre ; c'est l'allié du minimalisme.",r:"vide, clinique, impersonnel"},
+gris:{f:["rigueur","simplicite"],s:["confiance"],com:"Il exprime la rigueur et la neutralité ; il structure une identité et laisse la vedette à une couleur d'accent.",r:"ennui, tristesse, indécision"},
+noir:{f:["excellence","pouvoir"],s:["audace","rigueur","simplicite"],com:"Il affirme excellence, autorité et caractère ; sobre ou rebelle selon ce qu'on lui associe.",r:"deuil, menace, élitisme"}
+};
+
+/* ---------- Outils ---------- */
+function fix(s){
+  return s.replace(/'/g,"\u2019").replace(/« /g,"«\u00a0").replace(/ »/g,"\u00a0»").replace(/ ([:;!?])/g,"\u00a0$1");
+}
+function hexRgb(h){var n=parseInt(h.slice(1),16);return[(n>>16)&255,(n>>8)&255,n&255];}
+function toCmjn(r,g,b){
+  var R=r/255,G=g/255,B=b/255,k=1-Math.max(R,G,B);
+  if(k>=1)return[0,0,0,100];
+  return[(1-R-k)/(1-k),(1-G-k)/(1-k),(1-B-k)/(1-k),k].map(function(v){return Math.round(v*100);});
+}
+function lum(rgb){
+  var a=rgb.map(function(v){v/=255;return v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4);});
+  return 0.2126*a[0]+0.7152*a[1]+0.0722*a[2];
+}
+function onColor(rgb){
+  var L=lum(rgb),inkL=lum([30,30,30]);
+  var withWhite=1.05/(L+0.05),withInk=(L+0.05)/(inkL+0.05);
+  return withWhite>=withInk?"#FFFFFF":"#1E1E1E";
+}
+function contrast(a,b){var x=lum(a),y=lum(b);return(Math.max(x,y)+0.05)/(Math.min(x,y)+0.05);}
+function ratioTxt(r){return(Math.floor(r*10)/10).toFixed(1).replace(".",",")+"\u00a0:\u00a01";}
+function verdict(r){return r>=7?"AAA":r>=4.5?"AA":r>=3?"AA grand texte seulement":"insuffisant";}
+function toLab(rgb){
+  var v=rgb.map(function(c){c/=255;return c<=0.04045?c/12.92:Math.pow((c+0.055)/1.055,2.4);});
+  var X=(v[0]*0.4124+v[1]*0.3576+v[2]*0.1805)/0.95047,Y=v[0]*0.2126+v[1]*0.7152+v[2]*0.0722,Z=(v[0]*0.0193+v[1]*0.1192+v[2]*0.9505)/1.08883;
+  function f(t){return t>0.008856?Math.cbrt(t):7.787*t+16/116;}
+  var fx=f(X),fy=f(Y),fz=f(Z);
+  return[116*fy-16,500*(fx-fy),200*(fy-fz)];
+}
+function deltaE(a,b){var p=toLab(a),q=toLab(b);return Math.sqrt(Math.pow(p[0]-q[0],2)+Math.pow(p[1]-q[1],2)+Math.pow(p[2]-q[2],2));}
+function parseHex(v){
+  var m=/^#?([0-9a-f]{3}|[0-9a-f]{6})$/i.exec(v);if(!m)return null;
+  var h=m[1];if(h.length===3)h=h.replace(/./g,function(c){return c+c;});
+  return"#"+h.toUpperCase();
+}
+function esc(s){
+  return String(s).replace(/[&<>"]/g,function(ch){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch];});
+}
+/* normalisation sans accents, de même longueur que le texte d'origine */
+function norm(s){
+  var o="";
+  for(var i=0;i<s.length;i++){
+    var ch=s.charAt(i),c;
+    if(ch==="œ"||ch==="Œ")c="o";
+    else if(ch==="æ"||ch==="Æ")c="a";
+    else{c=ch.normalize("NFD").charAt(0).toLowerCase();if(c.length!==1)c=ch;}
+    o+=c;
+  }
+  return o;
+}
+var WORD=/[a-z0-9]/;
+function findRanges(text,terms){
+  if(!terms.length)return[];
+  var n=norm(text),r=[];
+  terms.forEach(function(t){
+    var nt=norm(t.trim());
+    if(nt.length<2)return;
+    var i=n.indexOf(nt);
+    while(i!==-1){
+      if(i===0||!WORD.test(n.charAt(i-1))){
+        var e=i+nt.length;
+        while(e<n.length&&WORD.test(n.charAt(e)))e++;
+        r.push([i,e]);
+      }
+      i=n.indexOf(nt,i+1);
+    }
+  });
+  r.sort(function(a,b){return a[0]-b[0];});
+  var m=[];
+  r.forEach(function(x){
+    if(m.length&&x[0]<=m[m.length-1][1])m[m.length-1][1]=Math.max(m[m.length-1][1],x[1]);
+    else m.push([x[0],x[1]]);
+  });
+  return m;
+}
+function hl(text,terms){
+  var rg=findRanges(text,terms);
+  if(!rg.length)return esc(text);
+  var o="",p=0;
+  rg.forEach(function(x){o+=esc(text.slice(p,x[0]))+"<mark>"+esc(text.slice(x[0],x[1]))+"</mark>";p=x[1];});
+  return o+esc(text.slice(p));
+}
+
+/* ---------- Images de référence (licences libres) ----------
+   t : légende · i : image en 960 px (Wikimedia Commons ou Pexels ; la version 500 px s’en déduit) · a : auteur · l : licence · u : page d’origine · p : cadrage facultatif */
+var IMGS={
+ rouge:[
+  {t:"Lanternes chinoises",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Chinese-lanterns-1394958.jpg/960px-Chinese-lanterns-1394958.jpg",a:"wiroj from Pixabay",l:"CC0",u:"https://commons.wikimedia.org/wiki/File:Chinese-lanterns-1394958.jpg"},
+  {t:"Cabine téléphonique rouge, Londres",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Red_telephone_box%2C_St_Paul%27s_Cathedral%2C_London%2C_England%2C_GB%2C_IMG_5182_edit.jpg/960px-Red_telephone_box%2C_St_Paul%27s_Cathedral%2C_London%2C_England%2C_GB%2C_IMG_5182_edit.jpg",a:"Christoph Braun",l:"CC0",u:"https://commons.wikimedia.org/wiki/File:Red_telephone_box,_St_Paul%27s_Cathedral,_London,_England,_GB,_IMG_5182_edit.jpg"},
+  {t:"Pigment rouge de Holi, Inde",i:"https://images.pexels.com/photos/7176395/pexels-photo-7176395.jpeg?auto=compress&cs=tinysrgb&w=960",a:"Alena Darmel",l:"Licence Pexels",u:"https://www.pexels.com/photo/shallow-focus-of-a-person-holding-a-ceramic-plate-with-white-flowers-and-holi-powder-7176395/",p:"center 78%"}
+ ],
+ corail:[
+  {t:"Corail mou, Komodo",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Soft_coral_peach_komodo.jpg/960px-Soft_coral_peach_komodo.jpg",a:"Nhobgood Nick Hobgood",l:"CC BY-SA 3.0",u:"https://commons.wikimedia.org/wiki/File:Soft_coral_peach_komodo.jpg"},
+  {t:"Corail orangé, mer Rouge",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Orange_soft_coral_with_a_mollusc_at_Paradise_Reef%2C_Red_Sea%2C_Egypt_-SCUBA_%286377742429%29.jpg/960px-Orange_soft_coral_with_a_mollusc_at_Paradise_Reef%2C_Red_Sea%2C_Egypt_-SCUBA_%286377742429%29.jpg",a:"Derek Keats from Johannesburg, South Africa",l:"CC BY 2.0",u:"https://commons.wikimedia.org/wiki/File:Orange_soft_coral_with_a_mollusc_at_Paradise_Reef,_Red_Sea,_Egypt_-SCUBA_(6377742429).jpg"},
+  {t:"Corail cupulaire orange",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Orange_cup_coral_%28Balanophyllia_elegans%29_01.jpg/960px-Orange_cup_coral_%28Balanophyllia_elegans%29_01.jpg",a:"Tewy",l:"CC BY-SA 3.0",u:"https://commons.wikimedia.org/wiki/File:Orange_cup_coral_(Balanophyllia_elegans)_01.jpg"}
+ ],
+ orange:[
+  {t:"Robes de moines, Chiang Mai",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Wat_Chedi_Luang%2C_Buddhist_monks_in_orange_robes%2C_Chiang_Mai%2C_Thailand.jpg/960px-Wat_Chedi_Luang%2C_Buddhist_monks_in_orange_robes%2C_Chiang_Mai%2C_Thailand.jpg",a:"Vyacheslav Argenberg",l:"CC BY 4.0",u:"https://commons.wikimedia.org/wiki/File:Wat_Chedi_Luang,_Buddhist_monks_in_orange_robes,_Chiang_Mai,_Thailand.jpg"},
+  {t:"Guirlandes d’œillets d’Inde, Calcutta",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Marigold_Garland_-_Kolkata_2012-10-15_0759.JPG/960px-Marigold_Garland_-_Kolkata_2012-10-15_0759.JPG",a:"Biswarup Ganguly",l:"CC BY 3.0",u:"https://commons.wikimedia.org/wiki/File:Marigold_Garland_-_Kolkata_2012-10-15_0759.JPG"},
+  {t:"Oranges Ambersweet",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Ambersweet_oranges.jpg/960px-Ambersweet_oranges.jpg",a:"USDA Agricultural Research Service",l:"Domaine public",u:"https://commons.wikimedia.org/wiki/File:Ambersweet_oranges.jpg"}
+ ],
+ safran:[
+  {t:"Pistils de safran",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Safran-Weinviertel_Niederreiter_2_Gramm_8285.jpg/960px-Safran-Weinviertel_Niederreiter_2_Gramm_8285.jpg",a:"Hubertl",l:"CC BY-SA 4.0",u:"https://commons.wikimedia.org/wiki/File:Safran-Weinviertel_Niederreiter_2_Gramm_8285.jpg"},
+  {t:"Épices au marché, Kaduna",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Tumeric_and_chili_power_spice_at_Bakin_dogo_market%2C_Kaduna_North.jpg/960px-Tumeric_and_chili_power_spice_at_Bakin_dogo_market%2C_Kaduna_North.jpg",a:"Samsule2",l:"CC BY-SA 4.0",u:"https://commons.wikimedia.org/wiki/File:Tumeric_and_chili_power_spice_at_Bakin_dogo_market,_Kaduna_North.jpg"},
+  {t:"Robe de moine bouddhiste, Shanghai",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Chinese_Buddhist_Monk_Yellow_Robe_Shanghai.jpeg/960px-Chinese_Buddhist_Monk_Yellow_Robe_Shanghai.jpeg",a:"Wern Don (user \"wloh\")",l:"CC BY 2.0",u:"https://commons.wikimedia.org/wiki/File:Chinese_Buddhist_Monk_Yellow_Robe_Shanghai.jpeg"}
+ ],
+ jaune:[
+  {t:"Taxi new-yorkais",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/New_York_Yellow_cab_Ford_Crown_Victoria_1020716.jpg/960px-New_York_Yellow_cab_Ford_Crown_Victoria_1020716.jpg",a:"Ermell",l:"CC BY-SA 4.0",u:"https://commons.wikimedia.org/wiki/File:New_York_Yellow_cab_Ford_Crown_Victoria_1020716.jpg"},
+  {t:"Champ de tournesols",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Sunflower_field_-_panoramio_%2811%29.jpg/960px-Sunflower_field_-_panoramio_%2811%29.jpg",a:"Björn S.",l:"CC BY-SA 3.0",u:"https://commons.wikimedia.org/wiki/File:Sunflower_field_-_panoramio_(11).jpg"},
+  {t:"Façade d’Izamal, Yucatán",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Yellow_memory_door_-_Izamal_Yucatan.jpg/960px-Yellow_memory_door_-_Izamal_Yucatan.jpg",a:"Hefzi-ba Chalchi López",l:"CC BY 2.0",u:"https://commons.wikimedia.org/wiki/File:Yellow_memory_door_-_Izamal_Yucatan.jpg"}
+ ],
+ ocre:[
+  {t:"Sentier des Ocres, Roussillon",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Roussillon_-_Sentier_des_Ocres_22.jpg/960px-Roussillon_-_Sentier_des_Ocres_22.jpg",a:"Auteur sur Commons",l:"CC BY-SA 3.0",u:"https://commons.wikimedia.org/wiki/File:Roussillon_-_Sentier_des_Ocres_22.jpg"},
+  {t:"Falaises d’ocre, Roussillon",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Sentier_des_Ocres%2C_Roussillon.jpg/960px-Sentier_des_Ocres%2C_Roussillon.jpg",a:"Willyman",l:"CC BY-SA 4.0",u:"https://commons.wikimedia.org/wiki/File:Sentier_des_Ocres,_Roussillon.jpg"},
+  {t:"Uluru, Australie",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Petermann_Ranges_%28AU%29%2C_Uluru-Kata_Tjuta_National_Park%2C_Uluru%2C_Kuniya_Walk_--_2019_--_3674.jpg/960px-Petermann_Ranges_%28AU%29%2C_Uluru-Kata_Tjuta_National_Park%2C_Uluru%2C_Kuniya_Walk_--_2019_--_3674.jpg",a:"Dietmar Rabich",l:"CC BY-SA 4.0",u:"https://commons.wikimedia.org/wiki/File:Petermann_Ranges_(AU),_Uluru-Kata_Tjuta_National_Park,_Uluru,_Kuniya_Walk_--_2019_--_3674.jpg"}
+ ],
+ marron:[
+  {t:"Grains de café torréfiés",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Roasted_coffee_beans.jpg/960px-Roasted_coffee_beans.jpg",a:"MarkSweep",l:"Public domain",u:"https://commons.wikimedia.org/wiki/File:Roasted_coffee_beans.jpg"},
+  {t:"Grande mosquée de Djenné, Mali",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Djenne_great_mud_mosque.jpg/960px-Djenne_great_mud_mosque.jpg",a:"Ruud Zwart",l:"CC BY-SA 3.0",u:"https://commons.wikimedia.org/wiki/File:Djenne_great_mud_mosque.jpg"},
+  {t:"Cabosse de cacao",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Theobroma_cacao_MHNT.BOT.2004.0.204.jpg/960px-Theobroma_cacao_MHNT.BOT.2004.0.204.jpg",a:"Roger Culos",l:"CC BY-SA 3.0",u:"https://commons.wikimedia.org/wiki/File:Theobroma_cacao_MHNT.BOT.2004.0.204.jpg"}
+ ],
+ kaki:[
+  {t:"Veste militaire M-1943",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/%28US%29_JACKET%2C_FIELD%2C_M-1943_%28STOCK_NO_55-J-190-55-J-192-98%29%2C_2002.1743.jpg/960px-%28US%29_JACKET%2C_FIELD%2C_M-1943_%28STOCK_NO_55-J-190-55-J-192-98%29%2C_2002.1743.jpg",a:"Anonyme",l:"CC0",u:"https://commons.wikimedia.org/wiki/File:(US)_JACKET,_FIELD,_M-1943_(STOCK_NO_55-J-190-55-J-192-98),_2002.1743.jpg"},
+  {t:"Canettes olive drab, années 1940",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/WWII-era_olive_drab_beer_cans.jpg/960px-WWII-era_olive_drab_beer_cans.jpg",a:"Porterhse",l:"CC BY-SA 3.0",u:"https://commons.wikimedia.org/wiki/File:WWII-era_olive_drab_beer_cans.jpg"},
+  {t:"Planche d’uniformes, Armée française, 1937",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Uniformes_de_l%27arm%C3%A9e_fran%C3%A7aise_1937_%E2%80%93_13A_L%C3%A9gion_%C3%A9trang%C3%A8re_Compagnies_sahariennes_Minist%C3%A8re_de_la_Guerre_L%27Uniforme_Officiel_Paris_French_army_uniforms_insignia_Governmental_info_Uncredited_No_known_copyright.jpg/960px-thumbnail.jpg",a:"Anonyme",l:"Public domain",u:"https://commons.wikimedia.org/wiki/File:Uniformes_de_l%27arm%C3%A9e_fran%C3%A7aise_1937_%E2%80%93_13A_L%C3%A9gion_%C3%A9trang%C3%A8re_Compagnies_sahariennes_Minist%C3%A8re_de_la_Guerre_L%27Uniforme_Officiel_Paris_French_army_uniforms_insignia_Governmental_info_Uncredited_No_known_copyright.jpg"}
+ ],
+ vert:[
+  {t:"Rizières en terrasses, Bali",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Rice_terraces%2C_Bali.jpg/960px-Rice_terraces%2C_Bali.jpg",a:"Vyacheslav Argenberg",l:"CC BY 4.0",u:"https://commons.wikimedia.org/wiki/File:Rice_terraces,_Bali.jpg"},
+  {t:"Plantation de thé",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Lush_Green_Tea_Plantation.jpg/960px-Lush_Green_Tea_Plantation.jpg",a:"Megala Shankar",l:"CC BY-SA 4.0",u:"https://commons.wikimedia.org/wiki/File:Lush_Green_Tea_Plantation.jpg"},
+  {t:"Céramiques de la Mosquée verte, Bursa",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Bursa_Green_Mosque_Iwan_tiles_in_2014_7374.jpg/960px-Bursa_Green_Mosque_Iwan_tiles_in_2014_7374.jpg",a:"Dosseman",l:"CC BY-SA 4.0",u:"https://commons.wikimedia.org/wiki/File:Bursa_Green_Mosque_Iwan_tiles_in_2014_7374.jpg"}
+ ],
+ turquoise:[
+  {t:"Mihrab en céramique, Ispahan",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Iran%2C_Isfahan_-_Prayer_Niche_%28Mihrab%29_-_1962.23_-_Cleveland_Museum_of_Art.tif/lossy-page1-960px-Iran%2C_Isfahan_-_Prayer_Niche_%28Mihrab%29_-_1962.23_-_Cleveland_Museum_of_Art.tif.jpg",a:"Auteur inconnu",l:"CC0",u:"https://commons.wikimedia.org/wiki/File:Iran,_Isfahan_-_Prayer_Niche_(Mihrab)_-_1962.23_-_Cleveland_Museum_of_Art.tif"},
+  {t:"Lagon de Koh Mak, Thaïlande",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Koh_Mak_%28island%29%2C_Thailand%2C_Tropical_lagoon%2C_Turquoise_colors.jpg/960px-Koh_Mak_%28island%29%2C_Thailand%2C_Tropical_lagoon%2C_Turquoise_colors.jpg",a:"Vyacheslav Argenberg",l:"CC BY 4.0",u:"https://commons.wikimedia.org/wiki/File:Koh_Mak_(island),_Thailand,_Tropical_lagoon,_Turquoise_colors.jpg"},
+  {t:"Plage de Havelock, îles Andaman",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Havelock_Island%2C_Sandy_lagoon%2C_Andaman_Islands.jpg/960px-Havelock_Island%2C_Sandy_lagoon%2C_Andaman_Islands.jpg",a:"Vyacheslav Argenberg",l:"CC BY 4.0",u:"https://commons.wikimedia.org/wiki/File:Havelock_Island,_Sandy_lagoon,_Andaman_Islands.jpg"}
+ ],
+ bleu:[
+  {t:"Ruelle de Chefchaouen, Maroc",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/2018_01_%28Blue%29_-_Chaouen.jpg/960px-2018_01_%28Blue%29_-_Chaouen.jpg",a:"Fbrandao.1963",l:"CC BY-SA 4.0",u:"https://commons.wikimedia.org/wiki/File:2018_01_(Blue)_-_Chaouen.jpg"},
+  {t:"Jardin Majorelle, Marrakech",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Le_jardin_des_majorelle_16.JPG/960px-Le_jardin_des_majorelle_16.JPG",a:"Viault",l:"CC BY-SA 4.0",u:"https://commons.wikimedia.org/wiki/File:Le_jardin_des_majorelle_16.JPG"},
+  {t:"Azulejos, Lisbonne",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Window_with_blue_wooden_shutters_on_building_fa%C3%A7ade_with_blue_azulejos%2C_Travessa_da_Portuguesa_1%2C_Lisbon%2C_Portugal_julesvernex2.jpg/960px-Window_with_blue_wooden_shutters_on_building_fa%C3%A7ade_with_blue_azulejos%2C_Travessa_da_Portuguesa_1%2C_Lisbon%2C_Portugal_julesvernex2.jpg",a:"Jules Verne Times Two",l:"CC BY-SA 4.0",u:"https://commons.wikimedia.org/wiki/File:Window_with_blue_wooden_shutters_on_building_fa%C3%A7ade_with_blue_azulejos,_Travessa_da_Portuguesa_1,_Lisbon,_Portugal_julesvernex2.jpg"}
+ ],
+ indigo:[
+  {t:"Tissu teint à l’indigo",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Kolam_Indigo_Dyed_Cloth.jpg/960px-Kolam_Indigo_Dyed_Cloth.jpg",a:"Nagata Shojiro/InterVision Institute/KASF member",l:"CC BY-SA 3.0",u:"https://commons.wikimedia.org/wiki/File:Kolam_Indigo_Dyed_Cloth.jpg"},
+  {t:"Chèche touareg",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Tuareg2.JPG/960px-Tuareg2.JPG",a:"Garrondo",l:"CC BY-SA 3.0",u:"https://commons.wikimedia.org/wiki/File:Tuareg2.JPG"},
+  {t:"Manteau Miao teint à l’indigo",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/2006_Christina_Kim_%27Traveler%27_coat_%28remade_2014%29%2C_indigo-dyed_and_glazed_Miao_cotton_05.jpg/960px-2006_Christina_Kim_%27Traveler%27_coat_%28remade_2014%29%2C_indigo-dyed_and_glazed_Miao_cotton_05.jpg",a:"RISD Museum",l:"CC0",u:"https://commons.wikimedia.org/wiki/File:2006_Christina_Kim_%27Traveler%27_coat_(remade_2014),_indigo-dyed_and_glazed_Miao_cotton_05.jpg"}
+ ],
+ violet:[
+  {t:"Champs de lavande, Provence",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Lavender_field.jpg/960px-Lavender_field.jpg",a:"Andyblind",l:"Public domain",u:"https://commons.wikimedia.org/wiki/File:Lavender_field.jpg"},
+  {t:"Jacaranda en fleurs",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Jacaranda_purple_tree_-_panoramio.jpg/960px-Jacaranda_purple_tree_-_panoramio.jpg",a:"Neil Parley",l:"CC BY 3.0",u:"https://commons.wikimedia.org/wiki/File:Jacaranda_purple_tree_-_panoramio.jpg"},
+  {t:"Iris de Virginie pourpres",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Iris_Virginica_Purple_Flower_Field_02.jpg/960px-Iris_Virginica_Purple_Flower_Field_02.jpg",a:"Amaury Laporte",l:"CC BY 2.0",u:"https://commons.wikimedia.org/wiki/File:Iris_Virginica_Purple_Flower_Field_02.jpg"}
+ ],
+ pourpre:[
+  {t:"Bougainvillée magenta",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Magenta_Bougainvillea_in_Bloom.jpg/960px-Magenta_Bougainvillea_in_Bloom.jpg",a:"Rryann0",l:"CC BY 4.0",u:"https://commons.wikimedia.org/wiki/File:Magenta_Bougainvillea_in_Bloom.jpg"},
+  {t:"Ornements liturgiques violets",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Bishop_Jubilee_Gnanabaranam_Johnson_%28No_7%29.JPG/960px-Bishop_Jubilee_Gnanabaranam_Johnson_%28No_7%29.JPG",a:"Auteur sur Commons",l:"CC BY 2.0 de",u:"https://commons.wikimedia.org/wiki/File:Bishop_Jubilee_Gnanabaranam_Johnson_(No_7).JPG"},
+  {t:"Fleur « Purple Velvet »",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Purple_Velvet_%28116645561%29.jpeg/960px-Purple_Velvet_%28116645561%29.jpeg",a:"Araceli Santana",l:"CC BY 3.0",u:"https://commons.wikimedia.org/wiki/File:Purple_Velvet_(116645561).jpeg"}
+ ],
+ rose:[
+  {t:"Hawa Mahal, Jaipur",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Hawa_Mahal_in_Jaipur_India.jpg/960px-Hawa_Mahal_in_Jaipur_India.jpg",a:"Wander-earth",l:"CC BY-SA 4.0",u:"https://commons.wikimedia.org/wiki/File:Hawa_Mahal_in_Jaipur_India.jpg"},
+  {t:"Fleurs de cerisier",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Pink_Cherry_Blossom_tree.jpg/960px-Pink_Cherry_Blossom_tree.jpg",a:"CupcakePerson13",l:"CC BY-SA 4.0",u:"https://commons.wikimedia.org/wiki/File:Pink_Cherry_Blossom_tree.jpg"},
+  {t:"Casa Rosada, Buenos Aires",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Casa_Rosada_fa%C3%A7ade.jpg/960px-Casa_Rosada_fa%C3%A7ade.jpg",a:"The Cosmonaut",l:"CC BY-SA 2.5 ca",u:"https://commons.wikimedia.org/wiki/File:Casa_Rosada_façade.jpg"}
+ ],
+ or:[
+  {t:"Kinkaku-ji, Kyoto",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Water_reflection_of_Kinkaku-ji_Temple_a_sunny_day%2C_Kyoto%2C_Japan.jpg/960px-Water_reflection_of_Kinkaku-ji_Temple_a_sunny_day%2C_Kyoto%2C_Japan.jpg",a:"Basile Morin",l:"CC BY-SA 4.0",u:"https://commons.wikimedia.org/wiki/File:Water_reflection_of_Kinkaku-ji_Temple_a_sunny_day,_Kyoto,_Japan.jpg"},
+  {t:"Pagode Shwedagon, Rangoun",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Shwedagon_Pagoda_Photo_2.JPG/960px-Shwedagon_Pagoda_Photo_2.JPG",a:"C1815",l:"CC0",u:"https://commons.wikimedia.org/wiki/File:Shwedagon_Pagoda_Photo_2.JPG"},
+  {t:"Reliquaire de la Shwedagon",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Shwedagon_Reliquary.JPG/960px-Shwedagon_Reliquary.JPG",a:"Jononmac46",l:"CC BY-SA 3.0",u:"https://commons.wikimedia.org/wiki/File:Shwedagon_Reliquary.JPG"}
+ ],
+ argent:[
+  {t:"Flèche du Chrysler Building, New York",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Chrysler_Building_spire%2C_Manhattan%2C_by_Carol_Highsmith_%28LOC_highsm.04444%29.png/960px-Chrysler_Building_spire%2C_Manhattan%2C_by_Carol_Highsmith_%28LOC_highsm.04444%29.png",a:"Carol M. Highsmith",l:"Public domain",u:"https://commons.wikimedia.org/wiki/File:Chrysler_Building_spire,_Manhattan,_by_Carol_Highsmith_(LOC_highsm.04444).png"},
+  {t:"Boucles d’oreilles en argent et perles",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Pearl_and_silver_earrings.jpg/960px-Pearl_and_silver_earrings.jpg",a:"W.carter",l:"CC BY 4.0",u:"https://commons.wikimedia.org/wiki/File:Pearl_and_silver_earrings.jpg"},
+  {t:"Coupe romaine en argent",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Silver_drinking_cup_MET_DP258108.jpg/1280px-Silver_drinking_cup_MET_DP258108.jpg",a:"The Metropolitan Museum of Art",l:"CC0",u:"https://commons.wikimedia.org/wiki/File:Silver_drinking_cup_MET_DP258108.jpg"}
+ ],
+ blanc:[
+  {t:"Oia, Santorin",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/White_houses_of_Oia_on_Santorini_%2852181448879%29.jpg/960px-White_houses_of_Oia_on_Santorini_%2852181448879%29.jpg",a:"Radek Kucharski from Warsaw, Poland",l:"CC BY 2.0",u:"https://commons.wikimedia.org/wiki/File:White_houses_of_Oia_on_Santorini_(52181448879).jpg"},
+  {t:"Maison chaulée, Grèce",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/A_Greek_house_and_walls_rendered_and_white_washed.jpg/960px-A_Greek_house_and_walls_rendered_and_white_washed.jpg",a:"Alan bron (talk)",l:"Public domain",u:"https://commons.wikimedia.org/wiki/File:A_Greek_house_and_walls_rendered_and_white_washed.jpg"},
+  {t:"Marbre du Taj Mahal, Agra",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/El_Taj_Mahal-Agra_India0023.JPG/960px-El_Taj_Mahal-Agra_India0023.JPG",a:"Diego Delso",l:"CC BY-SA 4.0",u:"https://commons.wikimedia.org/wiki/File:El_Taj_Mahal-Agra_India0023.JPG"}
+ ],
+ gris:[
+  {t:"Toits en zinc, Paris",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Boulevard_Saint-Michel_%28Paris%29%2C_num%C3%A9ro_1%2C_toit.jpg/960px-Boulevard_Saint-Michel_%28Paris%29%2C_num%C3%A9ro_1%2C_toit.jpg",a:"Coyau",l:"CC BY-SA 3.0",u:"https://commons.wikimedia.org/wiki/File:Boulevard_Saint-Michel_(Paris),_numéro_1,_toit.jpg"},
+  {t:"Béton de Tadao Ando",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Vitra_Conference_Pavilion.jpg/960px-Vitra_Conference_Pavilion.jpg",a:"Andreas Schwarzkopf",l:"CC BY-SA 3.0",u:"https://commons.wikimedia.org/wiki/File:Vitra_Conference_Pavilion.jpg"},
+  {t:"Toits d’ardoise",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Ermelo_01.JPG/960px-Ermelo_01.JPG",a:"João Carvalho",l:"CC BY-SA 3.0",u:"https://commons.wikimedia.org/wiki/File:Ermelo_01.JPG"}
+ ],
+ noir:[
+  {t:"Plage de sable noir, Islande",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Black_sand_beach_near_J%C3%B6kuls%C3%A1rl%C3%B3n_bay.jpg/960px-Black_sand_beach_near_J%C3%B6kuls%C3%A1rl%C3%B3n_bay.jpg",a:"Jakub Fryš",l:"CC BY-SA 4.0",u:"https://commons.wikimedia.org/wiki/File:Black_sand_beach_near_Jökulsárlón_bay.jpg"},
+  {t:"Boîte en laque noire, Japon",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Letter_box_by_Yoyosai_%281772-1845%29%2C_Japan%2C_late_18th_to_first_half_of_19th_century%2C_black_lacquer%2C_silver_and_gold_lacquer_on_wood_-_%C3%96stasiatiska_museet%2C_Stockholm_-_DSC09248.JPG/960px-thumbnail.jpg",a:"Daderot",l:"CC0",u:"https://commons.wikimedia.org/wiki/File:Letter_box_by_Yoyosai_(1772-1845),_Japan,_late_18th_to_first_half_of_19th_century,_black_lacquer,_silver_and_gold_lacquer_on_wood_-_Östasiatiska_museet,_Stockholm_-_DSC09248.JPG"},
+  {t:"Reynisfjara, Islande",i:"https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Reynisfjara%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-17%2C_DD_164.JPG/960px-Reynisfjara%2C_Su%C3%B0urland%2C_Islandia%2C_2014-08-17%2C_DD_164.JPG",a:"Diego Delso",l:"CC BY-SA 4.0",u:"https://commons.wikimedia.org/wiki/File:Reynisfjara,_Suðurland,_Islandia,_2014-08-17,_DD_164.JPG"}
+ ]
+};
+/* ---------- Sources et degrés de certitude ----------
+   Niveaux : "attesté" = documenté par des sources historiques ou institutionnelles ;
+   "répandu" = usage courant et observable, peu documenté par la recherche ;
+   "discuté" = interprétation variable ou contestée ;
+   "non codifié" = pas de symbolique propre documentée (lecture contemporaine) : aucune source à citer.
+   s:[] vide = source à compléter (affiché comme tel, jamais inventé).
+   ctxS / emoS : sources du contexte et des émotions · cu : une entrée par aire culturelle (n : certitude, s : sources, l : limite) · ex : exemple de communication · ret : synthèse pour le designer */
+var SOURCES={
+ "berlin-kay":{c:"Brent Berlin et Paul Kay, Basic Color Terms: Their Universality and Evolution, University of California Press, 1969."},
+ jonauskaite:{c:"Domicele Jonauskaite et al., « Universal Patterns in Color-Emotion Associations Are Further Shaped by Linguistic and Geographic Proximity », Psychological Science, vol. 31, n° 10, 2020.",u:"https://doi.org/10.1177/0956797620948810"},
+ "pastoureau-bleu":{c:"Michel Pastoureau, Bleu. Histoire d'une couleur, Seuil, 2000."},
+ "pastoureau-vert":{c:"Michel Pastoureau, Vert. Histoire d'une couleur, Seuil, 2013."},
+ "pastoureau-rouge":{c:"Michel Pastoureau, Rouge. Histoire d'une couleur, Seuil, 2016."},
+ "pastoureau-jaune":{c:"Michel Pastoureau, Jaune. Histoire d'une couleur, Seuil, 2019."},
+ greenfield:{c:"Amy Butler Greenfield, A Perfect Red: Empire, Espionage, and the Quest for the Color of Desire, HarperCollins, 2005."},
+ stclair:{c:"Kassia St Clair, The Secret Lives of Colour, John Murray, 2016 (entrée « Imperial yellow »)."},
+ paoletti:{c:"Jo B. Paoletti, Pink and Blue: Telling the Boys from the Girls in America, Indiana University Press, 2012."},
+ arnold:{c:"Dean E. Arnold et al., « The first direct evidence for the production of Maya Blue: rediscovery of a technology », Antiquity, vol. 82, 2008.",u:"https://doi.org/10.1017/S0003598X00096514"},
+ ushmm:{c:"United States Holocaust Memorial Museum, « Jewish Badge: During the Nazi Era », Holocaust Encyclopedia.",u:"https://encyclopedia.ushmm.org/content/en/article/jewish-badge-during-the-nazi-era"},
+ "unesco-muertos":{c:"UNESCO, « Indigenous festivity dedicated to the dead » (Mexique), Liste représentative du patrimoine culturel immatériel, inscrite en 2008.",u:"https://ich.unesco.org/en/RL/indigenous-festivity-dedicated-to-the-dead-00054"},
+ visualaids:{c:"Visual AIDS, « The Red Ribbon Project » (création du ruban rouge par le Visual AIDS Artists' Caucus, 1991).",u:"https://visualaids.org/projects/red-ribbon"},
+ iso20471:{c:"ISO 20471:2013, Vêtements à haute visibilité. Méthodes d'essai et exigences (couleurs de fond fluorescentes : jaune, orange-rouge, rouge)."},
+ "ue-drapeau":{c:"Union européenne, « Drapeau de l'UE » (adopté par le Conseil de l'Europe en 1955, par les Communautés européennes en 1985).",u:"https://european-union.europa.eu/principles-countries-history/symbols/european-flag_fr"},
+ "pastoureau-noir":{c:"Michel Pastoureau, Noir. Histoire d'une couleur, Seuil, 2008."},
+ garfield:{c:"Simon Garfield, Mauve: How One Man Invented a Colour That Changed the World, Faber and Faber, 2000."},
+ "ushmm-rose":{c:"United States Holocaust Memorial Museum, « Gay Men under the Nazi Regime », Holocaust Encyclopedia.",u:"https://encyclopedia.ushmm.org/content/en/article/persecution-of-homosexuals-in-the-third-reich"},
+ "cicr-parlementaire":{c:"Convention (IV) de La Haye concernant les lois et coutumes de la guerre sur terre, 18 octobre 1907, Règlement annexe, art. 32 (le parlementaire se présente « porteur du drapeau blanc »).",u:"https://ihl-databases.icrc.org/en/ihl-treaties/hague-conv-iv-1907/regulations-art-32"},
+ wcag143:{c:"W3C, « Understanding Success Criterion 1.4.3: Contrast (Minimum) », WCAG 2.2 (ratio de 4,5 : 1 pour le texte courant).",u:"https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"},
+ "brevet-139121":{c:"Brevet américain n° 139 121, « Improvement in fastening pocket-openings », 20 mai 1873.",u:"https://patents.google.com/patent/US139121A/en"},
+ "balfour-paul":{c:"Jenny Balfour-Paul, Indigo, British Museum Press, 1998 (ouvrage d'ensemble sur l'histoire de la teinture à l'indigo ; pages à préciser)."},
+ henshilwood:{c:"Christopher S. Henshilwood et al., « A 100,000-Year-Old Ochre-Processing Workshop at Blombos Cave, South Africa », Science, vol. 334, 2011.",u:"https://doi.org/10.1126/science.1211535"},
+ cooksey:{c:"Christopher J. Cooksey, « Tyrian Purple: 6,6'-Dibromoindigo and Related Compounds », Molecules, vol. 6, n° 9, 2001.",u:"https://doi.org/10.3390/60900736"},
+ "unesco-shibam":{c:"UNESCO, « Old Walled City of Shibam » (Yémen), Liste du patrimoine mondial, n° 192.",u:"https://whc.unesco.org/en/list/192"},
+ "dahal-sindoor":{c:"Bishnu Prasad Dahal, « Significance of Sindoor (Vermilion Powder) in Hindu Marriage Rituals », Review of European Studies, vol. 13, n° 3, 2021.",u:"https://doi.org/10.5539/res.v13n3p76"},
+ "baskes-cochenille":{c:"Jeremy Baskes, « Seeking Red: The Production and Trade of Cochineal Dye in Oaxaca, Mexico, 1750–1821 », dans The Materiality of Color, Routledge, 2017.",u:"https://doi.org/10.4324/9781315085982-9"},
+ "khandelwal-ocre":{c:"Meena Khandelwal, Women in Ochre Robes: Gendering Hindu Renunciation, SUNY Press, 2012.",u:"https://doi.org/10.1515/9780791485958"},
+ "hansen-safran":{c:"Thomas Blom Hansen, The Saffron Wave: Democracy and Hindu Nationalism in Modern India, Princeton University Press, 1999.",u:"https://doi.org/10.1515/9781400823055"},
+ "bahrami-safran":{c:"Askar Bahrami et al., « Saffron in the ancient history of Iran », dans Saffron, Elsevier, 2020.",u:"https://doi.org/10.1016/b978-0-12-818638-1.00003-4"},
+ "object-orange":{c:"« Object Orange: material culture in the rise of the House of Orange-Nassau », dans Dynastic Colonialism, Routledge, 2016.",u:"https://doi.org/10.4324/9781315636887-14"},
+ "soni-gemmes":{c:"Vishnu Soni et Rudresh M. Shastri, « A study on gemstone recommendation with special reference to Vedic astrology », International Journal of Jyotish Research, vol. 7, 2022.",u:"https://doi.org/10.22271/24564427.2022.v7.i1a.132"},
+ "gandhi-himba":{c:"Jinal Gandhi et Apoorva Trivedi, « The Himba and Red Ochre—Aesthetics, Symbolism, and Adaptation », JAMA Dermatology, vol. 154, 2018.",u:"https://doi.org/10.1001/jamadermatol.2017.3917"},
+ "rovine-bogolan":{c:"Victoria L. Rovine, Bogolan: Shaping Culture through Cloth in Contemporary Mali, Indiana University Press, 2008.",u:"https://doi.org/10.2979/5370.0"},
+ "villasenor-guadalupe":{c:"Charlene Villaseñor Black, « The Virgin of Guadalupe as an Iconic Image in Mexican Culture », Oxford Research Encyclopedia of Latin American History, 2018.",u:"https://doi.org/10.1093/acrefore/9780199366439.013.509"},
+ "tynan-khaki":{c:"Jane Tynan, British Army Uniform and the First World War: Men in Khaki, Palgrave Macmillan, 2013.",u:"https://doi.org/10.1057/9781137318312"},
+ "grego-olivier":{c:"Stefano Grego, « The Olive Tree: A Symbol », dans Olive Cultivation, IntechOpen, 2022.",u:"https://doi.org/10.5772/intechopen.102827"},
+ "nurhussein-drapeau":{c:"Nadia Nurhussein, « Recognizing the Ethiopian Flag », dans Black Land, Princeton University Press, 2019.",u:"https://doi.org/10.23943/princeton/9780691190969.003.0002"},
+ "taube-jade":{c:"Karl A. Taube, « The Symbolism of Jade in Classic Maya Religion », Ancient Mesoamerica, vol. 16, 2005.",u:"https://doi.org/10.1017/s0956536105050017"},
+ "khazeni-turquoise":{c:"Arash Khazeni, Sky Blue Stone: The Turquoise Trade in World History, University of California Press, 2014.",u:"https://doi.org/10.1525/9780520958357"},
+ "ventura-serabit":{c:"Raphael Ventura, « Serabit el-Khadim », Oxford Art Online, 2003.",u:"https://doi.org/10.1093/gao/9781884446054.article.t077644"},
+ "caplan-tlaloc":{c:"« Constructing Resemblance: Relational Color in the Turquoise Tlaloc Mask », chap. 4 de Flickering Creations, Princeton University Press, 2026.",u:"https://doi.org/10.1515/9780691280523-004"},
+ "nazar-turc":{c:"Saliha Türkmenoğlu Berkan et Bilgen Tuncer Manzakoğlu, « Evil eye belief in Turkish culture: myth of evil eye bead », The Turkish Online Journal of Design, Art and Communication, vol. 6, 2016.",u:"https://doi.org/10.7456/10602100/013"},
+ "yan-porcelaine":{c:"Chongnian Yan, « Blue-and-White Porcelain of the Yuan Dynasty », dans A Brief History of Chinese Imperial Porcelain, Springer, 2024.",u:"https://doi.org/10.1007/978-981-97-4145-8_5"},
+ "aldrich-cite":{c:"M. A. Aldrich, « The Purple Forbidden City », dans The Search for a Vanishing Beijing, Hong Kong University Press, 2008.",u:"https://doi.org/10.5790/hongkong/9789622097773.003.0023"},
+ "norget-milagros":{c:"Kristin Norget, « Miraculous Sovereignties: Mediation and the Señor de los Milagros in Lima, Peru », dans Mediating Catholicism, Bloomsbury, 2022.",u:"https://doi.org/10.5040/9781350228214.ch-9"},
+ "pastoureau-red":{c:"Michel Pastoureau, Red: The History of a Color, Princeton University Press, 2017, chap. « Roman Purple ».",u:"https://doi.org/10.2307/jj.3919389"},
+ phenicians:{c:"« Defining the Phoenicians: Land, Language, Name and People », dans Ancient Phoenicia, Bloomsbury, 2011.",u:"https://doi.org/10.5040/9781849668231.ch-001"},
+ "ohnuki-sakura":{c:"Emiko Ohnuki-Tierney, Kamikaze, Cherry Blossoms, and Nationalisms: The Militarization of Aesthetics in Japanese History, University of Chicago Press, 2002.",u:"https://doi.org/10.7208/chicago/9780226620688.001.0001"},
+ "chari-jaipur":{c:"Venkatesh Chari, Jotirmay Chari et Tanvi Katre, « Sustaining city branding through heritage architecture. A case of Jaipur: the ‘Pink City’ signature », Cogent Arts & Humanities, vol. 13, 2026.",u:"https://doi.org/10.1080/23311983.2026.2625584"},
+ "cruz-barragan":{c:"Mário Bruno Cruz, « Luis Barragán: Color as a means for introspection », dans Tradition and Innovation, CRC Press, 2021.",u:"https://doi.org/10.1201/9780429297786-24"},
+ "ei3-or":{c:"« Gold », Encyclopaedia of Islam, THREE, Brill.",u:"https://doi.org/10.1163/1573-3912_ei3_com_27497"},
+ "rpp-dome":{c:"« Dome of the Rock », Religion Past and Present, De Gruyter.",u:"https://doi.org/10.1163/1877-5888_rpp_sim_07538"},
+ "kemske-kintsugi":{c:"Bonnie Kemske, Kintsugi: The Poetic Mend, Bloomsbury, 2021.",u:"https://doi.org/10.5040/9781789942743"},
+ "hanserd-tabouret":{c:"Robert Hanserd, « Asanteman Sika Dwa (1701) and the Akyem Abuakwa Ofori stool at Akuapem (1733) », dans Identity, Spirit and Freedom in the Atlantic World, Routledge, 2019.",u:"https://doi.org/10.4324/9781315102344-4"},
+ "quintero-guatavita":{c:"Juan Pablo Quintero-Guzmán, « El Dorado Offerings in Lake Guatavita: A Muisca Ritual Archaeological Site », Latin American Antiquity, vol. 35, 2023.",u:"https://doi.org/10.1017/laq.2023.26"},
+ potosi:{c:"John Coatsworth, « Coercion and Market: Silver Mining in Colonial Potosí, 1692–1826 », Hispanic American Historical Review, vol. 75, n° 2, 1995.",u:"https://doi.org/10.1215/00182168-75.2.275"},
+ "bedouin-oman":{c:"Amal Al-Ismaili, « Interpreting the Traditional Jewellery of Bedouin in Oman through Contemporary Jewellery Practice », thèse, Sheffield Hallam University.",u:"https://doi.org/10.7190/shu-thesis-00345"},
+ "opera-pekin":{c:"« Evolution, Symbolism, and Artistry: A Study on the Colors of Peking Opera Facial Makeup », Art and Performance Letters, vol. 4, 2023.",u:"https://doi.org/10.23977/artpl.2023.041207"},
+ "cinq-elements":{c:"Vien Cheung et Jinghong Wang, « The Chinese Five-element Five-colour Theory », dans A Companion to Color, Wiley, 2026.",u:"https://doi.org/10.1002/9781394238699.ch04"},
+ "tani-achoura":{c:"Kenichi Tani, « An Historical Overview of Shia Rituals in Iran », dans Ashura as Submission and Rebellion, Brill, 2025.",u:"https://doi.org/10.1163/9789004747821_004"},
+ "earle-unia":{c:"Jonathan Earle, « Marcus Garvey and the UNIA », dans The Routledge Atlas of African American History, Routledge, 2021.",u:"https://doi.org/10.4324/9781003123477-39"},
+ "yadav-sari":{c:"Punam Yadav, « White Sari—Transforming Widowhood in Nepal », Gender, Technology and Development, vol. 20, 2016.",u:"https://doi.org/10.1177/0971852415618748"},
+ "elias-reveillon":{c:"Roberto Vilela Elias et Vania Oliveira Fortuna, « Réveillon do Rio como estratégia de visibilidade: do culto à Iemanjá ao megaevento da cidade-marca », Organicom, 2025.",u:"https://doi.org/10.11606/issn.2238-2593.organicom.2025.233249"},
+ "bp-marque":{c:"« The Brand Disconnect between BP and Beyond Petroleum », dans Marketing Big Oil, Palgrave Macmillan.",u:"https://doi.org/10.1057/9781137388070.0020"},
+ "parkins-suffragettes":{c:"Wendy Parkins, « ‘The Epidemic of Purple, White and Green’: Fashion and the Suffragette Movement in Britain 1908–14 », dans Fashioning the Body Politic, Berg / Bloomsbury, 2002.",u:"https://doi.org/10.2752/9781847888723/fashbodpol0009"},
+ "asm-chrysler":{c:"« The Chrysler Building (1930) », dans The History of Stainless Steel, ASM International, 2010.",u:"https://doi.org/10.31399/asm.tb.hss.t52790101"},
+ "mp-chrysler":{c:"« Stainless Steel Creates an Art Deco Masterpiece », Materials Performance, vol. 57, n° 11, 2018.",u:"https://doi.org/10.5006/mp2018_57_11-19"},
+ "drapeau-inde":{c:"« Shades of History: A Case of Saffron Colour », dans Reverence, Resistance and Politics of Seeing the Indian National Flag, Cambridge University Press, 2016.",u:"https://doi.org/10.1017/cbo9781316340455.006"},
+ "moriarty-khaki":{c:"Catherine Moriarty, « Dust to Dust: A Particular History of Khaki », TEXTILE, vol. 8, n° 3, 2010.",u:"https://doi.org/10.2752/175183510x12868938341484"},
+ "ruban-rose":{c:"« Pink Is for (Survivor) Girls: late-Stage Breast Cancer, Silence, and Pink Ribbon Culture », dans Communicating Women's Health, Routledge, 2015.",u:"https://doi.org/10.4324/9781315732077-10"},
+ "lbd-dico":{c:"« Little black dress, LBD », The Dictionary of Fashion History, Bloomsbury, 2017.",u:"https://doi.org/10.5040/9781474269728.1594"},
+ "homere-iliade":{c:"Homère, Iliade, chant VIII, v. 1 : Éos « au voile de safran » (krokopeplos)."}
+};
+var DOC={
+ rouge:{
+  ret:"Le rouge capte l'attention partout, mais son sens dépend du support : alerte en signalétique, fête et chance en Chine, deuil associé au noir chez les Akan. En data-visualisation, vérifiez la convention locale de hausse et de baisse avant d'utiliser rouge et vert.",
+  ctxS:["berlin-kay"],emoS:["jonauskaite"],
+  cu:{
+   occ:{n:"attesté",s:["pastoureau-rouge"]},
+   asi:{n:"attesté",s:["dahal-sindoor"],l:"Pratiques bien établies (hongbao, robe de mariée, sindoor), source académique à ajouter. La source couvre le sindoor indien ; les usages chinois (hongbao, mariage) et japonais (torii) restent à sourcer."},
+   ara:{n:"répandu",s:[],l:"Les quatre couleurs panarabes sont attestées (drapeau de la Révolte arabe, 1916) ; le sens « sang versé » est une lecture courante qui varie selon les pays."},
+   afr:{n:"attesté",s:[],l:"Rouge et noir des funérailles akan bien documentés en ethnographie ; le sens du rouge maasaï relève surtout de l'usage courant. Source à ajouter."},
+   lat:{n:"attesté",s:["greenfield","baskes-cochenille"],l:"Baskes documente la production de cochenille à Oaxaca (1750–1821)."}
+  },
+  ex:{t:"Le ruban rouge (1991)",d:"Créé à New York par le Visual AIDS Artists' Caucus, le ruban rouge devient le signe international de la lutte contre le sida. Le rouge y porte l'engagement et la solidarité plutôt que l'alerte : un exemple de sens construit par une campagne.",s:["visualaids"],st:"vérifié"}
+ },
+ corail:{
+  ret:"Le corail est une teinte peu codifiée : il emprunte le sens de ses voisins (orange, rose, rouge). Il convient à la convivialité, à la mode et au lifestyle. Sa valeur la plus ancienne tient à la matière (bijoux, amulettes), pas à la couleur : testez sa perception auprès du public visé.",
+  ctxS:[],emoS:[],
+  cu:{
+   occ:{n:"répandu",s:[],l:"Le cornicello italien est une amulette bien connue ; son lien avec le corail est une pratique populaire. Source à ajouter."},
+   asi:{n:"attesté",s:["soni-gemmes"],l:"Le corail dans les parures tibétaines et dans l'astrologie védique (moonga, pierre de Mars) est bien documenté. Source générale sur les pierres en astrologie védique ; l'usage du corail (moonga) et les parures tibétaines restent à détailler."},
+   ara:{n:"attesté",s:[],l:"Les bijoux amazighs mêlant corail, argent et ambre sont documentés par les collections muséales ; le sens de protection est l'interprétation courante. Source à ajouter."},
+   afr:{n:"attesté",s:[],l:"Les perles de corail comme attributs de l'Oba du Bénin sont bien documentées (collections muséales). Source à ajouter."},
+   lat:{n:"non codifié",s:[],l:"Pas de symbolique traditionnelle documentée ; lecture contemporaine liée aux façades colorées des villes côtières."}
+  },
+  ex:{t:"Pantone « Living Coral » (couleur de l'année 2019)",d:"L'institut Pantone nomme « Living Coral » sa couleur de l'année 2019 : un exemple de la façon dont une teinte peu codifiée reçoit un sens par la communication de marque.",s:[],st:"à confirmer"}
+ },
+ orange:{
+  ret:"L'orange signale sans alarmer : il convient à l'appel à l'action, à la promotion et à la signalétique de prudence. Il porte cependant des sens politiques ou religieux forts dans certains pays (Irlande du Nord, proximité avec le safran en Inde) : vérifiez le marché visé.",
+  ctxS:[],emoS:["jonauskaite"],
+  cu:{
+   occ:{n:"attesté",s:["object-orange"],l:"Maison d'Orange-Nassau et ordre d'Orange : faits historiques établis ; Halloween relève de l'usage courant. La source traite de la culture matérielle de la maison d'Orange-Nassau ; Halloween et l'Irlande du Nord restent à sourcer."},
+   asi:{n:"attesté",s:[],l:"La teinte des robes theravāda varie du safran à l'ocre selon les traditions et les teintures. Source à ajouter."},
+   ara:{n:"répandu",s:[],l:"La pratique du henné nuptial est attestée ; ses significations (bénédiction, protection) varient selon les régions."},
+   afr:{n:"répandu",s:[],l:"Significations des drapeaux telles qu'elles sont couramment présentées ; à vérifier dans les textes officiels de chaque pays."},
+   lat:{n:"attesté",s:["unesco-muertos"]}
+  },
+  ex:{t:"France Télécom devient Orange (2013)",d:"L'opérateur historique adopte le nom et la couleur de sa marque mobile : l'orange signale une entreprise accessible et moderne, en rupture avec l'image administrative du nom précédent.",s:[],st:"à confirmer"}
+ },
+ safran:{
+  ret:"Le safran est sacré en Inde (sadhus, drapeau, sikhs) mais aussi un marqueur politique (nationalisme hindou) : prudence en communication institutionnelle ou interreligieuse. En Occident et en Iran, il évoque d'abord l'épice de luxe et la fête.",
+  ctxS:[],emoS:[],
+  cu:{
+   occ:{n:"attesté",s:["homere-iliade"],l:"Lecture contemporaine liée à la gastronomie ; la citation d'Éos « au voile de safran » vient de la poésie grecque. Éos « au voile de safran » est une formule homérique ; l'association au luxe et à un « Orient » rêvé est une lecture contemporaine."},
+   asi:{n:"attesté",s:["khandelwal-ocre","hansen-safran","drapeau-inde"],l:"Le safran des renonçants et la bande supérieure du drapeau indien sont bien établis ; leur signification politique contemporaine est contestée selon les courants. Khandelwal traite des renonçantes hindoues en robes ocre ; Hansen, du safran comme emblème du nationalisme hindou. Drapeau et sikhs restent à sourcer. Le chapitre « Shades of History » traite du safran dans le drapeau indien."},
+   ara:{n:"attesté",s:["bahrami-safran"],l:"La culture du safran en Iran et son usage culinaire sont bien documentés ; les sens « prestige » et « hospitalité » sont des lectures courantes. La source traite de l'histoire ancienne du safran en Iran ; les sens « prestige » et « hospitalité » restent des lectures courantes."},
+   afr:{n:"non codifié",s:[],l:"Pas de symbolique propre documentée : lecture contemporaine."},
+   lat:{n:"non codifié",s:[],l:"Pas de symbolique propre documentée : lecture contemporaine."}
+  },
+  ex:{t:"Le drapeau de l'Inde (adopté en 1947)",d:"La bande supérieure safran du drapeau indien est officiellement présentée comme symbole du courage et du sacrifice. Elle montre comment une couleur sacrée devient aussi un emblème national, avec les lectures politiques que cela implique.",s:["drapeau-inde"],st:"vérifié"}
+ },
+ jaune:{
+  ret:"Le jaune est la couleur la plus visible : idéal pour signaler et attirer, à doser sur de grandes surfaces. En Occident il traîne un héritage d'infamie, en Chine un sens impérial mais aussi « érotique » dans le vocabulaire : vérifiez les noms et les slogans.",
+  ctxS:[],emoS:["jonauskaite"],
+  cu:{
+   occ:{n:"attesté",s:["pastoureau-jaune","ushmm"]},
+   asi:{n:"attesté",s:["stclair"],l:"Le rituel haldi (Inde) relève de l'usage courant, non sourcé ici."},
+   ara:{n:"répandu",s:[],l:"Expression de la langue courante ; source linguistique à ajouter."},
+   afr:{n:"répandu",s:[],l:"Les significations des couleurs du kente sont codifiées mais varient selon les sources et les tisserands ; l'attribution du jaune à Oshun varie selon les traditions."},
+   lat:{n:"discuté",s:[],l:"À l'origine, le vert et le jaune du drapeau brésilien renvoient aux maisons de Bragance et de Habsbourg ; la lecture « or et richesse » est populaire et postérieure."}
+  },
+  ex:{t:"Les vêtements à haute visibilité",d:"La norme ISO 20471 retient le jaune fluorescent (avec l'orange-rouge et le rouge) comme couleur de fond des vêtements de sécurité : la propriété visuelle (luminosité, visibilité de loin) prime sur toute symbolique.",s:["iso20471"],st:"vérifié"}
+ },
+ ocre:{
+  ret:"L'ocre est la couleur de la terre et du plus ancien pigment connu : il évoque l'authenticité, l'artisanat et le patrimoine, et porte aujourd'hui les valeurs « naturel » et « durable ». Chez les Himba comme chez d'autres peuples, il est rituel : évitez de l'employer en décor « tribal » ou « ethnique ».",
+  ctxS:["henshilwood"],emoS:[],
+  cu:{
+   occ:{n:"attesté",s:[],l:"Exploitation des ocres de Roussillon bien documentée ; l'association « naturel, durable » est une lecture de design contemporain."},
+   asi:{n:"attesté",s:[],l:"Les enduits de terre indiens et la terre de lœss chinoise sont bien documentés ; les lectures symboliques varient selon les régions. Source à ajouter."},
+   ara:{n:"attesté",s:["unesco-shibam"],l:"La page de l'UNESCO atteste l'architecture de briques de terre de Shibam ; l'interprétation « stabilité, ancrage » reste une lecture courante."},
+   afr:{n:"attesté",s:["gandhi-himba"],l:"L'otjize himba (ocre, beurre) est bien documentée en ethnographie ; sa signification « vie, terre » est l'interprétation courante. Étude dermatologique et symbolique de l'otjize ; le sens « terre, sang, vie » reste l'interprétation courante."},
+   lat:{n:"répandu",s:[],l:"Pigment utilisé dans les fresques précolombiennes et les enduits coloniaux ; peu de symbolique propre documentée."}
+  },
+  ex:{t:"Les ocres de Roussillon (Vaucluse)",d:"Le village de Roussillon fait de ses falaises d'ocre un patrimoine touristique et une identité visuelle : les façades et la signalétique y reprennent la teinte de la terre, devenue marque de territoire.",s:[],st:"à confirmer"}
+ },
+ marron:{
+  ret:"Le marron ancre et rassure : matière, terroir, artisanat, café ou chocolat. Il manque d'éclat en grande surface et peut paraître daté. En Allemagne, « braun » reste lié à l'extrême droite : à éviter en communication politique.",
+  ctxS:[],emoS:["jonauskaite"],
+  cu:{
+   occ:{n:"attesté",s:[],l:"Bure des ordres mendiants et « chemises brunes » des SA : faits historiques établis. Source à ajouter."},
+   asi:{n:"attesté",s:[],l:"L'expression « 48 bruns et 100 gris » (shijūhatcha hyakunezumi) et les lois somptuaires d'Edo sont bien documentées. Source à ajouter."},
+   ara:{n:"discuté",s:[],l:"Le bisht existe en plusieurs couleurs (noir, brun, beige, crème) : le brun n'en est pas la couleur unique."},
+   afr:{n:"attesté",s:["rovine-bogolan"],l:"Technique et usages du bogolan bien documentés ; le sens protecteur des motifs varie selon les régions. Ouvrage de référence sur le bogolan ; le sens des motifs varie selon les régions."},
+   lat:{n:"attesté",s:["villasenor-guadalupe"],l:"Le culte de la Vierge de Guadalupe (« la Morenita ») est établi ; la lecture « identité métisse » est une interprétation courante. La source traite de la Vierge de Guadalupe ; la Pachamama reste à sourcer."}
+  },
+  ex:{t:"« What can Brown do for you? » (UPS, 2002)",d:"Le transporteur fait de sa couleur, inhabituelle dans le secteur, le sujet même de sa campagne : le brun signifie la fiabilité et la régularité, et devient un nom de marque.",s:[],st:"à confirmer"}
+ },
+ kaki:{
+  ret:"Le kaki évoque le terrain, l'armée et l'utilitaire : robustesse en mode et plein air, autorité ou militarisme selon le contexte (Cuba : révolution). Faux ami : en anglais, khaki désigne un beige sable ; en français, c'est un vert brun. Fixez la référence par un code.",
+  ctxS:[],emoS:[],
+  cu:{
+   occ:{n:"attesté",s:["tynan-khaki"],l:"Usage militaire puis récupération par la mode utilitaire : tendance observable, sans étude citée ici. La source traite de l'uniforme khaki de l'armée britannique ; la récupération par la mode utilitaire reste à sourcer."},
+   asi:{n:"attesté",s:["moriarty-khaki"],l:"Le mot khaki vient du persan khāk (« poussière ») et s'impose avec les troupes britanniques en Inde ; l'uniforme de police et le vert olive de l'APL sont des faits courants. La source retrace l'histoire du khaki ; l'uniforme de la police indienne et le vert olive de l'APL restent à sourcer."},
+   ara:{n:"répandu",s:["grego-olivier"],l:"Le symbolisme de l'olivier (paix, abondance) est ancien et bien connu ; l'association au vert olive militaire est contemporaine. La source traite du symbole de l'olivier ; le lien avec le vert olive militaire est une lecture courante."},
+   afr:{n:"répandu",s:[],l:"Lecture générale : les uniformes de travail et militaires ; pas de symbolique propre documentée."},
+   lat:{n:"attesté",s:[],l:"Le treillis vert olive de la révolution cubaine est un fait historique bien documenté ; la lecture « verde olivo » comme couleur révolutionnaire est une interprétation courante."}
+  },
+  ex:{t:"Le khaki dans l'armée britannique (1848)",d:"Le mot khaki entre en anglais avec l'uniforme de troupes britanniques en Inde au milieu du XIXe siècle : une couleur de camouflage qui devient ensuite un code vestimentaire militaire, puis civil.",s:["moriarty-khaki"],st:"vérifié"}
+ },
+ vert:{
+  ret:"Le vert rassure et autorise (feu vert, santé, nature), mais il est sacré dans les pays musulmans et piégé en Chine (« chapeau vert »). Sur l'écologie, il est devenu un code si attendu qu'il peut paraître opportuniste : l'usage doit être justifié par l'offre.",
+  ctxS:["pastoureau-vert"],emoS:["jonauskaite"],
+  cu:{
+   occ:{n:"attesté",s:["pastoureau-vert"]},
+   asi:{n:"attesté",s:[],l:"L'expression chinoise « porter un chapeau vert » est un fait de langue établi ; les lectures japonaise et indienne relèvent de l'usage courant. Source à ajouter."},
+   ara:{n:"attesté",s:["pastoureau-vert"],l:"L'association du vert au Prophète repose sur des traditions dont la portée varie selon les courants."},
+   afr:{n:"attesté",s:["nurhussein-drapeau"],l:"Couleurs panafricaines héritées du drapeau éthiopien : fait historique établi. La source traite du drapeau éthiopien ; sa filiation avec les couleurs panafricaines est à vérifier page par page."},
+   lat:{n:"attesté",s:["taube-jade"],l:"Valeur du jade et des plumes de quetzal bien établie en archéologie mésoaméricaine. La source traite du jade dans la religion maya classique ; plumes de quetzal et monde aztèque restent à sourcer."}
+  },
+  ex:{t:"Le logo « Helios » de BP (2000)",d:"La compagnie pétrolière adopte un soleil vert et jaune et le slogan « Beyond Petroleum ». Le vert y porte une promesse écologique, critiquée ensuite comme écoblanchiment : un cas d'école sur la distance entre couleur et activité réelle.",s:["bp-marque"],st:"vérifié"}
+ },
+ turquoise:{
+  ret:"Le turquoise évoque l'eau, le soin et une modernité légère : utile pour la santé, le bien-être ou la tech. Au Moyen-Orient et en Asie centrale, il porte une dimension sacrée et protectrice. Désignez-le toujours par son code : plusieurs langues ne le distinguent ni du bleu ni du vert.",
+  ctxS:[],emoS:["jonauskaite"],
+  cu:{
+   occ:{n:"répandu",s:[],l:"Lecture issue des usages commerciaux contemporains plus que d'une tradition."},
+   asi:{n:"attesté",s:["khazeni-turquoise"],l:"Usage de la turquoise dans les parures tibétaines et des glaçures en Chine bien établi ; source à ajouter. Histoire mondiale de la turquoise ; les usages tibétains et chinois sont à détailler (pages à préciser)."},
+   ara:{n:"attesté",s:["khazeni-turquoise"],l:"Les faïences turquoise des mosquées sont un fait d'architecture ; l'interprétation « ciel, paradis » est courante mais ne figure pas forcément dans les sources d'époque. Le chapitre « The Turquoise of Islam » traite de la turquoise dans le monde islamique ; la lecture « ciel, paradis » des coupoles est à préciser."},
+   afr:{n:"attesté",s:["ventura-serabit"],l:"Le culte d'Hathor, « dame de la turquoise », au Sinaï (Serabit el-Khadim) est bien documenté en égyptologie. Notice sur Serabit el-Khadim, site des mines de turquoise et du temple d'Hathor ; le titre « dame de la turquoise » est à vérifier dans la notice."},
+   lat:{n:"attesté",s:["caplan-tlaloc"],l:"Mosaïques de turquoise aztèques et mixtèques conservées dans les musées ; sens symbolique reconstruit à partir des sources du XVIe siècle. Chapitre sur le masque de Tlaloc en turquoise ; xihuitl, feu et souveraineté sont à préciser."}
+  },
+  ex:{t:"Le bleu Tiffany",d:"Le joaillier new-yorkais fait d'un bleu-vert proche du turquoise la couleur de ses boîtes et de son identité, au point de l'avoir fait enregistrer comme marque : la couleur seule suffit à identifier l'enseigne.",s:[],st:"à confirmer"}
+ },
+ bleu:{
+  ret:"Le bleu est la valeur sûre des institutions et de la confiance, au point de ne plus différencier dans la banque ou la tech. Il protège au Moyen-Orient et touche au divin en Inde. Le code « bleu = garçon » est récent et occidental : ne l'exportez pas tel quel.",
+  ctxS:["pastoureau-bleu"],emoS:["jonauskaite"],
+  cu:{
+   occ:{n:"attesté",s:["pastoureau-bleu","paoletti","ue-drapeau"]},
+   asi:{n:"attesté",s:["yan-porcelaine"],l:"Iconographie de Krishna et porcelaine bleu et blanc bien documentées ; la lecture japonaise relève de l'usage courant. La source traite de la porcelaine bleu et blanc des Yuan ; Krishna et Shiva restent à sourcer."},
+   ara:{n:"attesté",s:["nazar-turc"],l:"L'usage du nazar est une pratique observable ; son efficacité protectrice relève de la croyance. La source traite du nazar boncuğu turc ; khamsa bleue et céramiques de mosquées restent à sourcer."},
+   afr:{n:"répandu",s:[],l:"Les attributs des orishas varient selon les traditions (Nigeria, Brésil, Cuba)."},
+   lat:{n:"attesté",s:["arnold"]}
+  },
+  ex:{t:"Le drapeau européen (1955)",d:"Le Conseil de l'Europe choisit un cercle de douze étoiles d'or sur fond bleu, repris en 1985 par les Communautés européennes. Le bleu y porte l'institution, la stabilité et le ciel commun, sans référence nationale.",s:["ue-drapeau"],st:"vérifié"}
+ },
+ indigo:{
+  ret:"L'indigo est un bleu profond lié à la nuit, au savoir et au jean ; il évoque l'artisanat dans l'Inde, au Japon et au Sahel. Son histoire est aussi celle des plantations coloniales et de l'esclavage : évitez un récit seulement « exotique ». Ne le confondez pas avec l'« indigo » du web (#4B0082), qui est un violet.",
+  ctxS:["balfour-paul"],emoS:[],
+  cu:{
+   occ:{n:"attesté",s:["balfour-paul"],l:"Pages à préciser. Newton rattache l'indigo aux sept couleurs de l'arc-en-ciel : fait établi."},
+   asi:{n:"attesté",s:["balfour-paul"],l:"Pages à préciser. La révolte de l'indigo (Bengale, 1859-1860) et la campagne de Champaran (1917) sont des faits historiques établis."},
+   ara:{n:"attesté",s:["balfour-paul"],l:"Pages à préciser. L'étymologie nīl / añil / aniline est établie ; le prestige du chèche indigo touareg relève de l'usage courant."},
+   afr:{n:"attesté",s:["balfour-paul"],l:"Pages à préciser. L'adire yoruba est bien documenté ; « plus le bleu est profond, plus l'étoffe est précieuse » est une lecture courante qui varie selon les régions."},
+   lat:{n:"attesté",s:["balfour-paul"],l:"Pages à préciser. L'añil, produit d'exportation du Salvador et du Guatemala à l'époque coloniale, est bien établi."}
+  },
+  ex:{t:"Le brevet des poches rivetées (1873)",d:"Le brevet américain n° 139 121 protège le renforcement des ouvertures de poches par des rivets, procédé exploité ensuite pour les pantalons de toile bleue de Levi Strauss & Co. Le bleu de l'indigo devient la couleur du vêtement de travail, puis du jean.",s:["brevet-139121"],st:"vérifié"}
+ },
+ violet:{
+  ret:"Le violet signale l'imaginaire, la spiritualité ou l'engagement féministe, selon le contexte. Rare et coûteux jusqu'au XIXe siècle, il garde une aura de distinction. En pays catholiques (Italie, Amérique latine), il rappelle aussi la pénitence et le deuil : prudence pour un événement festif.",
+  ctxS:["garfield"],emoS:["jonauskaite"],
+  cu:{
+   occ:{n:"attesté",s:["parkins-suffragettes"],l:"Usage liturgique (Avent, Carême) et couleurs des suffragettes britanniques (violet, blanc, vert, 1908) sont établis. Parkins traite des couleurs violet, blanc et vert des suffragettes britanniques (1908–1914) ; liturgie (Avent, Carême), évêques et demi-deuil restent à sourcer."},
+   asi:{n:"attesté",s:["aldrich-cite"],l:"Le violet au sommet des rangs de cour japonais (système des douze rangs, VIIe siècle) est bien documenté. La source traite de la « Cité pourpre interdite » ; le murasaki japonais reste à sourcer."},
+   ara:{n:"non codifié",s:[],l:"Pas de tradition ancienne identifiée ; lecture contemporaine liée à la mode, au parfum et à la cosmétique."},
+   afr:{n:"non codifié",s:[],l:"Pas de symbolique traditionnelle documentée ; lecture contemporaine, via la liturgie chrétienne."},
+   lat:{n:"attesté",s:["norget-milagros"],l:"Procession du Señor de los Milagros à Lima et habit violet des fidèles : pratique bien établie. La source traite du culte du Señor de los Milagros à Lima ; l'habit violet des fidèles est une pratique observable que le titre de la source ne détaille pas."}
+  },
+  ex:{t:"Les couleurs des suffragettes (1908)",d:"La Women's Social and Political Union adopte le violet, le blanc et le vert pour ses bannières, écharpes et bijoux : un des premiers codes couleur pensés pour une campagne militante, que le féminisme reprend encore aujourd'hui.",s:["parkins-suffragettes"],st:"vérifié"}
+ },
+ pourpre:{
+  ret:"Le pourpre est le rouge-violet du pouvoir, du luxe et du clergé : il impose plus qu'il n'apaise, et peut paraître pesant. Les langues ne tracent pas la frontière avec le violet au même endroit (l'anglais purple couvre les deux) : fixez-le par un code.",
+  ctxS:["cooksey"],emoS:[],
+  cu:{
+   occ:{n:"attesté",s:["pastoureau-red"],l:"Pourpre impériale romaine et pourpre cardinalice : faits historiques établis. Le chapitre traite de la pourpre romaine ; la pourpre cardinalice est à vérifier."},
+   asi:{n:"répandu",s:[],l:"Les rouges violacés des textiles de fête indiens sont des usages courants ; la lecture « noblesse » en Chine et au Japon renvoie surtout au violet."},
+   ara:{n:"discuté",s:["phenicians"],l:"L'étymologie qui fait dériver « Phénicie » du grec phoinix (pourpre) est classique mais contestée ; la pourpre de Tyr comme patrimoine phénicien est établie. Le chapitre traite de l'origine du nom des Phéniciens, au cœur de la discussion sur l'étymologie."},
+   afr:{n:"non codifié",s:[],l:"Pas de symbolique propre documentée ; lecture liée à la liturgie."},
+   lat:{n:"attesté",s:[],l:"Les textiles de cochenille de l'élite inca sont conservés dans les musées ; l'effet de rouge à pourpre dépend du mordant."}
+  },
+  ex:{t:"La pourpre cardinalice",d:"Être « élevé à la pourpre » signifie devenir cardinal : la couleur sert de signe de dignité dans la communication de l'Église catholique, des vêtements aux armoiries.",s:[],st:"à confirmer"}
+ },
+ rose:{
+  ret:"Le rose est l'exemple même d'une signification récente : son lien avec le « féminin » date du milieu du XXe siècle en Occident. Pâle, il apaise ; vif, il devient audacieux. Il porte aujourd'hui des causes (cancer du sein, droits LGBT) : vérifiez qu'il n'entre pas en concurrence avec elles.",
+  ctxS:["paoletti"],emoS:["jonauskaite"],
+  cu:{
+   occ:{n:"attesté",s:["paoletti","ushmm-rose"]},
+   asi:{n:"attesté",s:["ohnuki-sakura","chari-jaipur"],l:"Le symbolisme du sakura est largement documenté ; la date et le motif de la peinture de Jaipur (1876, visite du prince de Galles) sont souvent cités mais méritent vérification. Ohnuki-Tierney traite du symbolisme du cerisier au Japon ; Chari, de l'identité « Pink City » de Jaipur. La date de 1876 reste à vérifier."},
+   ara:{n:"attesté",s:[],l:"Usage de l'eau de rose dans le lavage rituel de la Kaaba : pratique attestée. Source à ajouter."},
+   afr:{n:"non codifié",s:[],l:"Pas de symbolique traditionnelle documentée ; lecture contemporaine liée aux tissus wax."},
+   lat:{n:"répandu",s:["cruz-barragan"],l:"Le nom « rosa mexicano » est souvent attribué au designer Ramón Valdiosera (vers 1949) ; à vérifier. La source traite de la couleur chez Luis Barragán ; le « rosa mexicano » comme couleur identitaire reste à sourcer."}
+  },
+  ex:{t:"Le ruban rose (années 1990)",d:"Le ruban rose devient le symbole international de la lutte contre le cancer du sein et donne son nom à Octobre rose. Le rose y passe d'une couleur « féminine » à une couleur d'engagement.",s:["ruban-rose"],st:"vérifié"}
+ },
+ or:{
+  ret:"L'or signale la valeur, la victoire et le sacré presque partout, mais il se joue d'abord par la matière (dorure, encre métallique) : un simple jaune ocre ne produit pas l'effet. Évitez l'or trop clinquant pour un message solidaire ou écologique, et son affichage pour un public masculin musulman.",
+  ctxS:[],emoS:[],
+  cu:{
+   occ:{n:"attesté",s:[],l:"Fonds d'or des icônes et retables, médaille d'or, noces d'or : usages bien documentés. Source à ajouter."},
+   asi:{n:"attesté",s:["kemske-kintsugi"],l:"Le kintsugi est une technique documentée ; sa lecture « sublimer les fêlures » est une interprétation courante. L'or de la mariée en Inde relève de la pratique courante. La source traite du kintsugi ; l'or de la mariée indienne et la prospérité chinoise restent à sourcer."},
+   ara:{n:"attesté",s:["ei3-or","rpp-dome"],l:"L'interdiction de l'or aux hommes repose sur des traditions religieuses dont l'application varie selon les courants et les pays. Notice « Gold » de l'Encyclopaedia of Islam et notice sur le Dôme du Rocher ; enluminures coraniques et dot restent à sourcer."},
+   afr:{n:"attesté",s:["hanserd-tabouret"],l:"Le Tabouret d'or ashanti est un objet et un récit d'origine bien documentés. La source traite du Tabouret d'or ashanti (Sika Dwa, 1701)."},
+   lat:{n:"discuté",s:["quintero-guatavita"],l:"Le rituel muisca de Guatavita est rapporté par les chroniqueurs espagnols ; la formule « sueur du soleil » est souvent attribuée aux Incas sans source précise. La source traite des offrandes muisca du lac Guatavita, origine du mythe d'El Dorado ; « sueur du soleil » reste sans source."}
+  },
+  ex:{t:"La médaille d'or olympique",d:"Le podium olympique fait de l'or le signe de la première place. La médaille d'or n'est pas en or massif mais en argent recouvert d'une fine couche d'or : l'effet de prestige tient à la couleur et au symbole, pas à la matière entière.",s:[],st:"à confirmer"}
+ },
+ argent:{
+  ret:"L'argent évoque la technologie, la précision et une élégance sobre ; il vient en second après l'or. Sans encre métallique, ce n'est qu'un gris : prévoyez un traitement spécial (dégradé à l'écran, encre ou dorure à chaud en impression).",
+  ctxS:[],emoS:[],
+  cu:{
+   occ:{n:"répandu",s:[],l:"Noces d'argent, deuxième place, associations lunaires : usages courants et mythologiques, sans étude citée ici."},
+   asi:{n:"répandu",s:[],l:"Le cadenas d'argent offert aux nouveau-nés (Chine) et les chevillères d'argent (Inde) sont des pratiques courantes, variables selon les régions."},
+   ara:{n:"attesté",s:["bedouin-oman"],l:"Les bijoux en argent bédouins et amazighs sont bien documentés par les collections muséales ; la tradition qui réserve l'or aux femmes varie selon les courants. Thèse sur les bijoux bédouins d'Oman ; bijoux amazighs et règle sur l'or et l'argent restent à sourcer."},
+   afr:{n:"attesté",s:[],l:"La croix d'Agadez est un bijou touareg bien documenté ; le sens protecteur est l'interprétation courante. Source à ajouter."},
+   lat:{n:"attesté",s:["potosi"],l:"L'exploitation de Potosí et l'origine du nom de l'Argentine (argentum, « argent ») sont bien établies ; « larmes de la lune » est une formule poétique dont l'origine incaïque est incertaine. La source traite de l'exploitation de l'argent à Potosí ; « larmes de la lune » et l'origine du nom de l'Argentine restent à sourcer."}
+  },
+  ex:{t:"La flèche du Chrysler Building (1930)",d:"La couronne et la flèche du gratte-ciel new-yorkais sont revêtues d'acier inoxydable brillant : l'argent y signale un futur technique, dans le style Art déco. L'effet tient à la matière réfléchissante, pas à une teinte plate.",s:["asm-chrysler","mp-chrysler"],st:"vérifié"}
+ },
+ blanc:{
+  ret:"Le blanc veut dire pureté et mariage en Occident, mais deuil en Chine, en Corée et en Inde. Comme fond, il évoque la clarté et l'hygiène ; en excès, le vide et le froid. N'en faites pas la dominante d'une occasion festive ou funèbre sans vérifier le marché visé.",
+  ctxS:[],emoS:["jonauskaite"],
+  cu:{
+   occ:{n:"attesté",s:["cicr-parlementaire"],l:"Le mariage de Victoria (1840) est le moment le plus cité de la robe blanche, mais des robes blanches existaient avant."},
+   asi:{n:"attesté",s:["yadav-sari"],l:"Le deuil en blanc est bien établi en Chine, en Corée et dans une partie de l'Inde ; ces usages ne sont pas universels dans chaque pays. La source traite du sari blanc des veuves au Népal ; Chine, Corée, Inde et Japon restent à sourcer."},
+   ara:{n:"attesté",s:[],l:"L'ihram (deux pièces de tissu blanc non cousu) est une prescription du pèlerinage ; son sens « égalité » est l'explication courante. Source à ajouter."},
+   afr:{n:"répandu",s:[],l:"Les usages du kaolin et le culte d'Obatala sont documentés pour certains peuples (Yoruba, Nigeria) mais ne se généralisent pas à tout le continent."},
+   lat:{n:"attesté",s:["elias-reveillon"],l:"La tenue blanche du Nouvel An à Rio relève des cultes afro-brésiliens (Iemanjá) devenus pratique populaire ; elle n'est pas répandue dans toute la région. La source traite du Réveillon de Rio et du culte d'Iemanjá ; les communions et mariages restent à sourcer."}
+  },
+  ex:{t:"Le drapeau blanc du parlementaire (1907)",d:"Le Règlement de La Haye reconnaît le drapeau blanc comme signe de celui qui vient parler à l'adversaire, et le déclare inviolable. Le blanc y est une convention juridique internationale de neutralité, au-delà de tout sens culturel local.",s:["cicr-parlementaire"],st:"vérifié"}
+ },
+ gris:{
+  ret:"Le gris est la couleur de la neutralité et du sérieux : il met en valeur les autres teintes. Seul, il peut paraître triste. Surtout, un texte gris moyen sur fond blanc échoue vite aux seuils d'accessibilité : mesurez le contraste avant de l'employer pour du texte.",
+  ctxS:[],emoS:["jonauskaite"],
+  cu:{
+   occ:{n:"répandu",s:[],l:"« Grisaille », costume gris : expressions et usages de la langue courante, sans étude citée ici."},
+   asi:{n:"attesté",s:[],l:"Les lois somptuaires d'Edo et l'expression « cent gris » sont bien documentées pour le Japon ; les robes grises de moines varient selon les écoles. Source à ajouter."},
+   ara:{n:"non codifié",s:[],l:"Pas de tradition ancienne identifiée ; lecture contemporaine liée à l'architecture et au design."},
+   afr:{n:"non codifié",s:[],l:"Pas de symbolique propre documentée à l'échelle du continent."},
+   lat:{n:"non codifié",s:[],l:"Pas de symbolique documentée ; simple observation de marché sur la laine d'alpaga non teinte."}
+  },
+  ex:{t:"Le texte gris sur fond blanc (WCAG 1.4.3)",d:"Le critère WCAG 1.4.3 exige un ratio de contraste de 4,5 : 1 pour le texte courant. Le gris de référence de cet atlas (#8A8D91) atteint environ 3,3 : 1 sur du blanc : insuffisant pour du texte courant, acceptable seulement pour du grand texte.",s:["wcag143"],st:"vérifié"}
+ },
+ noir:{
+  ret:"Le noir structure et impose : luxe et élégance en Occident, mais d'abord deuil dans de nombreuses cultures. Il est sacré et digne dans le monde musulman. Pour un cadeau, un faire-part ou un événement festif en Asie, préférez une autre dominante.",
+  ctxS:["pastoureau-noir"],emoS:["jonauskaite"],
+  cu:{
+   occ:{n:"attesté",s:["pastoureau-noir"]},
+   asi:{n:"attesté",s:["opera-pekin","cinq-elements"],l:"Correspondances des cinq éléments et codes des masques de l'opéra de Pékin bien établis ; usage du kajal relevant de la pratique courante. Deux sources : couleurs des masques de l'opéra de Pékin et théorie chinoise des cinq éléments et des cinq couleurs. Le kajal indien reste à sourcer."},
+   ara:{n:"attesté",s:["tani-achoura"],l:"Kiswa noire de la Kaaba et deuil chiite de l'Achoura : pratiques établies. La source traite des rituels chiites de l'Achoura en Iran ; la kiswa et l'abaya restent à sourcer."},
+   afr:{n:"attesté",s:["earle-unia"],l:"Le noir du drapeau panafricain (UNIA, 1920) et le deuil akan sont documentés ; la lecture « maturité, ancêtres » varie selon les peuples. Source générale sur l'UNIA, organisation à l'origine du drapeau rouge, noir et vert ; le deuil akan reste à sourcer."},
+   lat:{n:"répandu",s:[],l:"Le luto relève de la pratique catholique courante, aujourd'hui en recul."}
+  },
+  ex:{t:"La « petite robe noire » (1926)",d:"Le Vogue américain présente une robe noire de Chanel comme une « Ford » de la mode : simple, reproductible, élégante. Le noir quitte le deuil pour devenir la couleur du chic moderne.",s:["lbd-dico"],st:"vérifié"}
+ }
+};
+
+/* ---------- Préparation ---------- */
+CULTURES.forEach(function(k){k.sub=fix(k.sub);});
+FAMS.forEach(function(f){f.note=fix(f.note);});
+var CULT={};CULTURES.forEach(function(k){CULT[k.id]=k;});
+var BYID={};
+var COLORS=RAW.map(function(c,i){
+  var rgb=hexRgb(c.hex);
+  var o={id:c.id,n:c.n,hex:c.hex,g:c.g,i:i,rgb:rgb,cmjn:toCmjn(rgb[0],rgb[1],rgb[2]),on:onColor(rgb),
+    ctx:fix(c.ctx),emo:c.emo.map(fix),emoT:fix(c.emoT),p:fix(c.p),cult:{}};
+  CULTURES.forEach(function(k,j){o.cult[k.id]={k:fix(c.c[j][0]),t:fix(c.c[j][1])};});
+  var vd=VALDATA[c.id];
+  o.vf=vd.f;o.vs=vd.s;o.com=fix(vd.com);o.risk=fix(vd.r);
+  BYID[c.id]=o;
+  return o;
+});
+var VBYID={};
+VALUES.forEach(function(v){v.def=fix(v.def);v.nu=fix(v.nu);VBYID[v.id]=v;});
+function valNames(ids){return ids.map(function(id){return VBYID[id].name;}).join(", ");}
+
+/* ---------- État ---------- */
+var VIEWS=["teintes","valeurs","comparer","reperes"];
+var state={view:"teintes",cult:null,terms:[],label:"",chip:null,value:"confiance"};
+
+var $=function(id){return document.getElementById(id);};
+var qEl=$("q"),clearEl=$("clear"),chipsEl=$("chips"),cultsEl=$("cults"),dlg=$("sheet");
+
+/* ---------- Construction fixe ---------- */
+$("warp").innerHTML=COLORS.map(function(c,i){
+  return '<a class="thread" href="#'+c.id+'" style="--c:'+c.hex+';--on:'+c.on+';--i:'+i+'" aria-label="'+esc(c.n)+'"><span aria-hidden="true">'+esc(c.n.toLowerCase())+'</span></a>';
+}).join("");
+$("warp-foot").innerHTML=COLORS.map(function(c){return '<span style="--c:'+c.hex+'"></span>';}).join("");
+chipsEl.innerHTML=CHIPS.map(function(ch){return '<button type="button" class="pill" data-chip="'+esc(ch.l)+'" aria-pressed="false">'+esc(ch.l)+'</button>';}).join("");
+cultsEl.innerHTML='<button type="button" class="pill" data-cult="" aria-pressed="true">Toutes les cultures</button>'+
+  CULTURES.map(function(k){return '<button type="button" class="pill" data-cult="'+k.id+'" aria-pressed="false">'+esc(k.name)+'</button>';}).join("");
+$("cult-list").innerHTML=CULTURES.map(function(k){return '<div><dt>'+esc(k.name)+'</dt><dd>'+esc(k.sub)+'</dd></div>';}).join("");
+
+/* ---------- Rendu ---------- */
+function fieldsFor(c,cult){
+  if(cult)return[c.cult[cult].k,c.cult[cult].t];
+  var f=[c.n,c.ctx,c.emo.join(", "),c.emoT,c.p,valNames(c.vf.concat(c.vs)),c.com,c.risk];
+  CULTURES.forEach(function(k){f.push(c.cult[k.id].k,c.cult[k.id].t);});
+  return f;
+}
+function isMatch(c){
+  if(!state.terms.length)return true;
+  return fieldsFor(c,state.cult).some(function(f){return findRanges(f,state.terms).length>0;});
+}
+function tile(c){
+  var key=state.cult?c.cult[state.cult].k:valNames(c.vf).toLowerCase();
+  return '<a class="tile" href="#'+c.id+'" style="--c:'+c.hex+';--on:'+c.on+'"><span class="sw"><span class="sw-label" aria-hidden="true">Voir</span></span><span class="tn">'+hl(c.n,state.terms)+'</span><span class="tk">'+hl(key,state.terms)+'</span></a>';
+}
+function emptyBlock(){
+  var where=state.cult?" pour l\u2019aire "+esc(CULT[state.cult].name):"";
+  return '<div class="empty"><p>Aucune teinte ne correspond à «\u00a0'+esc(state.label)+'\u00a0»'+where+'.</p>'+
+    '<button type="button" class="pill" data-reset>Effacer la recherche</button>'+
+    (state.cult?'<button type="button" class="pill" data-allcult>Voir toutes les cultures</button>':'')+'</div>';
+}
+function renderHex(){
+  var rgb=hexRgb(state.hex);
+  var list=COLORS.map(function(c){return{c:c,d:deltaE(rgb,c.rgb)};}).sort(function(a,b){return a.d-b.d;});
+  var exact=list[0].d<0.5;
+  var shown=list.filter(function(x,i){return i<3||x.d<25;}).slice(0,6);
+  function lab(d){return d<0.5?"identique":d<2.3?"à peine perceptible":d<10?"proche":d<25?"assez éloignée":"éloignée";}
+  $("groups").innerHTML='<section class="hexres" aria-labelledby="hex-h"><div class="hexhead"><span class="sw" style="--c:'+state.hex+'"></span><div><h2 id="hex-h">'+(exact?"Correspondance exacte":"Teintes les plus proches")+' de '+esc(state.hex)+'</h2><p>'+(exact?"Ce code est la valeur de référence d\u2019une fiche.":"Aucune fiche n\u2019a exactement ce code\u00a0: voici les familles les plus proches.")+'</p></div></div>'+
+    '<div class="tiles">'+shown.map(function(x){
+      var c=x.c;
+      return '<a class="tile" href="#'+c.id+'" style="--c:'+c.hex+';--on:'+c.on+'"><span class="sw"><span class="sw-label" aria-hidden="true">Voir</span></span><span class="tn">'+esc(c.n)+'</span><span class="tk">'+esc(c.hex)+'</span><span class="de">\u0394E '+x.d.toFixed(1).replace(".",",")+' · '+lab(x.d)+'</span></a>';
+    }).join("")+'</div>'+
+    '<p class="method">Méthode\u00a0: distance \u0394E*ab (CIE 1976) entre les deux couleurs converties en CIELAB (sRGB, illuminant D65). Repères usuels\u00a0: sous 2,3 la différence est à peine perceptible, sous 10 les couleurs restent proches. Chaque fiche décrit une famille\u00a0: une couleur proche n\u2019hérite pas automatiquement de ses significations.</p></section>';
+  return shown.length;
+}
+function renderTeintes(){
+  if(state.hex)return renderHex();
+  var html="",total=0;
+  FAMS.forEach(function(f){
+    var list=COLORS.filter(function(c){return c.g===f.id&&isMatch(c);});
+    total+=list.length;
+    if(!list.length)return;
+    html+='<section class="group" aria-labelledby="g-'+f.id+'"><h2 id="g-'+f.id+'">'+esc(f.name)+' <small>'+esc(f.note)+'</small></h2><div class="tiles">'+list.map(tile).join("")+'</div></section>';
+  });
+  if(!total)html='<div class="group">'+emptyBlock()+'</div>';
+  $("groups").innerHTML=html;
+  return total;
+}
+function renderComparer(){
+  var list=COLORS.filter(isMatch);
+  if(state.hex){var hr=hexRgb(state.hex);list=list.slice().sort(function(a,b){return deltaE(hr,a.rgb)-deltaE(hr,b.rgb);});}
+  if(!list.length){$("matrix").innerHTML=emptyBlock();return 0;}
+  var head='<thead><tr><th scope="col">Teinte</th><th scope="col">Valeurs véhiculées<small>Lecture communication</small></th>'+CULTURES.map(function(k){
+    return '<th scope="col" class="'+(state.cult===k.id?"on":"")+'">'+esc(k.name)+'<small>'+esc(k.sub)+'</small></th>';
+  }).join("")+'</tr></thead>';
+  var body=list.map(function(c){
+    return '<tr data-id="'+c.id+'"><th scope="row" style="--c:'+c.hex+'"><a href="#'+c.id+'">'+esc(c.n)+'</a></th><td>'+hl(valNames(c.vf).toLowerCase(),state.terms)+'</td>'+
+      CULTURES.map(function(k){return '<td class="'+(state.cult===k.id?"on":"")+'">'+hl(c.cult[k.id].k,state.terms)+'</td>';}).join("")+'</tr>';
+  }).join("");
+  $("matrix").innerHTML='<table>'+head+'<tbody>'+body+'</tbody></table>';
+  return list.length;
+}
+function renderStatus(n){
+  var s;
+  if(state.hex){$("status").textContent="Recherche par code "+state.hex+" : "+n+" teinte"+(n>1?"s":"")+" classée"+(n>1?"s":"")+" de la plus proche à la plus éloignée (ΔE)";return;}
+  if(!n){s="Aucune teinte";}
+  else{
+    s=n+" teinte"+(n>1?"s":"");
+    if(state.terms.length)s+=" liée"+(n>1?"s":"")+" à «\u00a0"+state.label+"\u00a0»";
+    if(state.cult)s+=", lue"+(n>1?"s":"")+" depuis l\u2019aire "+CULT[state.cult].name;
+    else if(!state.terms.length)s+=", cinq aires culturelles";
+  }
+  $("status").textContent=s;
+}
+function update(){
+  if(document.activeElement!==qEl&&qEl.value!==state.label)qEl.value=state.label;
+  clearEl.hidden=!qEl.value;
+  chipsEl.querySelectorAll("[data-chip]").forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-chip")===state.chip));});
+  cultsEl.querySelectorAll("[data-cult]").forEach(function(b){b.setAttribute("aria-pressed",String((b.getAttribute("data-cult")||null)===state.cult));});
+  var n=20;
+  if(state.view==="teintes")n=renderTeintes();
+  else if(state.view==="comparer")n=renderComparer();
+  else if(state.view==="valeurs")renderValeurs();
+  renderStatus(n);
+}
+function showView(){
+  VIEWS.forEach(function(v){$("v-"+v).hidden=v!==state.view;});
+  document.querySelectorAll(".tab").forEach(function(t){
+    if(t.getAttribute("href")==="#"+state.view)t.setAttribute("aria-current","page");else t.removeAttribute("aria-current");
+  });
+  $("tools").hidden=state.view==="reperes"||state.view==="valeurs";
+  update();
+}
+function resetSearch(){state.chip=null;state.label="";state.terms=[];state.hex=null;qEl.value="";}
+
+/* ---------- Vue par valeur ---------- */
+var VGROUPS=[
+  {name:"Relation aux autres",ids:["confiance","bienveillance","convivialite","transparence","accessibilite"]},
+  {name:"Élan",ids:["dynamisme","audace","optimisme","creativite","innovation","liberte"]},
+  {name:"Ancrage",ids:["authenticite","tradition","durabilite","simplicite","serenite"]},
+  {name:"Statut",ids:["excellence","pouvoir","rigueur"]},
+  {name:"Conviction",ids:["engagement","spiritualite"]}
+];
+function vchips(c){
+  return c.vf.map(function(id){return '<a class="vchip f" href="#valeur-'+id+'">'+esc(VBYID[id].name)+'</a>';}).join("")+
+    c.vs.map(function(id){return '<a class="vchip" href="#valeur-'+id+'">'+esc(VBYID[id].name)+'</a>';}).join("");
+}
+function slug(s){return norm(s).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");}
+function paletteCss(v,strong,second){
+  var lines=[":root{","  /* Palette \u00ab "+v.name+" \u00bb, Guide des couleurs */"];
+  strong.forEach(function(c){lines.push("  --"+slug(v.name)+"-"+c.id+": "+c.hex+"; /* valeur centrale */");});
+  second.forEach(function(c){lines.push("  --"+slug(v.name)+"-"+c.id+": "+c.hex+"; /* valeur d\u2019appoint */");});
+  lines.push("}");return lines.join("\n");
+}
+function paletteJson(v,strong,second){
+  function row(c,role){return{id:c.id,nom:c.n,hex:c.hex,rvb:c.rgb,role:role,contraste_blanc:+contrast(c.rgb,[255,255,255]).toFixed(2),contraste_noir:+contrast(c.rgb,[0,0,0]).toFixed(2)};}
+  return JSON.stringify({valeur:v.name,definition:v.def,nuance_culturelle:v.nu,couleurs:strong.map(function(c){return row(c,"centrale");}).concat(second.map(function(c){return row(c,"appoint");})),
+    proportions_recommandees:"Recommandation graphique (règle 60/30/10), non une règle culturelle",source:"Guide des couleurs"},null,2);
+}
+function paletteSheet(strong,second){
+  var all=strong.concat(second);if(!all.length)return"";
+  var dom=strong[0]||all[0],sec=all.filter(function(c){return c!==dom;})[0],acc=all.filter(function(c){return c!==dom&&c!==sec;})[0];
+  var prop=[[dom,60,"dominante"]];if(sec)prop.push([sec,acc?30:40,"secondaire"]);if(acc)prop.push([acc,10,"accent"]);
+  var cand=all.map(function(c){return{n:c.n,rgb:c.rgb,hex:c.hex};}).concat([{n:"Blanc",rgb:[255,255,255],hex:"#FFFFFF"},{n:"Noir",rgb:[0,0,0],hex:"#000000"}]);
+  var pairs=all.map(function(bg){
+    var best=cand.filter(function(x){return x.hex!==bg.hex;}).map(function(x){return{x:x,r:contrast(bg.rgb,x.rgb)};}).sort(function(a,b){return b.r-a.r;});
+    var inPal=best.filter(function(p){return p.x.n!=="Blanc"&&p.x.n!=="Noir";})[0];
+    var pick=(inPal&&inPal.r>=4.5)?inPal:best[0];
+    return '<div class="pair" style="--bg-c:'+bg.hex+';--fg-c:'+pick.x.hex+'"><b>Aa</b><span>'+esc(pick.x.n)+' sur '+esc(bg.n)+'<br>'+ratioTxt(pick.r)+' · '+verdict(pick.r)+'</span></div>';
+  }).join("");
+  return '<h3>Fiche palette</h3>'+
+    '<div class="prop" aria-hidden="true">'+prop.map(function(p){return '<span style="--c:'+p[0].hex+';flex:'+p[1]+' 1 0"></span>';}).join("")+'</div>'+
+    '<p class="prop-l">'+prop.map(function(p){return '<span>'+p[1]+'\u00a0% '+esc(p[0].n.toLowerCase())+' ('+p[2]+')</span>';}).join("")+'</p>'+
+    '<p class="pal-note">Proportions proposées\u00a0: recommandation graphique (règle 60/30/10), pas une règle culturelle.</p>'+
+    '<h3>Associations texte / fond</h3><div class="pairs">'+pairs+'</div>'+
+    '<p class="pal-note">Pour chaque fond, le texte le plus lisible\u00a0: une couleur de la palette si elle atteint 4,5\u00a0:\u00a01, sinon le blanc ou le noir. Ne confiez jamais une information à la seule couleur.</p>';
+}
+function renderValeurs(){
+  var cur=VBYID[state.value]||VBYID.confiance;
+  var pick=$("vpick"),hadFocus=pick.contains(document.activeElement);
+  pick.innerHTML='<p>Choisissez une valeur à incarner.</p>'+VGROUPS.map(function(g){
+    return '<div class="vgroup"><h3>'+esc(g.name)+'</h3><div class="pills">'+g.ids.map(function(id){
+      return '<a class="pill" href="#valeur-'+id+'"'+(id===cur.id?' aria-current="true"':'')+'>'+esc(VBYID[id].name)+'</a>';
+    }).join("")+'</div></div>';
+  }).join("");
+  if(hadFocus){var cp=pick.querySelector('[aria-current="true"]');if(cp)cp.focus({preventScroll:true});}
+  var strong=COLORS.filter(function(c){return c.vf.indexOf(cur.id)>-1;});
+  var second=COLORS.filter(function(c){return c.vs.indexOf(cur.id)>-1;});
+  var all=strong.concat(second);
+  function item(c,lvl){
+    return '<li class="vitem '+lvl+'"><a href="#'+c.id+'" style="--c:'+c.hex+'"><span class="sw"></span><div><span class="vn">'+esc(c.n)+'</span><span class="lv">'+(lvl==="f"?"valeur centrale":"valeur d\u2019appoint")+'</span><p>'+esc(c.com)+'</p></div></a></li>';
+  }
+  var count=strong.length+" teinte"+(strong.length>1?"s":"")+" centrale"+(strong.length>1?"s":"")+(second.length?", "+second.length+" d\u2019appoint":"");
+  $("vpanel").innerHTML='<h2>'+esc(cur.name)+'</h2><p class="vdef">'+esc(cur.def)+'</p>'+
+    '<div class="palette" aria-hidden="true">'+all.map(function(c){return '<span class="'+(c.vf.indexOf(cur.id)>-1?"f":"s")+'" style="--c:'+c.hex+'"></span>';}).join("")+'</div>'+
+    '<div class="pal-row"><span>'+count+'</span><div class="pal-tools"><button type="button" class="pill" data-palette="'+all.map(function(c){return c.hex;}).join(" ")+'">Copier la palette</button><button type="button" class="pill" data-css="'+esc(paletteCss(cur,strong,second))+'">Copier en CSS</button><button type="button" class="pill" data-json="'+cur.id+'">Télécharger JSON</button></div></div>'+
+    paletteSheet(strong,second)+
+    '<h3>Teintes qui la portent</h3><ul class="vlist">'+strong.map(function(c){return item(c,"f");}).join("")+second.map(function(c){return item(c,"s");}).join("")+'</ul>'+
+    '<div class="nuance"><h3>Selon les cultures</h3><p>'+esc(cur.nu)+'</p></div>';
+}
+function copyRaw(text,cb){
+  function fb(){
+    var ok=false;
+    try{var ta=document.createElement("textarea");ta.value=text;ta.setAttribute("readonly","");ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();ok=document.execCommand("copy");ta.remove();}catch(e){ok=false;}
+    cb(ok);
+  }
+  try{
+    if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(text).then(function(){cb(true);},fb);
+    else fb();
+  }catch(e){fb();}
+}
+
+function downloadFile(name,text){
+  try{
+    var url=URL.createObjectURL(new Blob([text],{type:"application/json"}));
+    var a=document.createElement("a");a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();
+    setTimeout(function(){URL.revokeObjectURL(url);},2000);
+  }catch(e){copyRaw(text,function(){});}
+}
+function exportAll(){
+  return JSON.stringify({titre:"Guide des couleurs",cultures:CULTURES,familles:FAMS,valeurs:VALUES.map(function(v){return{id:v.id,nom:v.name,definition:v.def,nuance:v.nu};}),
+    couleurs:COLORS.map(function(c){return{id:c.id,nom:c.n,famille:c.g,hex:c.hex,rvb:c.rgb,cmjn_indicatif:c.cmjn,contexte:c.ctx,emotions:c.emo,psychologie:c.emoT,piege:c.p,
+      valeurs_centrales:c.vf,valeurs_appoint:c.vs,communication:c.com,risque:c.risk,
+      cultures:CULTURES.map(function(k){var cu=DOC[c.id]&&DOC[c.id].cu[k.id];return{aire:k.id,cle:c.cult[k.id].k,texte:c.cult[k.id].t,certitude:cu?cu.n:null,sources:cu?cu.s:[],limite:cu&&cu.l||null};}),
+      synthese:DOC[c.id]?DOC[c.id].ret:null,exemple:DOC[c.id]?DOC[c.id].ex:null,images:IMGS[c.id]||[]};}),sources:SOURCES},null,2);
+}
+
+/* ---------- Fiche ---------- */
+function codeBtn(label,shown,val){
+  return '<button type="button" class="code" data-copy="'+esc(val)+'"><span class="cl">'+label+'</span><span class="cv">'+esc(shown)+'</span><span class="cc">Copier</span></button>';
+}
+function docOf(c){return DOC[c.id]||null;}
+function srcOrder(c){
+  var d=docOf(c),o=[];if(!d)return o;
+  function add(a){(a||[]).forEach(function(id){if(SOURCES[id]&&o.indexOf(id)<0)o.push(id);});}
+  add(d.ctxS);add(d.emoS);CULTURES.forEach(function(k){if(d.cu[k.id])add(d.cu[k.id].s);});if(d.ex)add(d.ex.s);
+  return o;
+}
+function cite(ids,order){
+  ids=(ids||[]).filter(function(id){return order.indexOf(id)>-1;});
+  if(!ids.length)return"";
+  return ' <span class="cite">['+ids.map(function(id){return order.indexOf(id)+1;}).join(", ")+']</span>';
+}
+function retenirBlock(c){
+  var d=docOf(c);if(!d||!d.ret)return"";
+  return '<section class="retenir"><span class="lvl">Synthèse pour la décision</span><h3>Ce que doit retenir le designer</h3><p>'+esc(fix(d.ret))+'</p></section>';
+}
+function exBlock(c,order){
+  var d=docOf(c);if(!d||!d.ex)return"";
+  var e=d.ex,src=e.s.length?'Source'+cite(e.s,order)+' · exemple vérifié':'Exemple à confirmer : source primaire non encore vérifiée';
+  return '<section class="blk ex"><span class="lvl">Application graphique</span><h3>En communication\u00a0: '+esc(fix(e.t))+'</h3><p>'+esc(fix(e.d))+'</p><p class="exs">'+src+'</p></section>';
+}
+function srcBlock(c,order){
+  var d=docOf(c);if(!d)return"";
+  var todo=CULTURES.filter(function(k){return d.cu[k.id]&&!d.cu[k.id].s.length&&d.cu[k.id].n!=="non codifié";}).length;
+  return '<section class="srcs"><span class="lvl">Documentation</span><h3>Sources</h3>'+
+    (order.length?'<ol>'+order.map(function(id){var x=SOURCES[id];return '<li>'+esc(fix(x.c))+(x.u?' <a href="'+esc(x.u)+'" target="_blank" rel="noopener">'+esc(x.u.replace(/^https?:\/\//,""))+'</a>':'')+'</li>';}).join("")+'</ol>':'')+
+    (todo?'<p class="todo">'+todo+' lecture'+(todo>1?"s":"")+' culturelle'+(todo>1?"s":"")+' sans source académique pour l\u2019instant\u00a0: signalée'+(todo>1?"s":"")+' dans la fiche, à compléter.</p>':'')+'</section>';
+}
+function contrastBlock(c){
+  var W=[255,255,255],K=[0,0,0],rw=contrast(c.rgb,W),rk=contrast(c.rgb,K);
+  function cell(lbl,fg,r){return '<div class="ct" style="color:'+fg+'"><b aria-hidden="true">Aa</b><span><strong>'+lbl+'\u00a0: '+ratioTxt(r)+'</strong><br>'+verdict(r)+'</span></div>';}
+  return '<section class="contrast"><span class="lvl">Propriété visuelle</span><h3>Lisibilité du texte sur cette couleur</h3><div class="ct-row">'+cell("Texte blanc","#FFFFFF",rw)+cell("Texte noir","#000000",rk)+'</div>'+
+    '<p class="ct-note">Seuils WCAG 2.2\u00a0: 4,5\u00a0:\u00a01 pour le texte courant (AA), 3\u00a0:\u00a01 pour le texte de grande taille, 7\u00a0:\u00a01 pour le niveau AAA. Le ratio vaut pour la valeur de référence, pas pour toutes les nuances de la famille.</p></section>';
+}
+function refsBlock(c){
+  var list=IMGS[c.id];
+  if(!list||!list.length)return "";
+  return '<section class="refs"><h3>Références visuelles</h3><div class="refs-g">'+list.map(function(x){
+    var small=x.i.replace(/\/\d+px-/,"/500px-").replace(/w=960$/,"w=500");
+    return '<figure class="ref"><a class="ri" href="'+esc(x.u)+'" target="_blank" rel="noopener"><img src="'+esc(small)+'" srcset="'+esc(small)+' 500w, '+esc(x.i)+' 960w" sizes="(max-width:760px) 100vw, 340px" alt="'+esc(x.t)+'"'+(x.p?' style="object-position:'+esc(x.p)+'"':'')+' loading="lazy" decoding="async"></a>'+
+      '<figcaption><span class="rt">'+esc(x.t)+'</span><span class="rc">'+esc(x.a)+' · <a href="'+esc(x.u)+'" target="_blank" rel="noopener">'+esc(x.l)+'</a></span></figcaption></figure>';
+  }).join("")+'</div></section>';
+}
+function fillSheet(c){
+  var t=state.terms,prev=COLORS[(c.i+COLORS.length-1)%COLORS.length],next=COLORS[(c.i+1)%COLORS.length];
+  var fam=FAMS.filter(function(f){return f.id===c.g;})[0].name;
+  var r=c.rgb,k=c.cmjn,cm="C"+k[0]+" M"+k[1]+" J"+k[2]+" N"+k[3];
+  var d=docOf(c),order=srcOrder(c);
+  dlg.style.setProperty("--c",c.hex);
+  dlg.style.setProperty("--on",c.on);
+  dlg.innerHTML='<div class="sheet-in">'+
+    '<header class="sheet-head"><p class="fam">'+esc(fam)+'</p><h2 id="sheet-title">'+esc(c.n)+'</h2>'+
+    '<button type="button" class="print" data-print aria-label="Imprimer la fiche"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M7 9V3h10v6M7 17H4V9h16v8h-3M7 14h10v7H7z"/></svg></button>'+
+    '<button type="button" class="close" data-close aria-label="Fermer la fiche">×</button></header>'+
+    '<div class="codes">'+codeBtn("HEX",c.hex,c.hex)+codeBtn("RVB",r.join(", "),"rgb("+r.join(", ")+")")+codeBtn("CMJN",cm,cm)+'</div>'+
+    '<p class="codes-note">CMJN indicatif, à convertir avec le profil de l\u2019imprimeur. Touchez un code pour le copier.</p>'+
+    contrastBlock(c)+
+    retenirBlock(c)+
+    '<div class="sheet-body"><div>'+
+      '<section class="blk"><span class="lvl">Repères historiques</span><h3>Contexte</h3><p>'+hl(c.ctx,t)+(d?cite(d.ctxS,order):"")+'</p></section>'+
+      '<section class="blk"><span class="lvl">Association émotionnelle</span><h3>Émotions et psychologie</h3><p class="emo">'+hl(c.emo.join(", "),t)+'</p><p>'+hl(c.emoT,t)+(d?cite(d.emoS,order):"")+'</p></section>'+
+      '<section class="blk"><span class="lvl">Application graphique</span><h3>Valeurs véhiculées</h3><div class="vchips">'+vchips(c)+'</div><p>'+hl(c.com,t)+'</p><p class="risk">Risque d\u2019image\u00a0: '+hl(c.risk,t)+'</p><p class="legend">En plein, les valeurs centrales\u00a0; en contour, les valeurs d\u2019appoint.</p></section>'+
+      '<section class="blk trap"><span class="lvl">Application graphique</span><h3>Piège à l\u2019international</h3><p>'+hl(c.p,t)+'</p></section>'+
+      exBlock(c,order)+
+    '</div><section class="cults"><span class="lvl">Signification culturelle</span><h3>Selon les cultures</h3>'+
+      CULTURES.map(function(x){
+        var hit=findRanges(c.cult[x.id].t,t).length>0;
+        var cu=d&&d.cu[x.id],cert=cu?'<span class="cert'+(cu.n==="discuté"?" discute":cu.n==="non codifié"?" nc":"")+'">'+esc(cu.n)+'</span>':"";
+        var more=cu?(cite(cu.s,order)+'</p>'+(cu.l?'<p class="lim">Limite : '+esc(fix(cu.l))+'</p>':'')+(!cu.s.length&&cu.n!=="non codifié"&&!/sourc/i.test(cu.l||"")?'<p class="lim">Source académique à compléter.</p>':'')):'</p>';
+        var isOpen=(state.cult===x.id||hit)?' open':'';
+        return '<details class="cult'+(state.cult===x.id?" on":"")+'"'+isOpen+'>'+
+          '<summary><span class="sm"><span class="cn">'+esc(x.name)+' <span class="cs">'+esc(x.sub)+'</span></span><span class="ck">'+hl(c.cult[x.id].k,t)+cert+'</span></span></summary>'+
+          '<p class="ct-t">'+hl(c.cult[x.id].t,t)+more+
+        '</details>';
+      }).join("")+
+    '</section></div>'+
+    srcBlock(c,order)+
+    refsBlock(c)+
+    '<nav class="sheet-nav" aria-label="Autres teintes">'+
+      '<a href="#'+prev.id+'" style="--c:'+prev.hex+'" aria-label="Teinte précédente : '+esc(prev.n)+'"><span class="dot"></span>'+esc(prev.n)+'</a>'+
+      '<a href="#'+next.id+'" class="nx" style="--c:'+next.hex+'" aria-label="Teinte suivante : '+esc(next.n)+'">'+esc(next.n)+'<span class="dot"></span></a>'+
+    '</nav></div>';
+}
+var BASE_TITLE=document.title;
+function openSheet(id){
+  var act=document.activeElement,which=null;
+  document.title=BYID[id].n+" · "+BASE_TITLE;
+  if(dlg.open&&act&&act.closest){
+    var a=act.closest(".sheet-nav a");
+    if(a)which=a.classList.contains("nx")?".sheet-nav .nx":".sheet-nav a:first-child";
+  }
+  fillSheet(BYID[id]);
+  if(!dlg.open)dlg.showModal();
+  dlg.scrollTop=0;
+  var f=which?dlg.querySelector(which):dlg.querySelector(".close");
+  if(f)f.focus({preventScroll:true});
+}
+function copyText(text,btn){
+  var cc=btn.querySelector(".cc");
+  function done(ok){
+    cc.textContent=ok?"Copié":"Copie bloquée : sélectionnez la valeur";
+    setTimeout(function(){cc.textContent="Copier";},1600);
+  }
+  function fallback(){
+    var ok=false;
+    try{
+      var ta=document.createElement("textarea");
+      ta.value=text;ta.setAttribute("readonly","");ta.style.position="fixed";ta.style.opacity="0";
+      dlg.appendChild(ta);ta.select();ok=document.execCommand("copy");ta.remove();
+    }catch(e){ok=false;}
+    done(ok);
+  }
+  try{
+    if(navigator.clipboard&&window.isSecureContext){
+      navigator.clipboard.writeText(text).then(function(){done(true);},fallback);
+    }else fallback();
+  }catch(e){fallback();}
+}
+
+/* ---------- Navigation ---------- */
+function hashId(){try{return decodeURIComponent(location.hash.slice(1));}catch(e){return"";}}
+function route(){
+  var h=hashId();
+  if(BYID[h]){openSheet(h);return;}
+  var picked=false;
+  if(h.indexOf("valeur-")===0&&VBYID[h.slice(7)]){state.value=h.slice(7);h="valeurs";picked=true;}
+  var v=VIEWS.indexOf(h)>-1?h:"teintes";
+  if(dlg.open)dlg.close();
+  if(v!==state.view){
+    state.view=v;
+    showView();
+    var tabs=$("tabs"),y=tabs.getBoundingClientRect().top+window.scrollY;
+    if(window.scrollY>y)window.scrollTo(0,y);
+  }else if(picked){
+    update();
+    if(window.matchMedia("(max-width:820px)").matches)$("vpanel").scrollIntoView({block:"start"});
+  }
+}
+
+/* ---------- Événements ---------- */
+qEl.addEventListener("input",function(){
+  var v=qEl.value.trim(),hx=parseHex(v);
+  state.chip=null;state.label=v;state.hex=hx;state.terms=(!hx&&v.length>=2)?[v]:[];
+  update();
+});
+clearEl.addEventListener("click",function(){resetSearch();update();qEl.focus();});
+chipsEl.addEventListener("click",function(e){
+  var b=e.target.closest("[data-chip]");if(!b)return;
+  var l=b.getAttribute("data-chip");
+  if(state.chip===l){resetSearch();}
+  else{
+    var ch=CHIPS.filter(function(x){return x.l===l;})[0];
+    state.chip=l;state.label=l;state.terms=ch.t.slice();state.hex=null;qEl.value=l;
+  }
+  update();
+});
+cultsEl.addEventListener("click",function(e){
+  var b=e.target.closest("[data-cult]");if(!b)return;
+  state.cult=b.getAttribute("data-cult")||null;
+  update();
+});
+document.querySelector("main").addEventListener("click",function(e){
+  if(e.target.closest("[data-reset]")){resetSearch();update();return;}
+  if(e.target.closest("[data-allcult]")){state.cult=null;update();return;}
+  var cb=e.target.closest("[data-css]");
+  if(cb){copyRaw(cb.getAttribute("data-css"),function(ok){cb.textContent=ok?"CSS copié":"Copie bloquée";setTimeout(function(){cb.textContent="Copier en CSS";},1600);});return;}
+  var jb=e.target.closest("[data-json]");
+  if(jb){
+    var v=VBYID[jb.getAttribute("data-json")];
+    var st=COLORS.filter(function(c){return c.vf.indexOf(v.id)>-1;}),se=COLORS.filter(function(c){return c.vs.indexOf(v.id)>-1;});
+    downloadFile("palette-"+slug(v.name)+".json",paletteJson(v,st,se));return;
+  }
+  if(e.target.closest("[data-export-all]")){downloadFile("guide-des-couleurs.json",exportAll());return;}
+  var pb=e.target.closest("[data-palette]");
+  if(pb){copyRaw(pb.getAttribute("data-palette"),function(ok){pb.textContent=ok?"Palette copiée":"Copie bloquée";setTimeout(function(){pb.textContent="Copier la palette";},1600);});return;}
+  var tr=e.target.closest("tr[data-id]");
+  if(tr&&!e.target.closest("a"))location.hash=tr.getAttribute("data-id");
+});
+dlg.addEventListener("click",function(e){
+  if(e.target===dlg){dlg.close();return;}
+  if(e.target.closest("[data-close]")){dlg.close();return;}
+  if(e.target.closest("[data-print]")){window.print();return;}
+  var cp=e.target.closest("[data-copy]");
+  if(cp)copyText(cp.getAttribute("data-copy"),cp);
+});
+dlg.addEventListener("close",function(){
+  document.title=BASE_TITLE;
+  if(BYID[hashId()])location.hash=state.view;
+});
+/* Impression : déplier les cultures et charger les images de la fiche ouverte */
+window.addEventListener("beforeprint",function(){
+  if(!dlg.open)return;
+  dlg.querySelectorAll("details").forEach(function(x){x.setAttribute("data-was",x.open?"1":"0");x.open=true;});
+  dlg.querySelectorAll("img").forEach(function(i){i.loading="eager";});
+});
+window.addEventListener("afterprint",function(){
+  dlg.querySelectorAll("details[data-was]").forEach(function(x){x.open=x.getAttribute("data-was")==="1";x.removeAttribute("data-was");});
+});
+window.addEventListener("hashchange",route);
+
+showView();
+route();
+})();
+</script>
+<script>
+(function(){
+  "use strict";
+  var d=document.documentElement;
+  /* Bouton clair / sombre */
+  var tb=document.getElementById("theme"),mq=window.matchMedia?matchMedia("(prefers-color-scheme: dark)"):null;
+  function isDark(){var t=d.getAttribute("data-theme");return t?t==="dark":!!(mq&&mq.matches);}
+  function syncTheme(){var dk=isDark(),l=dk?"Mode clair":"Mode sombre";tb.querySelector(".tl").textContent=l;tb.setAttribute("aria-label","Passer en "+l.toLowerCase());}
+  if(tb){
+    syncTheme();
+    tb.addEventListener("click",function(){var t=isDark()?"light":"dark";d.setAttribute("data-theme",t);try{localStorage.setItem("theme",t);}catch(e){}syncTheme();});
+    if(mq&&mq.addEventListener)mq.addEventListener("change",syncTheme);
+  }
+  if(!d.hasAttribute("data-intro"))return;
+  var timers=[],ended=false;
+  /* Entrée (chute des fils) puis rétractation en vague, sans pause */
+  var T={collapse:900,end:3000};
+  function at(ms,fn){timers.push(setTimeout(fn,ms));}
+  function cls(add,rm){if(add)d.classList.add.apply(d.classList,add.split(" "));if(rm)d.classList.remove.apply(d.classList,rm.split(" "));}
+  function finish(){
+    if(ended)return;ended=true;
+    timers.forEach(clearTimeout);
+    try{sessionStorage.setItem("introSeen","1");}catch(e){}
+    ["wheel","touchstart","keydown","mousedown"].forEach(function(t){window.removeEventListener(t,skip,true);});
+  }
+  function skip(){
+    if(ended)return;
+    cls("skip done","op cl");
+    finish();
+    requestAnimationFrame(function(){requestAnimationFrame(function(){d.classList.remove("skip");});});
+  }
+  ["wheel","touchstart","keydown","mousedown"].forEach(function(t){window.addEventListener(t,skip,{capture:true,passive:true});});
+  at(T.collapse,function(){cls("cl","op");});
+  at(T.end,function(){cls("done","cl");finish();});
+})();
+</script>
+</body>
+</html>
